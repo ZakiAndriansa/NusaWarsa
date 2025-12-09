@@ -1,6 +1,6 @@
 'use client';
 
-import { Menu, Mountain, X } from 'lucide-react';
+import { Menu, Mountain } from 'lucide-react';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
@@ -10,8 +10,8 @@ import { cn } from '@/lib/utils';
 
 const navItems = [
   { href: '/#timeline', label: 'Timeline' },
-  { href: '/explore', label: 'Peta' },
-  { href: '/gallery', label: 'Galeri' },
+  { href: '/#peta', label: 'Peta' },
+  { href: '/#galeri', label: 'Galeri' },
 ];
 
 export default function Header() {
@@ -29,24 +29,19 @@ export default function Header() {
 
   const NavLinks = ({ className }: { className?: string }) => (
     <>
-      {navItems.map((item) => {
-        const isHomePage = pathname === '/';
-        const targetHref = isHomePage ? item.href : item.href.startsWith('/#') ? `/${item.href}` : item.href;
-        
-        return (
-          <Link
-            key={item.label}
-            href={targetHref}
-            className={cn(
-              'text-foreground/80 transition-colors hover:text-foreground',
-              className
-            )}
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            {item.label}
-          </Link>
-        );
-      })}
+      {navItems.map((item) => (
+        <Link
+          key={item.label}
+          href={item.href}
+          className={cn(
+            'text-foreground/80 transition-colors hover:text-foreground',
+            className
+          )}
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          {item.label}
+        </Link>
+      ))}
     </>
   );
 
@@ -59,51 +54,51 @@ export default function Header() {
           : 'bg-transparent'
       )}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="flex h-14 sm:h-16 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
-            <Mountain className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
-            <span className="font-bold text-sm sm:text-base font-headline">
-              Nusantara Chronicles
-            </span>
-          </Link>
+      <div className="container mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:h-16 sm:px-6 lg:px-8">
+        {/* Logo */}
+        <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
+          <Mountain className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+          <span className="font-bold text-sm sm:text-base font-headline">
+            Nusantara Chronicles
+          </span>
+        </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <NavLinks className="text-sm lg:text-base" />
-          </nav>
+        <div className="flex items-center space-x-4">
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <NavLinks className="text-sm lg:text-base" />
+            </nav>
 
-          {/* Mobile Menu Button */}
-          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-            <SheetTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="md:hidden"
-                aria-label="Open mobile menu"
-              >
-                <Menu className="h-5 w-5" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left" className="w-[280px] sm:w-[350px]">
-              <div className="flex h-full flex-col">
-                <div className="flex items-center justify-between border-b pb-4">
-                  <Link 
-                    href="/" 
-                    className="flex items-center space-x-2"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <Mountain className="h-6 w-6 text-primary" />
-                    <span className="font-bold font-headline">Nusantara Chronicles</span>
-                  </Link>
+            {/* Mobile Menu Button */}
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+                <SheetTrigger asChild>
+                <Button
+                    variant="ghost"
+                    size="icon"
+                    className="md:hidden"
+                    aria-label="Open mobile menu"
+                >
+                    <Menu className="h-5 w-5" />
+                </Button>
+                </SheetTrigger>
+                <SheetContent side="left" className="w-[280px] sm:w-[350px]">
+                <div className="flex h-full flex-col">
+                    <div className="flex items-center justify-between border-b pb-4">
+                    <Link 
+                        href="/" 
+                        className="flex items-center space-x-2"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                        <Mountain className="h-6 w-6 text-primary" />
+                        <span className="font-bold font-headline">Nusantara Chronicles</span>
+                    </Link>
+                    </div>
+                    <nav className="mt-6 flex flex-col space-y-4">
+                    <NavLinks className="text-base sm:text-lg py-2" />
+                    </nav>
                 </div>
-                <nav className="mt-6 flex flex-col space-y-4">
-                  <NavLinks className="text-base sm:text-lg py-2" />
-                </nav>
-              </div>
-            </SheetContent>
-          </Sheet>
+                </SheetContent>
+            </Sheet>
         </div>
       </div>
     </header>
