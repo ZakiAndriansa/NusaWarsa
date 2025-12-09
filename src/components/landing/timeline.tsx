@@ -70,13 +70,13 @@ const Timeline = () => {
                         </CardHeader>
                         <CardContent className="flex flex-col gap-4">
                           {image && (
-                            <div className="overflow-hidden rounded-md">
+                            <div className="overflow-hidden rounded-md aspect-video relative">
                               <Image
                                 src={image.imageUrl}
                                 alt={event.title}
-                                width={600}
-                                height={400}
-                                className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                fill
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                className="object-cover transition-transform duration-300 group-hover:scale-105"
                                 data-ai-hint={image.imageHint}
                               />
                             </div>
