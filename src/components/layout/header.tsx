@@ -59,19 +59,19 @@ export default function Header() {
           : 'bg-transparent'
       )}
     >
-      <div className="container flex h-16 items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
+      <div className="container flex h-16 items-center justify-between">
+        <Link href="/" className="flex items-center space-x-2">
           <Mountain className="h-6 w-6 text-primary" />
           <span className="hidden font-bold sm:inline-block font-headline">
             Nusantara Chronicles
           </span>
         </Link>
 
-        <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
-          <NavLinks />
-        </nav>
+        <div className="flex items-center gap-4">
+          <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
+            <NavLinks />
+          </nav>
 
-        <div className="flex flex-1 items-center justify-end space-x-4">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button
