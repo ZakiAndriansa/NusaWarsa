@@ -59,44 +59,46 @@ export default function Header() {
           : 'bg-transparent'
       )}
     >
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <Mountain className="h-6 w-6 text-primary" />
-          <span className="hidden font-bold sm:inline-block font-headline">
-            Nusantara Chronicles
-          </span>
-        </Link>
+      <div className="container flex h-16 items-center">
+        <div className="flex w-full items-center justify-between">
+          <Link href="/" className="flex items-center space-x-2">
+            <Mountain className="h-6 w-6 text-primary" />
+            <span className="hidden font-bold sm:inline-block font-headline">
+              Nusantara Chronicles
+            </span>
+          </Link>
 
-        <div className="flex items-center gap-4">
-          <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
-            <NavLinks />
-          </nav>
+          <div className="flex items-center gap-4">
+            <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
+              <NavLinks />
+            </nav>
 
-          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-            <SheetTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="md:hidden"
-                aria-label="Open mobile menu"
-              >
-                <Menu className="h-5 w-5" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left">
-              <div className="flex h-full flex-col">
-                <div className="flex items-center justify-between border-b pb-4">
-                  <Link href="/" className="flex items-center space-x-2">
-                    <Mountain className="h-6 w-6 text-primary" />
-                    <span className="font-bold font-headline">Nusantara Chronicles</span>
-                  </Link>
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="md:hidden"
+                  aria-label="Open mobile menu"
+                >
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left">
+                <div className="flex h-full flex-col">
+                  <div className="flex items-center justify-between border-b pb-4">
+                    <Link href="/" className="flex items-center space-x-2">
+                      <Mountain className="h-6 w-6 text-primary" />
+                      <span className="font-bold font-headline">Nusantara Chronicles</span>
+                    </Link>
+                  </div>
+                  <nav className="mt-6 flex flex-col space-y-4">
+                    <NavLinks className="text-lg" />
+                  </nav>
                 </div>
-                <nav className="mt-6 flex flex-col space-y-4">
-                  <NavLinks className="text-lg" />
-                </nav>
-              </div>
-            </SheetContent>
-          </Sheet>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
