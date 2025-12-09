@@ -106,7 +106,7 @@ export const timelineData: (TimelineEvent & { colorClass: string })[] = [
   },
   {
     id: 'ikn-modern-era',
-    year: '2024',
+    year: 'Masa Depan',
     era: 'modern',
     title: 'IKN: Visi Masa Depan Forest City',
     slug: 'ikn-modern-era',

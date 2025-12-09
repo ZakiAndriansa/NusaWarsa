@@ -78,7 +78,7 @@ export default function TimelineDetailPage({ params }: TimelineDetailPageProps) 
               <h1 className="text-4xl sm:text-6xl font-bold font-headline mt-2 text-foreground">
                 {event.title}
               </h1>
-              <p className="text-2xl text-muted-foreground mt-2">{event.year}</p>
+              <p className="text-lg text-muted-foreground mt-2">{event.year}</p>
             </div>
 
             <div className="p-8 rounded-xl bg-card shadow-lg border">
