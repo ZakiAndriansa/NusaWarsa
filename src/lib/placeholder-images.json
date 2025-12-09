@@ -157,12 +157,6 @@
       "imageHint": "balinese ceremony"
     },
     {
-      "id": "rendang",
-      "description": "Rendang dish",
-      "imageUrl": "https://images.unsplash.com/photo-1599021419847-d8a7a6aba5b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmb29kJTIwZGlzaHxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "food dish"
-    },
-    {
       "id": "gamelan",
       "description": "Gamelan instruments",
       "imageUrl": "https://images.unsplash.com/photo-1564528183203-ec84690e06a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtdXNpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzY1MTc0ODk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -185,6 +179,228 @@
       "description": "Default image for tradition gallery",
       "imageUrl": "https://images.unsplash.com/photo-1721508490082-2c32c0abf8dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsb2NhbCUyMGNyYWZ0fGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "local craft"
+    },
+    {
+      "id": "imam-bonjol",
+      "description": "Portrait of Tuanku Imam Bonjol",
+      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFsZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NTI3OTkyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "sutan-sjahrir",
+      "description": "Portrait of Sutan Sjahrir",
+      "imageUrl": "https://images.unsplash.com/photo-1656338997878-279d71d48f6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1Mjc5OTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "chairil-anwar",
+      "description": "Portrait of Chairil Anwar",
+      "imageUrl": "https://images.unsplash.com/photo-1692197393247-c76e1bd8f29e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1Mjc5OTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "gajah-mada",
+      "description": "Illustration of Gajah Mada",
+      "imageUrl": "https://images.unsplash.com/photo-1743965127365-b184dd9020b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3YXJyaW9yJTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc2NTI5NTA2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "warrior illustration"
+    },
+    {
+      "id": "diponegoro",
+      "description": "Portrait of Pangeran Diponegoro",
+      "imageUrl": "https://images.unsplash.com/photo-1596701957770-ce421a997579?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyb3lhbCUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NTI5NTA2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "royal portrait"
+    },
+    {
+      "id": "kartini",
+      "description": "Portrait of R.A. Kartini",
+      "imageUrl": "https://images.unsplash.com/photo-1634149134664-ca3598f29da5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmZW1hbGUlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjUyODUyNDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "female portrait"
+    },
+    {
+      "id": "antasari",
+      "description": "Portrait of Pangeran Antasari",
+      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1Mjc5OTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "tjilik-riwut",
+      "description": "Portrait of Tjilik Riwut",
+      "imageUrl": "https://images.unsplash.com/photo-1692197393247-c76e1bd8f29e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1Mjc5OTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "hasanuddin",
+      "description": "Illustration of Sultan Hasanuddin",
+      "imageUrl": "https://images.unsplash.com/photo-1715625911582-afd2db935496?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdWx0YW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sultan portrait"
+    },
+    {
+      "id": "emmy-saelan",
+      "description": "Portrait of Emmy Saelan",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjUyODUyNDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "female portrait"
+    },
+    {
+      "id": "frans-kaisiepo",
+      "description": "Portrait of Frans Kaisiepo",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1Mjc5OTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "silas-papare",
+      "description": "Portrait of Silas Papare",
+      "imageUrl": "https://images.unsplash.com/photo-1715423058726-ddea1ec51b66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1Mjc5OTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "ngurah-rai",
+      "description": "Portrait of I Gusti Ngurah Rai",
+      "imageUrl": "https://images.unsplash.com/photo-1700774607216-c37bdeaf9869?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtaWxpdGFyeSUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NTI5NTA2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "military portrait"
+    },
+    {
+      "id": "walter-spies",
+      "description": "Portrait of Walter Spies",
+      "imageUrl": "https://images.unsplash.com/photo-1614204424926-196a80bf0be8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcnRpc3QlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "artist portrait"
+    },
+    {
+      "id": "pattimura",
+      "description": "Illustration of Kapitan Pattimura",
+      "imageUrl": "https://images.unsplash.com/photo-1543844481-52e5d6b93760?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3YXJyaW9yJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1Mjk1MDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "warrior portrait"
+    },
+    {
+      "id": "baabullah",
+      "description": "Illustration of Sultan Baabullah",
+      "imageUrl": "https://images.unsplash.com/photo-1729342036455-608a3d1f164a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdWx0YW4lMjBpbGx1c3RyYXRpb258ZW58MHx8fHwxNzY1Mjk1MDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sultan illustration"
+    },
+    {
+      "id": "lompat-batu",
+      "description": "Nias stone jumping tradition",
+      "imageUrl": "https://images.unsplash.com/photo-1763656448126-b2f8c149df99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjdWx0dXJhbCUyMHJpdHVhbHxlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cultural ritual"
+    },
+    {
+      "id": "ulos",
+      "description": "Ulos fabric from Batak",
+      "imageUrl": "https://images.unsplash.com/photo-1762111908782-fabda1a1fe1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0cmFkaXRpb25hbCUyMGZhYnJpY3xlbnwwfHx8fDE3NjUyNDgyNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "traditional fabric"
+    },
+    {
+      "id": "rendang",
+      "description": "Rendang dish",
+      "imageUrl": "https://images.unsplash.com/photo-1484980972926-edee96e0960d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmb29kJTIwZGlzaHxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "food dish"
+    },
+    {
+      "id": "kasada-bromo",
+      "description": "Kasada Bromo ceremony",
+      "imageUrl": "https://images.unsplash.com/photo-1700539944979-727d8827ed4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx2b2xjYW5vJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzY1Mjk1MDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "volcano ceremony"
+    },
+    {
+      "id": "batik-kebaya",
+      "description": "Woman wearing Batik and Kebaya",
+      "imageUrl": "https://images.unsplash.com/photo-1743080331401-b5164105b070?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0cmFkaXRpb25hbCUyMGRyZXNzfGVufDB8fHx8MTc2NTE4MzYyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "traditional dress"
+    },
+    {
+      "id": "gudeg",
+      "description": "Gudeg dish from Yogyakarta",
+      "imageUrl": "https://images.unsplash.com/photo-1618666185697-b4aabeedd8bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Zm9vZCUyMGRpc2h8ZW58MHx8fHwxNzY1MjU5NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "food dish"
+    },
+    {
+      "id": "erau-ceremony",
+      "description": "Erau festival in Kalimantan",
+      "imageUrl": "https://images.unsplash.com/photo-1765248228659-e36323cc966c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjdWx0dXJhbCUyMGZlc3RpdmFsfGVufDB8fHx8MTc2NTI3MTMzNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cultural festival"
+    },
+    {
+      "id": "dayak-clothing",
+      "description": "Dayak traditional attire",
+      "imageUrl": "https://images.unsplash.com/photo-1760637626138-3c2ff9eca63f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cmliYWwlMjBjbG90aGluZ3xlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tribal clothing"
+    },
+    {
+      "id": "soto-banjar",
+      "description": "Soto Banjar soup",
+      "imageUrl": "https://images.unsplash.com/photo-1734772682896-2db9bf254596?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c291cCUyMGRpc2h8ZW58MHx8fHwxNzY1Mjk1MDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "soup dish"
+    },
+    {
+      "id": "rambu-solo",
+      "description": "Rambu Solo funeral ceremony in Toraja",
+      "imageUrl": "https://images.unsplash.com/photo-1644665357133-7dd19a96c168?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmdW5lcmFsJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzY1MjQ4Mjc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "funeral ceremony"
+    },
+    {
+      "id": "baju-bodo",
+      "description": "Baju Bodo, traditional clothing from South Sulawesi",
+      "imageUrl": "https://images.unsplash.com/photo-1614440455218-e4469b5d899e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGRyZXNzfGVufDB8fHx8MTc2NTE4MzYyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "traditional dress"
+    },
+    {
+      "id": "coto-makassar",
+      "description": "Coto Makassar soup",
+      "imageUrl": "https://images.unsplash.com/photo-1615444431936-df9a932734f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YmVlZiUyMHNvdXB8ZW58MHx8fHwxNzY1MjQ4Mjc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "beef soup"
+    },
+    {
+      "id": "bakar-batu",
+      "description": "Bakar Batu (burning stone) cooking tradition in Papua",
+      "imageUrl": "https://images.unsplash.com/photo-1680695303876-7feec37520d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb29raW5nJTIwcml0dWFsfGVufDB8fHx8MTc2NTI5NTA2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cooking ritual"
+    },
+    {
+      "id": "koteka",
+      "description": "Man wearing Koteka in Papua",
+      "imageUrl": "https://images.unsplash.com/photo-1584137283390-2284026dc0e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmliYWwlMjBhdHRpcmV8ZW58MHx8fHwxNzY1Mjk1MDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tribal attire"
+    },
+    {
+      "id": "papeda",
+      "description": "Papeda, sago porridge from Papua",
+      "imageUrl": "https://images.unsplash.com/photo-1682692094951-2972f739cc6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwb3JyaWRnZSUyMGRpc2h8ZW58MHx8fHwxNzY1Mjk1MDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "porridge dish"
+    },
+    {
+      "id": "subak",
+      "description": "Subak irrigation system in Bali",
+      "imageUrl": "https://images.unsplash.com/photo-1665030996710-3661497490e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxyaWNlJTIwcGFkZGllc3xlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rice paddies"
+    },
+    {
+      "id": "payas-agung",
+      "description": "Balinese Payas Agung wedding attire",
+      "imageUrl": "https://images.unsplash.com/photo-1600287792237-3f66db635a73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2VkZGluZyUyMGRyZXNzfGVufDB8fHx8MTc2NTIzNTEzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wedding dress"
+    },
+    {
+      "id": "ayam-betutu",
+      "description": "Ayam Betutu dish from Bali",
+      "imageUrl": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjaGlja2VuJTIwZGlzaHxlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chicken dish"
+    },
+    {
+      "id": "pukul-sapu",
+      "description": "Pukul Sapu tradition in Maluku",
+      "imageUrl": "https://images.unsplash.com/photo-1707405432940-6124db71c729?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyaXR1YWwlMjBmaWdodHxlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ritual fight"
+    },
+    {
+      "id": "baju-cele",
+      "description": "Baju Cele from Maluku",
+      "imageUrl": "https://images.unsplash.com/photo-1624001051001-8287dfecc07c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwYXR0ZXJuZWQlMjBkcmVzc3xlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "patterned dress"
+    },
+    {
+      "id": "ikan-kuah-pala",
+      "description": "Ikan Kuah Pala Banda dish",
+      "imageUrl": "https://images.unsplash.com/photo-1637699612253-b2d5f7a4ea59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmaXNoJTIwc291cHxlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fish soup"
     }
   ]
 }

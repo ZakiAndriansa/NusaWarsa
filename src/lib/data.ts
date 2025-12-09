@@ -144,10 +144,17 @@ export const regionsData: Region[] = [
         details: {
             history: 'Sumatera adalah rumah bagi kerajaan maritim besar seperti Sriwijaya yang menguasai perdagangan di Selat Malaka selama berabad-abad. Pulau ini juga menjadi salah satu gerbang utama masuknya Islam ke Nusantara.',
             folklore: 'Legenda Malin Kundang, anak durhaka yang dikutuk menjadi batu, adalah salah satu cerita rakyat paling terkenal dari Sumatera Barat, mengajarkan pentingnya menghormati orang tua.',
-            figures: ['Tuanku Imam Bonjol', 'Sutan Sjahrir', 'Chairil Anwar'],
+            figures: [
+                { name: 'Tuanku Imam Bonjol', description: 'Ulama, pemimpin, dan pejuang yang berperang melawan Belanda dalam Perang Padri.', imageId: 'imam-bonjol' },
+                { name: 'Sutan Sjahrir', description: 'Seorang intelektual, politikus, dan perdana menteri pertama Indonesia.', imageId: 'sutan-sjahrir' },
+                { name: 'Chairil Anwar', description: 'Penyair terkemuka Indonesia, pelopor Angkatan \'45 dalam sastra Indonesia.', imageId: 'chairil-anwar' },
+            ],
             cuisine: ['Rendang', 'Pempek', 'Gulai Ikan Patin', 'Bika Ambon'],
+            cuisineImageId: 'rendang',
             clothing: 'Ulos (Batak), Songket (Palembang)',
-            traditions: ['Upacara Tabuik', 'Lompat Batu Nias']
+            clothingImageId: 'ulos',
+            traditions: ['Upacara Tabuik', 'Lompat Batu Nias'],
+            traditionImageId: 'lompat-batu'
         }
     },
     {
@@ -159,10 +166,17 @@ export const regionsData: Region[] = [
         details: {
             history: 'Pulau Jawa menjadi pusat dari kerajaan-kerajaan agraris besar seperti Mataram Kuno, Majapahit, hingga Mataram Islam. Peninggalan berupa candi-candi megah menjadi saksi bisu kejayaan masa lalu.',
             folklore: 'Kisah Roro Jonggrang yang menceritakan asal-usul Candi Prambanan adalah dongeng populer tentang cinta, pengkhianatan, dan kekuatan gaib.',
-            figures: ['Gajah Mada', 'Pangeran Diponegoro', 'R.A. Kartini'],
+            figures: [
+                { name: 'Gajah Mada', description: 'Mahapatih Majapahit yang terkenal dengan Sumpah Palapa untuk menyatukan Nusantara.', imageId: 'gajah-mada' },
+                { name: 'Pangeran Diponegoro', description: 'Pahlawan nasional yang memimpin Perang Jawa melawan penjajah Belanda.', imageId: 'diponegoro' },
+                { name: 'R.A. Kartini', description: 'Pahlawan nasional dan pelopor emansipasi wanita di Indonesia.', imageId: 'kartini' },
+            ],
             cuisine: ['Gudeg', 'Rawon', 'Sate Madura', 'Nasi Liwet'],
+            cuisineImageId: 'gudeg',
             clothing: 'Batik, Kebaya',
-            traditions: ['Sekaten', 'Upacara Kasada Bromo']
+            clothingImageId: 'batik-kebaya',
+            traditions: ['Sekaten', 'Upacara Kasada Bromo'],
+            traditionImageId: 'kasada-bromo'
         }
     },
     {
@@ -174,10 +188,16 @@ export const regionsData: Region[] = [
         details: {
             history: 'Kalimantan memiliki sejarah kerajaan Hindu seperti Kutai Kartanegara, kerajaan tertua di Indonesia. Hutan lebatnya menyimpan banyak misteri dan menjadi jalur perdagangan penting di masa lalu.',
             folklore: 'Legenda Batu Menangis dari Kalimantan Barat menceritakan tentang seorang gadis cantik yang durhaka pada ibunya dan dikutuk menjadi batu yang terus mengeluarkan air mata.',
-            figures: ['Pangeran Antasari', 'Tjilik Riwut'],
+            figures: [
+                { name: 'Pangeran Antasari', description: 'Pahlawan Nasional Indonesia dari Kesultanan Banjar yang memimpin perlawanan terhadap Belanda.', imageId: 'antasari' },
+                { name: 'Tjilik Riwut', description: 'Pahlawan Nasional, gubernur pertama Kalimantan Tengah, dan tokoh adat Dayak.', imageId: 'tjilik-riwut' },
+            ],
             cuisine: ['Soto Banjar', 'Ayam Cincane', 'Bubur Pedas Sambas'],
-            clothing: 'Baju adat Dayak dengan manik-manik dan bulu burung',
-            traditions: ['Upacara adat Erau', 'Tato tradisional Dayak']
+            cuisineImageId: 'soto-banjar',
+            clothing: 'Baju adat Dayak',
+            clothingImageId: 'dayak-clothing',
+            traditions: ['Upacara adat Erau', 'Tato tradisional Dayak'],
+            traditionImageId: 'erau-ceremony'
         }
     },
     {
@@ -189,10 +209,16 @@ export const regionsData: Region[] = [
         details: {
             history: 'Sulawesi dikenal sebagai rumah bagi para pelaut ulung Bugis-Makassar dari Kerajaan Gowa-Tallo. Mereka mengarungi samudra dengan kapal Phinisi yang legendaris.',
             folklore: 'La Galigo adalah sebuah wiracarita mitologis dari peradaban Bugis kuno, salah satu karya sastra terpanjang di dunia yang menceritakan asal-usul manusia.',
-            figures: ['Sultan Hasanuddin', 'Emmy Saelan'],
+            figures: [
+                { name: 'Sultan Hasanuddin', description: 'Raja Gowa ke-16 yang dijuluki "Ayam Jantan dari Timur" oleh Belanda karena keberaniannya.', imageId: 'hasanuddin' },
+                { name: 'Emmy Saelan', description: 'Pahlawan wanita dari Sulawesi Selatan yang berjuang dalam perang kemerdekaan.', imageId: 'emmy-saelan' },
+            ],
             cuisine: ['Coto Makassar', 'Pallubasa', 'Sop Konro'],
-            clothing: 'Baju Bodo (salah satu busana tertua di dunia)',
-            traditions: ['Rambu Solo (upacara pemakaman Toraja)', 'Pembuatan Kapal Phinisi']
+            cuisineImageId: 'coto-makassar',
+            clothing: 'Baju Bodo',
+            clothingImageId: 'baju-bodo',
+            traditions: ['Rambu Solo (upacara pemakaman Toraja)', 'Pembuatan Kapal Phinisi'],
+            traditionImageId: 'rambu-solo'
         }
     },
     {
@@ -204,10 +230,16 @@ export const regionsData: Region[] = [
         details: {
             history: 'Papua memiliki sejarah panjang sebagai wilayah yang dihuni oleh ratusan suku dengan budaya yang sangat beragam. Kontak dengan dunia luar secara intensif baru terjadi dalam beberapa abad terakhir.',
             folklore: 'Kisah buaya ajaib yang menolong seorang anak dari suku Asmat adalah salah satu cerita yang menggambarkan hubungan erat antara manusia dan alam di Papua.',
-            figures: ['Frans Kaisiepo', 'Silas Papare'],
+            figures: [
+                { name: 'Frans Kaisiepo', description: 'Pahlawan Nasional yang berperan dalam penyatuan Papua dengan Indonesia.', imageId: 'frans-kaisiepo' },
+                { name: 'Silas Papare', description: 'Seorang pejuang kemerdekaan yang mendirikan Partai Kemerdekaan Indonesia Irian.', imageId: 'silas-papare' },
+            ],
             cuisine: ['Papeda', 'Ikan Bakar Manokwari', 'Sate Ulat Sagu'],
+            cuisineImageId: 'papeda',
             clothing: 'Koteka, Rok Rumbai',
-            traditions: ['Tradisi Bakar Batu', 'Kerajinan Noken (Warisan UNESCO)']
+            clothingImageId: 'koteka',
+            traditions: ['Tradisi Bakar Batu', 'Kerajinan Noken (Warisan UNESCO)'],
+            traditionImageId: 'bakar-batu'
         }
     },
     {
@@ -219,10 +251,16 @@ export const regionsData: Region[] = [
         details: {
             history: 'Bali memiliki sejarah kerajaan yang kuat dengan budaya Hindu yang unik. Sementara itu, Nusa Tenggara menjadi jalur perdagangan penting dan rumah bagi berbagai suku.',
             folklore: 'Cerita Calon Arang dari Bali mengisahkan tentang pertarungan antara sihir baik dan jahat, menjadi dasar dari banyak pertunjukan seni di Bali.',
-            figures: ['I Gusti Ngurah Rai', 'Walter Spies (seniman Jerman di Bali)'],
+            figures: [
+                { name: 'I Gusti Ngurah Rai', description: 'Pahlawan Nasional yang memimpin pasukan Ciung Wanara dalam Puputan Margarana.', imageId: 'ngurah-rai' },
+                { name: 'Walter Spies', description: 'Seniman Jerman yang sangat berpengaruh dalam perkembangan seni modern Bali.', imageId: 'walter-spies' },
+            ],
             cuisine: ['Ayam Betutu', 'Sate Lilit', 'Ayam Taliwang (Lombok)'],
-            clothing: 'Pakaian adat Bali (Payas Agung)',
-            traditions: ['Upacara Ngaben', 'Sistem irigasi Subak (Warisan UNESCO)']
+            cuisineImageId: 'ayam-betutu',
+            clothing: 'Payas Agung (Bali)',
+            clothingImageId: 'payas-agung',
+            traditions: ['Upacara Ngaben', 'Sistem irigasi Subak (Warisan UNESCO)'],
+            traditionImageId: 'subak'
         }
     },
     {
@@ -234,10 +272,16 @@ export const regionsData: Region[] = [
         details: {
             history: 'Selama berabad-abad, Maluku menjadi satu-satunya sumber rempah-rempah seperti cengkih dan pala, menjadikannya rebutan bangsa-bangsa Eropa dan pusat perdagangan dunia.',
             folklore: 'Legenda Batu Badaong (Batu Berdaun) di Ternate menceritakan tentang batu keramat yang menjadi pusat kekuatan spiritual kesultanan.',
-            figures: ['Kapitan Pattimura', 'Sultan Baabullah'],
+            figures: [
+                { name: 'Kapitan Pattimura', description: 'Pahlawan Nasional yang memimpin pemberontakan melawan VOC Belanda di Maluku.', imageId: 'pattimura' },
+                { name: 'Sultan Baabullah', description: 'Sultan Ternate yang berhasil mengusir Portugis dari Maluku dan membawa kesultanan ke puncak kejayaan.', imageId: 'baabullah' },
+            ],
             cuisine: ['Ikan Kuah Pala Banda', 'Gohu Ikan', 'Nasi Lapola'],
+            cuisineImageId: 'ikan-kuah-pala',
             clothing: 'Baju Cele',
-            traditions: ['Tradisi Pukul Sapu', 'Upacara Cuci Negeri Soya']
+            clothingImageId: 'baju-cele',
+            traditions: ['Tradisi Pukul Sapu', 'Upacara Cuci Negeri Soya'],
+            traditionImageId: 'pukul-sapu'
         }
     },
 ];

@@ -13,13 +13,22 @@ export interface TimelineEvent {
   imageId: string;
 }
 
+export interface RegionFigure {
+  name: string;
+  description: string;
+  imageId: string;
+}
+
 export interface RegionDetails {
   history: string;
   folklore: string;
-  figures: string[];
+  figures: RegionFigure[];
   cuisine: string[];
+  cuisineImageId: string;
   clothing: string;
+  clothingImageId: string;
   traditions: string[];
+  traditionImageId: string;
 }
 
 export interface Region {

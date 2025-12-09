@@ -42,12 +42,15 @@ export default async function RegionDetailPage({ params }: RegionDetailPageProps
     notFound();
   }
 
-  const image = PlaceHolderImages.find(img => img.id === region.imageId);
+  const mainImage = PlaceHolderImages.find(img => img.id === region.imageId);
+  const cuisineImage = PlaceHolderImages.find(img => img.id === region.details.cuisineImageId);
+  const clothingImage = PlaceHolderImages.find(img => img.id === region.details.clothingImageId);
+  const traditionImage = PlaceHolderImages.find(img => img.id === region.details.traditionImageId);
   
   const contextForQuiz = `
     Sejarah: ${region.details.history}
     Dongeng: ${region.details.folklore}
-    Tokoh: ${region.details.figures.join(', ')}
+    Tokoh: ${region.details.figures.map(f => `${f.name} (${f.description})`).join(', ')}
     Kuliner: ${region.details.cuisine.join(', ')}
     Pakaian Adat: ${region.details.clothing}
     Tradisi: ${region.details.traditions.join(', ')}
@@ -55,33 +58,31 @@ export default async function RegionDetailPage({ params }: RegionDetailPageProps
 
   const quizData = await generateRegionQuiz({ context: contextForQuiz });
 
-  const InfoCard = ({ icon, title, content }: { icon: React.ReactNode, title: string, content: string | string[] }) => (
-    <div className="flex items-start gap-4">
-        <div className="text-primary mt-1">{icon}</div>
-        <div>
-            <h3 className="font-bold font-headline text-xl text-foreground/90">{title}</h3>
-            {Array.isArray(content) ? (
-                 <ul className="list-disc list-inside mt-2 space-y-1 text-muted-foreground">
-                    {content.map((item, index) => <li key={index}>{item}</li>)}
-                 </ul>
-            ) : (
-                <p className="mt-1 text-muted-foreground">{content}</p>
-            )}
-        </div>
-    </div>
+  const InfoCard = ({ icon, title, children }: { icon: React.ReactNode, title: string, children: React.ReactNode }) => (
+    <Card className="flex flex-col h-full bg-card/50">
+        <CardHeader>
+            <CardTitle className="text-xl font-bold font-headline flex items-center gap-3">
+                <span className="flex-shrink-0 text-primary">{icon}</span>
+                {title}
+            </CardTitle>
+        </CardHeader>
+        <CardContent className="text-muted-foreground flex-grow">
+            {children}
+        </CardContent>
+    </Card>
   )
 
   return (
     <div className="bg-background">
-      {image && (
+      {mainImage && (
         <AnimatedWrapper>
           <div className="relative h-[50vh] w-full">
             <Image
-              src={image.imageUrl}
+              src={mainImage.imageUrl}
               alt={region.name}
               fill
               className="object-cover"
-              data-ai-hint={image.imageHint}
+              data-ai-hint={mainImage.imageHint}
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
@@ -99,16 +100,66 @@ export default async function RegionDetailPage({ params }: RegionDetailPageProps
               <p className="text-lg text-foreground/80 mt-4 max-w-3xl mx-auto">{region.description}</p>
             </div>
 
-            <Card className="p-6 sm:p-10 rounded-2xl bg-card shadow-xl border">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
-                    <InfoCard icon={<Landmark size={24} />} title="Sejarah Singkat" content={region.details.history} />
-                    <InfoCard icon={<ScrollText size={24} />} title="Dongeng Rakyat" content={region.details.folklore} />
-                    <InfoCard icon={<Users size={24} />} title="Tokoh Terkenal" content={region.details.figures} />
-                    <InfoCard icon={<Utensils size={24} />} title="Kuliner Khas" content={region.details.cuisine} />
-                    <InfoCard icon={<Shirt size={24} />} title="Pakaian Adat" content={region.details.clothing} />
-                    <InfoCard icon={<Drama size={24} />} title="Tradisi Unik" content={region.details.traditions} />
+            <div className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <InfoCard icon={<Landmark size={24} />} title="Sejarah Singkat">
+                        <p>{region.details.history}</p>
+                    </InfoCard>
+                    <InfoCard icon={<ScrollText size={24} />} title="Dongeng Rakyat">
+                        <p>{region.details.folklore}</p>
+                    </InfoCard>
                 </div>
-            </Card>
+
+                <InfoCard icon={<Users size={24} />} title="Tokoh Terkenal">
+                    <div className="space-y-6">
+                        {region.details.figures.map(figure => {
+                            const figureImage = PlaceHolderImages.find(img => img.id === figure.imageId);
+                            return (
+                                <div key={figure.name} className="flex gap-4 items-start">
+                                    {figureImage && (
+                                        <Image src={figureImage.imageUrl} alt={figure.name} width={80} height={80} className="rounded-full aspect-square object-cover border-2 border-primary/20" data-ai-hint={figureImage.imageHint} />
+                                    )}
+                                    <div>
+                                        <h4 className="font-bold text-foreground">{figure.name}</h4>
+                                        <p className="text-sm">{figure.description}</p>
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </InfoCard>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                     <InfoCard icon={<Utensils size={24} />} title="Kuliner Khas">
+                        {cuisineImage && (
+                           <div className="relative aspect-video rounded-md overflow-hidden mb-4">
+                                <Image src={cuisineImage.imageUrl} alt="Kuliner Khas" fill className="object-cover" data-ai-hint={cuisineImage.imageHint}/>
+                           </div>
+                        )}
+                        <ul className="list-disc list-inside space-y-1">
+                            {region.details.cuisine.map((item, index) => <li key={index}>{item}</li>)}
+                        </ul>
+                    </InfoCard>
+                     <InfoCard icon={<Shirt size={24} />} title="Pakaian Adat">
+                        {clothingImage && (
+                           <div className="relative aspect-video rounded-md overflow-hidden mb-4">
+                                <Image src={clothingImage.imageUrl} alt={region.details.clothing} fill className="object-cover" data-ai-hint={clothingImage.imageHint}/>
+                           </div>
+                        )}
+                        <p className="font-semibold text-foreground text-center">{region.details.clothing}</p>
+                    </InfoCard>
+                     <InfoCard icon={<Drama size={24} />} title="Tradisi Unik">
+                        {traditionImage && (
+                           <div className="relative aspect-video rounded-md overflow-hidden mb-4">
+                                <Image src={traditionImage.imageUrl} alt="Tradisi Unik" fill className="object-cover" data-ai-hint={traditionImage.imageHint}/>
+                           </div>
+                        )}
+                        <ul className="list-disc list-inside space-y-1">
+                            {region.details.traditions.map((item, index) => <li key={index}>{item}</li>)}
+                        </ul>
+                    </InfoCard>
+                </div>
+            </div>
 
             <Separator className="my-12" />
 
