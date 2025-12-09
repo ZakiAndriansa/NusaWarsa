@@ -13,12 +13,22 @@ export interface TimelineEvent {
   imageId: string;
 }
 
+export interface RegionDetails {
+  history: string;
+  folklore: string;
+  figures: string[];
+  cuisine: string[];
+  clothing: string;
+  traditions: string[];
+}
+
 export interface Region {
   id: string;
   name: string;
   description: string;
   imageId: string;
   coordinates: [number, number];
+  details: RegionDetails;
 }
 
 export type TraditionCategory = 'Tarian' | 'Kerajinan' | 'Upacara' | 'Kuliner' | 'Musik';

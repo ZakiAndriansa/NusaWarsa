@@ -5,14 +5,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import AnimatedWrapper from '../ui/animated-wrapper';
-import { Badge } from '../ui/badge';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 const Timeline = () => {
   return (
     <section id="timeline" className="py-20 sm:py-32 bg-background">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold font-headline tracking-tight text-foreground sm:text-5xl">
             Linimasa Sejarah
@@ -38,7 +37,7 @@ const Timeline = () => {
                   className={cn('relative md:grid md:grid-cols-2 md:gap-x-8 items-center')}
                 >
                   {/* Dot on the timeline */}
-                  <div className="absolute left-6 md:left-1/2 top-1/2 -translate-y-1/2 z-10 h-4 w-4 rounded-full bg-primary -translate-x-1/2" />
+                  <div className="absolute left-6 md:left-1/2 top-1/2 -translate-y-1/2 z-10 h-4 w-4 rounded-full bg-primary -translate-x-1/2 ring-4 ring-background" />
                   
                   {/* Card */}
                   <AnimatedWrapper
@@ -54,18 +53,26 @@ const Timeline = () => {
                         <CardHeader>
                           <div
                             className={cn(
-                              'flex items-center gap-4',
-                              isRight ? '' : 'md:text-right md:flex-row-reverse'
+                              'flex flex-col gap-1',
+                              isRight ? '' : 'md:items-end'
                             )}
                           >
-                            <Badge variant="outline" className="text-lg">
-                              {event.year}
-                            </Badge>
                             <CardTitle
-                              className={`font-headline text-2xl`}
+                              className={cn(
+                                'font-headline text-2xl',
+                                isRight ? 'text-left' : 'md:text-right'
+                              )}
                             >
                               {event.title}
                             </CardTitle>
+                            <p 
+                              className={cn(
+                                'text-sm italic text-muted-foreground',
+                                isRight ? 'text-left' : 'md:text-right'
+                              )}
+                            >
+                              {event.year}
+                            </p>
                           </div>
                         </CardHeader>
                         <CardContent className="flex flex-col gap-4">

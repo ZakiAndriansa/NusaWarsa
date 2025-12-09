@@ -7,10 +7,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import SoundscapeSuggester from '@/components/explore/soundscape-suggester';
 import AnimatedWrapper from '@/components/ui/animated-wrapper';
 import dynamic from 'next/dynamic';
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { X } from 'lucide-react';
-import type { Region } from '@/lib/types';
+import Link from 'next/link';
 
 // Lazy load map to avoid SSR issues with Leaflet
 const IndonesiaMap = dynamic(
@@ -26,21 +23,6 @@ const IndonesiaMap = dynamic(
 );
 
 export default function ExploreSection() {
-  const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
-
-  const handleRegionClick = (region: Region) => {
-    setSelectedRegion(region.id);
-    // Scroll to region card
-    const element = document.getElementById(`region-${region.id}`);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  };
-
-  const handleCloseHighlight = () => {
-    setSelectedRegion(null);
-  };
-
   return (
     <section id="peta" className="bg-background py-12 sm:py-16 md:py-20 lg:py-32">
       {/* Hero Header */}
@@ -51,7 +33,7 @@ export default function ExploreSection() {
               Peta Interaktif Nusantara
             </h2>
             <p className="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl leading-7 sm:leading-8 text-muted-foreground max-w-3xl mx-auto px-4">
-              Klik pada peta untuk menjelajahi setiap wilayah, atau dapatkan sugesti musik tradisional menggunakan fitur di bawah ini.
+              Klik pada peta untuk menjelajahi setiap wilayah dan uji pengetahuan Anda dengan kuis interaktif!
             </p>
           </AnimatedWrapper>
         </div>
@@ -61,8 +43,7 @@ export default function ExploreSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl mt-8 sm:mt-10 md:mt-12 mb-12 sm:mb-16 md:mb-20">
         <AnimatedWrapper delay={200}>
           <IndonesiaMap 
-            regions={regionsData} 
-            onRegionClick={handleRegionClick}
+            regions={regionsData}
           />
         </AnimatedWrapper>
       </div>
@@ -78,26 +59,13 @@ export default function ExploreSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {regionsData.map((region, index) => {
             const regionImage = PlaceHolderImages.find(img => img.id === region.imageId);
-            const isSelected = selectedRegion === region.id;
             
             return (
               <AnimatedWrapper key={region.id} delay={index * 100}>
-                <div id={`region-${region.id}`} className="relative">
+                <Link href={`/explore/${region.id}`} className="block h-full">
                   <Card 
-                    className={`h-full overflow-hidden group transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 ${
-                      isSelected ? 'ring-2 ring-primary shadow-2xl scale-105' : ''
-                    }`}
+                    className="h-full overflow-hidden group transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1"
                   >
-                    {isSelected && (
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        className="absolute top-2 right-2 z-10 bg-background/80 backdrop-blur-sm"
-                        onClick={handleCloseHighlight}
-                      >
-                        <X className="h-4 w-4" />
-                      </Button>
-                    )}
                     {regionImage && (
                       <div className="overflow-hidden aspect-video">
                         <Image
@@ -121,7 +89,7 @@ export default function ExploreSection() {
                       </CardDescription>
                     </CardContent>
                   </Card>
-                </div>
+                </Link>
               </AnimatedWrapper>
             );
           })}

@@ -138,51 +138,107 @@ export const regionsData: Region[] = [
     {
         id: 'sumatera',
         name: 'Sumatera',
-        description: 'Pulau di ujung barat Indonesia, kaya akan keindahan alam, dari hutan hujan tropis hingga danau vulkanik, serta warisan budaya Melayu yang kental.',
+        description: 'Jelajahi kekayaan alam dan budaya Melayu yang kental di pulau paling barat di Indonesia.',
         imageId: 'sumatera-region',
         coordinates: [0.5897, 101.3431],
+        details: {
+            history: 'Sumatera adalah rumah bagi kerajaan maritim besar seperti Sriwijaya yang menguasai perdagangan di Selat Malaka selama berabad-abad. Pulau ini juga menjadi salah satu gerbang utama masuknya Islam ke Nusantara.',
+            folklore: 'Legenda Malin Kundang, anak durhaka yang dikutuk menjadi batu, adalah salah satu cerita rakyat paling terkenal dari Sumatera Barat, mengajarkan pentingnya menghormati orang tua.',
+            figures: ['Tuanku Imam Bonjol', 'Sutan Sjahrir', 'Chairil Anwar'],
+            cuisine: ['Rendang', 'Pempek', 'Gulai Ikan Patin', 'Bika Ambon'],
+            clothing: 'Ulos (Batak), Songket (Palembang)',
+            traditions: ['Upacara Tabuik', 'Lompat Batu Nias']
+        }
     },
     {
         id: 'jawa',
         name: 'Jawa',
-        description: 'Jantung Indonesia, pusat pemerintahan dan ekonomi. Pulau ini memiliki sejarah kerajaan kuno, candi-candi megah, dan budaya yang beragam.',
+        description: 'Selami jantung peradaban kuno, pusat pemerintahan, dan dinamika budaya modern Indonesia.',
         imageId: 'jawa-region',
         coordinates: [-7.7956, 110.3695],
+        details: {
+            history: 'Pulau Jawa menjadi pusat dari kerajaan-kerajaan agraris besar seperti Mataram Kuno, Majapahit, hingga Mataram Islam. Peninggalan berupa candi-candi megah menjadi saksi bisu kejayaan masa lalu.',
+            folklore: 'Kisah Roro Jonggrang yang menceritakan asal-usul Candi Prambanan adalah dongeng populer tentang cinta, pengkhianatan, dan kekuatan gaib.',
+            figures: ['Gajah Mada', 'Pangeran Diponegoro', 'R.A. Kartini'],
+            cuisine: ['Gudeg', 'Rawon', 'Sate Madura', 'Nasi Liwet'],
+            clothing: 'Batik, Kebaya',
+            traditions: ['Sekaten', 'Upacara Kasada Bromo']
+        }
     },
     {
         id: 'kalimantan',
         name: 'Kalimantan',
-        description: 'Bagian dari pulau Borneo, terkenal dengan hutan hujannya yang luas, keanekaragaman hayati yang luar biasa, dan budaya suku Dayak yang eksotis.',
+        description: 'Temukan keajaiban hutan hujan tropis, keanekaragaman hayati, dan kearifan lokal suku Dayak.',
         imageId: 'kalimantan-region',
-        coordinates: [-0.02, 113.9213], // Approximately central point
+        coordinates: [-0.02, 113.9213],
+        details: {
+            history: 'Kalimantan memiliki sejarah kerajaan Hindu seperti Kutai Kartanegara, kerajaan tertua di Indonesia. Hutan lebatnya menyimpan banyak misteri dan menjadi jalur perdagangan penting di masa lalu.',
+            folklore: 'Legenda Batu Menangis dari Kalimantan Barat menceritakan tentang seorang gadis cantik yang durhaka pada ibunya dan dikutuk menjadi batu yang terus mengeluarkan air mata.',
+            figures: ['Pangeran Antasari', 'Tjilik Riwut'],
+            cuisine: ['Soto Banjar', 'Ayam Cincane', 'Bubur Pedas Sambas'],
+            clothing: 'Baju adat Dayak dengan manik-manik dan bulu burung',
+            traditions: ['Upacara adat Erau', 'Tato tradisional Dayak']
+        }
     },
     {
         id: 'sulawesi',
         name: 'Sulawesi',
-        description: 'Pulau dengan bentuk unik, menawarkan keindahan bawah laut kelas dunia di Bunaken dan Wakatobi, serta ritual pemakaman unik di Tana Toraja.',
+        description: 'Jelajahi pulau dengan bentuk unik, dari surga bawah laut hingga ritual pemakaman yang menakjubkan.',
         imageId: 'sulawesi-region',
         coordinates: [-1.42, 120.46],
+        details: {
+            history: 'Sulawesi dikenal sebagai rumah bagi para pelaut ulung Bugis-Makassar dari Kerajaan Gowa-Tallo. Mereka mengarungi samudra dengan kapal Phinisi yang legendaris.',
+            folklore: 'La Galigo adalah sebuah wiracarita mitologis dari peradaban Bugis kuno, salah satu karya sastra terpanjang di dunia yang menceritakan asal-usul manusia.',
+            figures: ['Sultan Hasanuddin', 'Emmy Saelan'],
+            cuisine: ['Coto Makassar', 'Pallubasa', 'Sop Konro'],
+            clothing: 'Baju Bodo (salah satu busana tertua di dunia)',
+            traditions: ['Rambu Solo (upacara pemakaman Toraja)', 'Pembuatan Kapal Phinisi']
+        }
     },
     {
         id: 'papua',
         name: 'Papua',
-        description: 'Tanah paling timur Indonesia, rumah bagi puncak gunung bersalju, lembah-lembah subur, dan suku-suku asli dengan tradisi yang masih terjaga.',
+        description: 'Nikmati petualangan di tanah paling timur Indonesia, rumah bagi puncak salju abadi dan tradisi kuno.',
         imageId: 'papua-region',
         coordinates: [-4.2249, 138.084],
+        details: {
+            history: 'Papua memiliki sejarah panjang sebagai wilayah yang dihuni oleh ratusan suku dengan budaya yang sangat beragam. Kontak dengan dunia luar secara intensif baru terjadi dalam beberapa abad terakhir.',
+            folklore: 'Kisah buaya ajaib yang menolong seorang anak dari suku Asmat adalah salah satu cerita yang menggambarkan hubungan erat antara manusia dan alam di Papua.',
+            figures: ['Frans Kaisiepo', 'Silas Papare'],
+            cuisine: ['Papeda', 'Ikan Bakar Manokwari', 'Sate Ulat Sagu'],
+            clothing: 'Koteka, Rok Rumbai',
+            traditions: ['Tradisi Bakar Batu', 'Kerajinan Noken (Warisan UNESCO)']
+        }
     },
     {
         id: 'bali-nusa-tenggara',
         name: 'Bali & Nusa Tenggara',
-        description: 'Gugusan pulau yang mempesona, dari surga pariwisata Bali, keindahan alam Lombok, hingga pertemuan dengan komodo di Pulau Komodo.',
+        description: 'Temukan pesona gugusan pulau eksotis, dari spiritualitas Bali hingga kadal purba di Komodo.',
         imageId: 'bali-nt-region',
-        coordinates: [-8.65, 115.2167], // Bali
+        coordinates: [-8.65, 115.2167],
+        details: {
+            history: 'Bali memiliki sejarah kerajaan yang kuat dengan budaya Hindu yang unik. Sementara itu, Nusa Tenggara menjadi jalur perdagangan penting dan rumah bagi berbagai suku.',
+            folklore: 'Cerita Calon Arang dari Bali mengisahkan tentang pertarungan antara sihir baik dan jahat, menjadi dasar dari banyak pertunjukan seni di Bali.',
+            figures: ['I Gusti Ngurah Rai', 'Walter Spies (seniman Jerman di Bali)'],
+            cuisine: ['Ayam Betutu', 'Sate Lilit', 'Ayam Taliwang (Lombok)'],
+            clothing: 'Pakaian adat Bali (Payas Agung)',
+            traditions: ['Upacara Ngaben', 'Sistem irigasi Subak (Warisan UNESCO)']
+        }
     },
     {
         id: 'maluku',
         name: 'Maluku',
-        description: 'Dikenal sebagai "Kepulauan Rempah-Rempah", Maluku memiliki sejarah maritim yang kaya dan pantai-pantai tersembunyi yang menakjubkan.',
+        description: 'Kunjungi "Kepulauan Rempah" yang legendaris, pusat sejarah maritim dan surga pantai tersembunyi.',
         imageId: 'maluku-region',
         coordinates: [-3.655, 128.19],
+        details: {
+            history: 'Selama berabad-abad, Maluku menjadi satu-satunya sumber rempah-rempah seperti cengkih dan pala, menjadikannya rebutan bangsa-bangsa Eropa dan pusat perdagangan dunia.',
+            folklore: 'Legenda Batu Badaong (Batu Berdaun) di Ternate menceritakan tentang batu keramat yang menjadi pusat kekuatan spiritual kesultanan.',
+            figures: ['Kapitan Pattimura', 'Sultan Baabullah'],
+            cuisine: ['Ikan Kuah Pala Banda', 'Gohu Ikan', 'Nasi Lapola'],
+            clothing: 'Baju Cele',
+            traditions: ['Tradisi Pukul Sapu', 'Upacara Cuci Negeri Soya']
+        }
     },
 ];
 

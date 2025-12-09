@@ -3,16 +3,17 @@
 import { useEffect, useState, useRef } from 'react';
 import type { Region } from '@/lib/types';
 import { Loader2 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 interface IndonesiaMapProps {
   regions: Region[];
-  onRegionClick?: (region: Region) => void;
 }
 
-export default function IndonesiaMap({ regions, onRegionClick }: IndonesiaMapProps) {
+export default function IndonesiaMap({ regions }: IndonesiaMapProps) {
   const [mapLoaded, setMapLoaded] = useState(false);
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<any>(null);
+  const router = useRouter();
 
   useEffect(() => {
     // Load Leaflet from CDN
@@ -40,6 +41,18 @@ export default function IndonesiaMap({ regions, onRegionClick }: IndonesiaMapPro
       } else {
         initMap();
       }
+    };
+
+    const handleRegionClick = (region: Region) => {
+        router.push(`/explore/${region.id}`);
+    };
+    
+    // Make it globally accessible for the popup button
+    (window as any).selectRegion = (regionId: string) => {
+        const region = regions.find(r => r.id === regionId);
+        if (region) {
+            handleRegionClick(region);
+        }
     };
 
     const initMap = () => {
@@ -79,22 +92,20 @@ export default function IndonesiaMap({ regions, onRegionClick }: IndonesiaMapPro
               ${region.name}
             </h3>
             <p style="font-size: 14px; color: #4b5563; margin: 0; line-height: 1.5;">
-              ${region.description}
+              Klik untuk memulai kuis!
             </p>
             <button 
               onclick="window.selectRegion('${region.id}')"
               style="margin-top: 12px; color: #c2882f; font-size: 14px; font-weight: 600; cursor: pointer; background: none; border: none; padding: 0;"
             >
-              Lihat Detail →
+              Mulai Petualangan →
             </button>
           </div>
         `;
         marker.bindPopup(popupContent);
 
         marker.on('click', () => {
-          if (onRegionClick) {
-            onRegionClick(region);
-          }
+          handleRegionClick(region);
         });
       });
 
@@ -108,13 +119,6 @@ export default function IndonesiaMap({ regions, onRegionClick }: IndonesiaMapPro
       setMapLoaded(true);
     };
 
-    // Global function for popup button
-    (window as any).selectRegion = (regionId: string) => {
-      const region = regions.find(r => r.id === regionId);
-      if (region && onRegionClick) {
-        onRegionClick(region);
-      }
-    };
 
     loadLeaflet();
 
@@ -125,7 +129,7 @@ export default function IndonesiaMap({ regions, onRegionClick }: IndonesiaMapPro
       }
       delete (window as any).selectRegion;
     };
-  }, [regions, onRegionClick]);
+  }, [regions, router]);
 
   return (
     <div className="w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-2xl border border-border">
