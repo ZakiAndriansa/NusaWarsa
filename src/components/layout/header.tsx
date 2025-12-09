@@ -68,7 +68,7 @@ export default function Header() {
             </span>
           </Link>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 ml-auto">
             <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
               <NavLinks />
             </nav>
