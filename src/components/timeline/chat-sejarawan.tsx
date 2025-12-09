@@ -13,6 +13,7 @@ import { Separator } from '../ui/separator';
 const initialState = {
   answer: '',
   error: '',
+  question: '',
 };
 
 function SubmitButton() {
@@ -45,10 +46,11 @@ export default function ChatSejarawan({ event }: ChatSejarawanProps) {
 
   const handleFormAction = (formData: FormData) => {
     formAction(formData);
-    if(questionRef.current) {
-        questionRef.current.value = '';
+    // Don't reset formRef.current.reset() as it clears hidden inputs
+    if (questionRef.current) {
+      questionRef.current.value = '';
     }
-  }
+  };
 
   return (
     <section className="mt-16">
@@ -79,7 +81,7 @@ export default function ChatSejarawan({ event }: ChatSejarawanProps) {
             )}
           </form>
 
-          {state?.answer && (
+          {state?.answer && state.question && (
             <div className="mt-8 max-w-3xl mx-auto">
                 <Separator />
                 <div className="mt-6 p-6 bg-muted/50 rounded-lg border">

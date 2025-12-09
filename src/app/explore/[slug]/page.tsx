@@ -3,11 +3,12 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Separator } from '@/components/ui/separator';
-import { Landmark, ScrollText, Users, Utensils, Shirt, Drama, HelpCircle } from 'lucide-react';
+import { Landmark, ScrollText, Users, Utensils, Shirt, Drama } from 'lucide-react';
 import AnimatedWrapper from '@/components/ui/animated-wrapper';
 import { generateRegionQuiz } from '@/ai/flows/generate-region-quiz';
-import QuizClient from '@/components/explore/quiz-client';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import InteractiveZone from '@/components/explore/interactive-zone';
+import type { Region } from '@/lib/types';
 
 interface RegionDetailPageProps {
   params: {
@@ -36,7 +37,7 @@ export function generateMetadata({ params }: RegionDetailPageProps) {
 
 
 export default async function RegionDetailPage({ params }: RegionDetailPageProps) {
-  const region = regionsData.find(r => r.id === params.slug);
+  const region = regionsData.find(r => r.id === params.slug) as Region;
 
   if (!region) {
     notFound();
@@ -47,7 +48,9 @@ export default async function RegionDetailPage({ params }: RegionDetailPageProps
   const clothingImage = PlaceHolderImages.find(img => img.id === region.details.clothingImageId);
   const traditionImage = PlaceHolderImages.find(img => img.id === region.details.traditionImageId);
   
-  const contextForQuiz = `
+  const contextForAI = `
+    Nama Wilayah: ${region.name}
+    Deskripsi: ${region.description}
     Sejarah: ${region.details.history}
     Dongeng: ${region.details.folklore}
     Tokoh: ${region.details.figures.map(f => `${f.name} (${f.description})`).join(', ')}
@@ -56,7 +59,9 @@ export default async function RegionDetailPage({ params }: RegionDetailPageProps
     Tradisi: ${region.details.traditions.join(', ')}
   `;
 
-  const quizData = await generateRegionQuiz({ context: contextForQuiz });
+  // We pre-generate the first quiz on the server for a fast initial load.
+  // The client can then re-generate it if needed.
+  const initialQuizData = await generateRegionQuiz({ context: contextForAI });
 
   const InfoCard = ({ icon, title, children }: { icon: React.ReactNode, title: string, children: React.ReactNode }) => (
     <Card className="flex flex-col h-full bg-card/50">
@@ -163,19 +168,11 @@ export default async function RegionDetailPage({ params }: RegionDetailPageProps
 
             <Separator className="my-12" />
 
-             <Card className="shadow-2xl border-2 border-primary/10 bg-card">
-                <CardHeader className="text-center">
-                    <CardTitle className="font-headline text-3xl flex items-center justify-center gap-3">
-                        <HelpCircle className="text-primary"/> Uji Pengetahuan Anda!
-                    </CardTitle>
-                    <CardDescription className="max-w-2xl mx-auto">
-                        Jawab 5 pertanyaan berikut berdasarkan informasi di atas untuk menguji seberapa baik Anda mengenal {region.name}. Setiap jawaban benar bernilai 20 poin.
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <QuizClient quizData={quizData.quiz} />
-                </CardContent>
-            </Card>
+             <InteractiveZone 
+                regionName={region.name} 
+                context={contextForAI} 
+                initialQuizData={initialQuizData.quiz} 
+             />
             
           </div>
         </AnimatedWrapper>
