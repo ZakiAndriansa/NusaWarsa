@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
-import { Users, Calendar, Landmark } from 'lucide-react';
+import { Users, Calendar, Landmark, Sparkles, Hand, Ship } from 'lucide-react';
 import ChatSejarawan from '@/components/timeline/chat-sejarawan';
 import AnimatedWrapper from '@/components/ui/animated-wrapper';
 
@@ -43,6 +43,15 @@ export default function TimelineDetailPage({ params }: TimelineDetailPageProps) 
 
   const image = PlaceHolderImages.find(img => img.id === event.imageId);
 
+  const getEraTitle = (era: string) => {
+    switch(era) {
+      case 'kerajaan': return 'Babak 1: Era Kejayaan Kerajaan';
+      case 'kolonial': return 'Babak 2: Era Perdagangan & Akulturasi';
+      case 'modern': return 'Babak 3: Era Modern & Digital';
+      default: return 'Era Tidak Dikenal';
+    }
+  }
+
   return (
     <div className="bg-background">
       {image && (
@@ -65,7 +74,7 @@ export default function TimelineDetailPage({ params }: TimelineDetailPageProps) 
         <AnimatedWrapper delay={200}>
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
-              <Badge variant="secondary" className="text-sm capitalize">{event.era}</Badge>
+              <Badge variant="secondary" className="text-sm capitalize">{getEraTitle(event.era)}</Badge>
               <h1 className="text-4xl sm:text-6xl font-bold font-headline mt-2 text-foreground">
                 {event.title}
               </h1>
@@ -73,7 +82,13 @@ export default function TimelineDetailPage({ params }: TimelineDetailPageProps) 
             </div>
 
             <div className="p-8 rounded-xl bg-card shadow-lg border">
-                <p className="text-lg leading-relaxed text-foreground/90 mb-8">
+                <p className="text-lg leading-relaxed text-foreground/90 mb-8 italic">
+                    "{event.description}"
+                </p>
+                
+                <Separator className="my-6" />
+                
+                <p className="text-base leading-relaxed text-foreground/80 mb-8">
                     {event.fullDescription}
                 </p>
 
@@ -81,13 +96,13 @@ export default function TimelineDetailPage({ params }: TimelineDetailPageProps) 
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                        <h3 className="text-xl font-bold font-headline flex items-center gap-2 mb-4"><Users className="text-primary"/> Tokoh Penting</h3>
+                        <h3 className="text-xl font-bold font-headline flex items-center gap-2 mb-4"><Sparkles className="text-primary"/> Peninggalan Utama</h3>
                         <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                             {event.keyFigures.map(figure => <li key={figure}>{figure}</li>)}
                         </ul>
                     </div>
                      <div>
-                        <h3 className="text-xl font-bold font-headline flex items-center gap-2 mb-4"><Landmark className="text-primary"/> Peristiwa Terkait</h3>
+                        <h3 className="text-xl font-bold font-headline flex items-center gap-2 mb-4"><Ship className="text-primary"/> Highlight Budaya</h3>
                         <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                             {event.relatedEvents.map(related => <li key={related}>{related}</li>)}
                         </ul>

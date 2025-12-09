@@ -2,7 +2,7 @@ export type TimelineEra = 'kerajaan' | 'kolonial' | 'kemerdekaan' | 'modern';
 
 export interface TimelineEvent {
   id: string;
-  year: number;
+  year: number | string;
   era: TimelineEra;
   title: string;
   slug: string;

@@ -7,82 +7,58 @@
       "imageHint": "batik pattern"
     },
     {
-      "id": "kutai-yupa",
-      "description": "Yupa inscription from Kutai Kingdom",
-      "imageUrl": "https://images.unsplash.com/photo-1759053559022-2edd963bd545?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhbmNpZW50JTIwaW5zY3JpcHRpb258ZW58MHx8fHwxNzY1MjU5NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ancient inscription"
-    },
-    {
       "id": "sriwijaya-ship",
-      "description": "Illustration of a Sriwijayan ship",
+      "description": "Illustration of a Sriwijayan ship, representing maritime power",
       "imageUrl": "https://images.unsplash.com/photo-1656682775443-02b6d853a1f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhbmNpZW50JTIwc2hpcHxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ancient ship"
     },
     {
       "id": "majapahit-temple",
-      "description": "Trowulan, the capital city of Majapahit",
+      "description": "A grand Indonesian temple, representing Majapahit's architectural prowess.",
       "imageUrl": "https://images.unsplash.com/photo-1655793488799-1ffba5b22cbd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbmRvbmVzaWFuJTIwdGVtcGxlfGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "indonesian temple"
     },
     {
-      "id": "gajah-mada",
-      "description": "Statue of Gajah Mada",
-      "imageUrl": "https://images.unsplash.com/photo-1748884729251-2aac3fbdad3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxoaXN0b3JpYyUyMHN0YXR1ZXxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "historic statue"
+      "id": "phinisi-ship",
+      "description": "A majestic Phinisi ship, symbolizing the seafaring skills of Bugis-Makassar people.",
+      "imageUrl": "https://images.unsplash.com/photo-1595026652393-241f23781524?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwaGluaXNpfGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "phinisi ship"
     },
     {
-      "id": "dutch-arrival",
-      "description": "Painting of the first Dutch arrival in Indonesia",
-      "imageUrl": "https://images.unsplash.com/photo-1761395303113-43537427be67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2xvbmlhbCUyMHBhaW50aW5nfGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "colonial painting"
+      "id": "maluku-fort",
+      "description": "A colonial fort in the Spice Islands (Maluku).",
+      "imageUrl": "https://images.unsplash.com/photo-1622395420352-0943905b3815?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2xvbmlhbCUyMGZvcnR8ZW58MHx8fHwxNzY1MjU5NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "colonial fort"
     },
     {
-      "id": "diponegoro-war",
-      "description": "Painting of Prince Diponegoro leading his troops",
-      "imageUrl": "https://images.unsplash.com/photo-1578924825332-401f6a5f73be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3YXIlMjBwYWludGluZ3xlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "war painting"
+      "id": "batavia-old-town",
+      "description": "The bustling atmosphere of Batavia's old town (Kota Tua).",
+      "imageUrl": "https://images.unsplash.com/photo-1595183389859-052b003c035f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrb3RhJTIwdHVhJTIwamFrYXJ0YXxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "jakarta oldtown"
     },
     {
-      "id": "budi-utomo",
-      "description": "Founders of Budi Utomo organization",
-      "imageUrl": "https://images.unsplash.com/photo-1580128636806-b29892ddbb48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxoaXN0b3JpY2FsJTIwcGhvdG98ZW58MHx8fHwxNzY1MjAxNjE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "historical photo"
+      "id": "aceh-mosque",
+      "description": "The grand Baiturrahman Mosque in Aceh, the 'Veranda of Mecca'.",
+      "imageUrl": "https://images.unsplash.com/photo-1605333502935-513645511b8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhY2VoJTIwbW9zcXVlfGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "aceh mosque"
     },
     {
-      "id": "sumpah-pemuda",
-      "description": "Youth Pledge congress in 1928",
-      "imageUrl": "https://picsum.photos/seed/204/600/400",
-      "imageHint": "historical congress"
+      "id": "bali-modern",
+      "description": "A modern cafe in Bali, representing the digital nomad lifestyle.",
+      "imageUrl": "https://images.unsplash.com/photo-1559599422-9f3f31481b24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiYWxpJTIwY2FmZXxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bali cafe"
     },
     {
-      "id": "proclamation",
-      "description": "The proclamation of Indonesian independence",
-      "imageUrl": "https://images.unsplash.com/photo-1760292423997-07bf8521ec7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoaXN0b3JpY2FsJTIwZXZlbnR8ZW58MHx8fHwxNzY1MjU5NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "historical event"
+      "id": "yogyakarta-art",
+      "description": "Contemporary art scene in Yogyakarta.",
+      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcnQlMjBnYWxsZXJ5fGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "art gallery"
     },
     {
-      "id": "orde-baru",
-      "description": "Symbolic image of the New Order era",
-      "imageUrl": "https://images.unsplash.com/photo-1648698450122-e8a06535bce3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwb2xpdGljYWwlMjBoaXN0b3J5fGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "political history"
-    },
-    {
-      "id": "reformasi",
-      "description": "Student protests during the 1998 Reformasi",
-      "imageUrl": "https://images.unsplash.com/photo-1591065411478-97722a82fe81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdHVkZW50JTIwcHJvdGVzdHxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "student protest"
-    },
-    {
-      "id": "first-election",
-      "description": "Indonesian citizens voting in the first direct presidential election",
-      "imageUrl": "https://images.unsplash.com/photo-1595126731003-755959b6baf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxlbGVjdGlvbiUyMHZvdGluZ3xlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "election voting"
-    },
-    {
-      "id": "borobudur-unesco",
-      "description": "Borobudur Temple, a UNESCO World Heritage site",
-      "imageUrl": "https://images.unsplash.com/photo-1705905343745-6d901a93e946?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxib3JvYnVkdXIlMjB0ZW1wbGV8ZW58MHx8fHwxNzY1MjU5NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "borobudur temple"
+      "id": "papua-modern",
+      "description": "A blend of nature and infrastructure in Papua.",
+      "imageUrl": "https://images.unsplash.com/photo-1595191839213-7804a625894b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYXB1YSUyMGJyaWRnZXxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "papua bridge"
     },
     {
       "id": "ikn-nusantara",
@@ -141,7 +117,7 @@
     {
       "id": "tari-piring",
       "description": "Tari Piring dance",
-      "imageUrl": "https://picsum.photos/seed/601/400/600",
+      "imageUrl": "https://images.unsplash.com/photo-1749718278933-9359bdcc7c00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwbGF0ZSUyMGRhbmNlfGVufDB8fHx8MTc2NTI3NjAyMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "plate dance"
     },
     {
