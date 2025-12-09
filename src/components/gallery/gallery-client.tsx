@@ -32,7 +32,7 @@ const TraditionCard = ({ tradition, onSelect }: { tradition: Tradition, onSelect
               src={image.imageUrl}
               alt={tradition.name}
               width={400}
-              height={Math.random() * 200 + 400} // random height for masonry effect
+              height={400} // Removed Math.random() and set a fixed height
               className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               data-ai-hint={image.imageHint}
             />
