@@ -18,6 +18,7 @@ export interface Region {
   name: string;
   description: string;
   imageId: string;
+  coordinates: [number, number];
 }
 
 export type TraditionCategory = 'Tarian' | 'Kerajinan' | 'Upacara' | 'Kuliner' | 'Musik';

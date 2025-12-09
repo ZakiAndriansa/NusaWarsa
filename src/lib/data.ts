@@ -187,43 +187,50 @@ export const regionsData: Region[] = [
         id: 'sumatera',
         name: 'Sumatera',
         description: 'Pulau di ujung barat Indonesia, kaya akan keindahan alam, dari hutan hujan tropis hingga danau vulkanik, serta warisan budaya Melayu yang kental.',
-        imageId: 'sumatera-region'
+        imageId: 'sumatera-region',
+        coordinates: [0.5897, 101.3431],
     },
     {
         id: 'jawa',
         name: 'Jawa',
         description: 'Jantung Indonesia, pusat pemerintahan dan ekonomi. Pulau ini memiliki sejarah kerajaan kuno, candi-candi megah, dan budaya yang beragam.',
-        imageId: 'jawa-region'
+        imageId: 'jawa-region',
+        coordinates: [-7.7956, 110.3695],
     },
     {
         id: 'kalimantan',
         name: 'Kalimantan',
         description: 'Bagian dari pulau Borneo, terkenal dengan hutan hujannya yang luas, keanekaragaman hayati yang luar biasa, dan budaya suku Dayak yang eksotis.',
-        imageId: 'kalimantan-region'
+        imageId: 'kalimantan-region',
+        coordinates: [-0.02, 113.9213], // Approximately central point
     },
     {
         id: 'sulawesi',
         name: 'Sulawesi',
         description: 'Pulau dengan bentuk unik, menawarkan keindahan bawah laut kelas dunia di Bunaken dan Wakatobi, serta ritual pemakaman unik di Tana Toraja.',
-        imageId: 'sulawesi-region'
+        imageId: 'sulawesi-region',
+        coordinates: [-1.42, 120.46],
     },
     {
         id: 'papua',
         name: 'Papua',
         description: 'Tanah paling timur Indonesia, rumah bagi puncak gunung bersalju, lembah-lembah subur, dan suku-suku asli dengan tradisi yang masih terjaga.',
-        imageId: 'papua-region'
+        imageId: 'papua-region',
+        coordinates: [-4.2249, 138.084],
     },
     {
         id: 'bali-nusa-tenggara',
         name: 'Bali & Nusa Tenggara',
         description: 'Gugusan pulau yang mempesona, dari surga pariwisata Bali, keindahan alam Lombok, hingga pertemuan dengan komodo di Pulau Komodo.',
-        imageId: 'bali-nt-region'
+        imageId: 'bali-nt-region',
+        coordinates: [-8.65, 115.2167], // Bali
     },
     {
         id: 'maluku',
         name: 'Maluku',
         description: 'Dikenal sebagai "Kepulauan Rempah-Rempah", Maluku memiliki sejarah maritim yang kaya dan pantai-pantai tersembunyi yang menakjubkan.',
-        imageId: 'maluku-region'
+        imageId: 'maluku-region',
+        coordinates: [-3.655, 128.19],
     },
 ];
 
