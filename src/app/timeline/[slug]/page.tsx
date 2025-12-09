@@ -74,11 +74,10 @@ export default function TimelineDetailPage({ params }: TimelineDetailPageProps) 
         <AnimatedWrapper delay={200}>
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
-              <Badge variant="secondary" className="text-sm capitalize">{getEraTitle(event.era)}</Badge>
               <h1 className="text-4xl sm:text-6xl font-bold font-headline mt-2 text-foreground">
                 {event.title}
               </h1>
-              <p className="text-lg text-muted-foreground mt-2">{event.year}</p>
+              <p className="text-lg text-muted-foreground mt-4">{getEraTitle(event.era)} &middot; {event.year}</p>
             </div>
 
             <div className="p-8 rounded-xl bg-card shadow-lg border">
