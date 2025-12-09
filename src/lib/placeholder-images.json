@@ -1,3 +1,214 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Subtle batik pattern for hero background",
+      "imageUrl": "https://images.unsplash.com/photo-1761516659766-c092d4b1209d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYXRpayUyMHBhdHRlcm58ZW58MHx8fHwxNzY1MjU5NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "batik pattern"
+    },
+    {
+      "id": "kutai-yupa",
+      "description": "Yupa inscription from Kutai Kingdom",
+      "imageUrl": "https://images.unsplash.com/photo-1759053559022-2edd963bd545?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhbmNpZW50JTIwaW5zY3JpcHRpb258ZW58MHx8fHwxNzY1MjU5NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ancient inscription"
+    },
+    {
+      "id": "sriwijaya-ship",
+      "description": "Illustration of a Sriwijayan ship",
+      "imageUrl": "https://images.unsplash.com/photo-1656682775443-02b6d853a1f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhbmNpZW50JTIwc2hpcHxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ancient ship"
+    },
+    {
+      "id": "majapahit-temple",
+      "description": "Trowulan, the capital city of Majapahit",
+      "imageUrl": "https://images.unsplash.com/photo-1655793488799-1ffba5b22cbd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbmRvbmVzaWFuJTIwdGVtcGxlfGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indonesian temple"
+    },
+    {
+      "id": "gajah-mada",
+      "description": "Statue of Gajah Mada",
+      "imageUrl": "https://images.unsplash.com/photo-1748884729251-2aac3fbdad3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxoaXN0b3JpYyUyMHN0YXR1ZXxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "historic statue"
+    },
+    {
+      "id": "dutch-arrival",
+      "description": "Painting of the first Dutch arrival in Indonesia",
+      "imageUrl": "https://images.unsplash.com/photo-1761395303113-43537427be67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2xvbmlhbCUyMHBhaW50aW5nfGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "colonial painting"
+    },
+    {
+      "id": "diponegoro-war",
+      "description": "Painting of Prince Diponegoro leading his troops",
+      "imageUrl": "https://images.unsplash.com/photo-1578924825332-401f6a5f73be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3YXIlMjBwYWludGluZ3xlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "war painting"
+    },
+    {
+      "id": "budi-utomo",
+      "description": "Founders of Budi Utomo organization",
+      "imageUrl": "https://images.unsplash.com/photo-1580128636806-b29892ddbb48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxoaXN0b3JpY2FsJTIwcGhvdG98ZW58MHx8fHwxNzY1MjAxNjE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "historical photo"
+    },
+    {
+      "id": "sumpah-pemuda",
+      "description": "Youth Pledge congress in 1928",
+      "imageUrl": "https://picsum.photos/seed/204/600/400",
+      "imageHint": "historical congress"
+    },
+    {
+      "id": "proclamation",
+      "description": "The proclamation of Indonesian independence",
+      "imageUrl": "https://images.unsplash.com/photo-1760292423997-07bf8521ec7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoaXN0b3JpY2FsJTIwZXZlbnR8ZW58MHx8fHwxNzY1MjU5NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "historical event"
+    },
+    {
+      "id": "orde-baru",
+      "description": "Symbolic image of the New Order era",
+      "imageUrl": "https://images.unsplash.com/photo-1648698450122-e8a06535bce3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwb2xpdGljYWwlMjBoaXN0b3J5fGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "political history"
+    },
+    {
+      "id": "reformasi",
+      "description": "Student protests during the 1998 Reformasi",
+      "imageUrl": "https://images.unsplash.com/photo-1591065411478-97722a82fe81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdHVkZW50JTIwcHJvdGVzdHxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "student protest"
+    },
+    {
+      "id": "first-election",
+      "description": "Indonesian citizens voting in the first direct presidential election",
+      "imageUrl": "https://images.unsplash.com/photo-1595126731003-755959b6baf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxlbGVjdGlvbiUyMHZvdGluZ3xlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "election voting"
+    },
+    {
+      "id": "borobudur-unesco",
+      "description": "Borobudur Temple, a UNESCO World Heritage site",
+      "imageUrl": "https://images.unsplash.com/photo-1705905343745-6d901a93e946?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxib3JvYnVkdXIlMjB0ZW1wbGV8ZW58MHx8fHwxNzY1MjU5NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "borobudur temple"
+    },
+    {
+      "id": "ikn-nusantara",
+      "description": "Architectural render of the new capital city, IKN Nusantara",
+      "imageUrl": "https://images.unsplash.com/photo-1512364615838-8088a04a778b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmdXR1cmlzdGljJTIwY2l0eXxlbnwwfHx8fDE3NjUyNDIzMjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "futuristic city"
+    },
+    {
+      "id": "map-background",
+      "description": "Artistic map of Indonesia",
+      "imageUrl": "https://images.unsplash.com/photo-1586863065451-6a82fa7e81b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxpbmRvbmVzaWElMjBtYXB8ZW58MHx8fHwxNzY1MjQ4Mjc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indonesia map"
+    },
+    {
+      "id": "sumatera-region",
+      "description": "Scenery from Sumatera",
+      "imageUrl": "https://images.unsplash.com/photo-1642762428067-7ef09dee28f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzdW1hdGVyYSUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sumatera landscape"
+    },
+    {
+      "id": "jawa-region",
+      "description": "Scenery from Jawa",
+      "imageUrl": "https://images.unsplash.com/photo-1722016145515-b0ca4961e18f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYXdhJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "jawa landscape"
+    },
+    {
+      "id": "kalimantan-region",
+      "description": "Scenery from Kalimantan",
+      "imageUrl": "https://images.unsplash.com/photo-1719546744531-f004a0b5fe3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxrYWxpbWFudGFuJTIwZm9yZXN0fGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kalimantan forest"
+    },
+    {
+      "id": "sulawesi-region",
+      "description": "Scenery from Sulawesi",
+      "imageUrl": "https://images.unsplash.com/photo-1696326790529-e6a24574db1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzdWxhd2VzaSUyMGJlYWNofGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sulawesi beach"
+    },
+    {
+      "id": "papua-region",
+      "description": "Scenery from Papua",
+      "imageUrl": "https://images.unsplash.com/photo-1700144068847-d2b8f5c07dae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwYXB1YSUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "papua mountains"
+    },
+    {
+      "id": "bali-nt-region",
+      "description": "Scenery from Bali & Nusa Tenggara",
+      "imageUrl": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYWxpJTIwdGVtcGxlfGVufDB8fHx8MTc2NTI0ODI3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bali temple"
+    },
+    {
+      "id": "maluku-region",
+      "description": "Scenery from Maluku",
+      "imageUrl": "https://images.unsplash.com/photo-1660307892397-ca716548d577?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWx1a3UlMjBpc2xhbmRzfGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "maluku islands"
+    },
+    {
+      "id": "tari-piring",
+      "description": "Tari Piring dance",
+      "imageUrl": "https://picsum.photos/seed/601/400/600",
+      "imageHint": "plate dance"
+    },
+    {
+      "id": "tari-saman",
+      "description": "Tari Saman dance",
+      "imageUrl": "https://images.unsplash.com/photo-1520732789276-a0ebed2eeabd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxncm91cCUyMGRhbmNlfGVufDB8fHx8MTc2NTE3MTkyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "group dance"
+    },
+    {
+      "id": "tari-kecak",
+      "description": "Tari Kecak dance",
+      "imageUrl": "https://images.unsplash.com/photo-1714738041039-e3a874e35934?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmaXJlJTIwZGFuY2V8ZW58MHx8fHwxNzY1MjQ4Mjc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fire dance"
+    },
+    {
+      "id": "batik",
+      "description": "Batik crafting",
+      "imageUrl": "https://images.unsplash.com/photo-1761516659902-2994696b362e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiYXRpayUyMGZhYnJpY3xlbnwwfHx8fDE3NjUxNjk4NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "batik fabric"
+    },
+    {
+      "id": "tenun",
+      "description": "Tenun weaving",
+      "imageUrl": "https://images.unsplash.com/photo-1612978277713-8af3d4665036?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMHdlYXZpbmd8ZW58MHx8fHwxNzY1MjU5NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "traditional weaving"
+    },
+    {
+      "id": "wayang",
+      "description": "Wayang Kulit shadow puppets",
+      "imageUrl": "https://images.unsplash.com/photo-1620409123739-3849e65df57a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzaGFkb3clMjBwdXBwZXRzfGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "shadow puppets"
+    },
+    {
+      "id": "ngaben",
+      "description": "Ngaben ceremony",
+      "imageUrl": "https://images.unsplash.com/photo-1634909995140-82b10b08bd2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiYWxpbmVzZSUyMGNlcmVtb255fGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "balinese ceremony"
+    },
+    {
+      "id": "rendang",
+      "description": "Rendang dish",
+      "imageUrl": "https://images.unsplash.com/photo-1599021419847-d8a7a6aba5b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmb29kJTIwZGlzaHxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "food dish"
+    },
+    {
+      "id": "gamelan",
+      "description": "Gamelan instruments",
+      "imageUrl": "https://images.unsplash.com/photo-1564528183203-ec84690e06a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtdXNpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzY1MTc0ODk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "musical instruments"
+    },
+    {
+      "id": "default-tradition-1",
+      "description": "Default image for tradition gallery",
+      "imageUrl": "https://images.unsplash.com/photo-1643259993518-02a4d3088f46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbmRvbmVzaWFuJTIwY3VsdHVyZXxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indonesian culture"
+    },
+    {
+      "id": "default-tradition-2",
+      "description": "Default image for tradition gallery",
+      "imageUrl": "https://images.unsplash.com/photo-1760638260787-5f9e4f32a69e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0cmFkaXRpb25hbCUyMGFydHxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "traditional art"
+    },
+    {
+      "id": "default-tradition-3",
+      "description": "Default image for tradition gallery",
+      "imageUrl": "https://images.unsplash.com/photo-1721508490082-2c32c0abf8dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsb2NhbCUyMGNyYWZ0fGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "local craft"
+    }
+  ]
 }
