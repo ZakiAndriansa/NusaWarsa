@@ -1,6 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { suggestSoundscapeAction } from '@/app/actions';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -32,7 +33,7 @@ function SubmitButton() {
 }
 
 export default function SoundscapeSuggester() {
-  const [state, formAction] = useFormState(suggestSoundscapeAction, initialState);
+  const [state, formAction] = useActionState(suggestSoundscapeAction, initialState);
 
   return (
     <section className="py-20 sm:py-32">
