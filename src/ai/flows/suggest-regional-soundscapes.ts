@@ -28,6 +28,7 @@ const prompt = ai.definePrompt({
   name: 'suggestRegionalSoundscapesPrompt',
   input: {schema: SuggestRegionalSoundscapesInputSchema},
   output: {schema: SuggestRegionalSoundscapesOutputSchema},
+  model: 'googleai/gemini-2.5-flash',
   prompt: `You are a music expert specializing in Indonesian traditional music. Based on the region the user is exploring, suggest a fitting traditional regional soundscape (music).
 
 Region: {{{regionName}}}

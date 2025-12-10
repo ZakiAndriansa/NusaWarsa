@@ -10,12 +10,12 @@
 import { ai } from '@/ai/genkit';
 import { z } from 'zod';
 
+export type AskRegionalExpertInput = z.infer<typeof AskRegionalExpertInputSchema>;
 const AskRegionalExpertInputSchema = z.object({
   question: z.string().describe("The user's question about the specific region."),
   regionName: z.string().describe('The name of the region.'),
   regionContext: z.string().describe('The full description of the region to provide context (history, culture, food, etc.).'),
 });
-export type AskRegionalExpertInput = z.infer<typeof AskRegionalExpertInputSchema>;
 
 const AskRegionalExpertOutputSchema = z.object({
   answer: z.string().describe("The AI expert's answer to the user's question, in Indonesian."),
@@ -30,6 +30,7 @@ const prompt = ai.definePrompt({
   name: 'askRegionalExpertPrompt',
   input: { schema: AskRegionalExpertInputSchema },
   output: { schema: AskRegionalExpertOutputSchema },
+  model: 'googleai/gemini-2.5-flash',
   prompt: `Anda adalah seorang pemandu wisata dan ahli budaya Nusantara yang sangat berpengetahuan dan ramah. Tugas Anda adalah menjawab pertanyaan pengguna seolah-olah Anda sedang bercerita kepada seorang teman yang penasaran.
 
 Gunakan informasi dari konteks sebagai dasar cerita, tetapi jangan ragu untuk menambahkan informasi menarik lainnya dari pengetahuan Anda untuk membuat ceritanya lebih hidup.

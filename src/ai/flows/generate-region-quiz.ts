@@ -37,6 +37,7 @@ const prompt = ai.definePrompt({
   name: 'generateRegionQuizPrompt',
   input: { schema: GenerateRegionQuizInputSchema },
   output: { schema: GenerateRegionQuizOutputSchema },
+  model: 'googleai/gemini-2.5-flash',
   prompt: `You are an expert quiz maker for an educational platform about Indonesian culture.
 Your task is to create a 5-question multiple-choice quiz based on the provided text about a specific Indonesian region.
 The questions should be engaging, clear, and cover different aspects mentioned in the text (history, figures, food, traditions, etc.).
