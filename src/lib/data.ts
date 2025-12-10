@@ -154,7 +154,34 @@ export const regionsData: Region[] = [
             clothing: 'Ulos (Batak), Songket (Palembang)',
             clothingImageId: 'ulos',
             traditions: ['Upacara Tabuik', 'Lompat Batu Nias'],
-            traditionImageId: 'lompat-batu'
+            traditionImageId: 'lompat-batu',
+            quiz: [
+                {
+                    question: 'Kerajaan maritim besar yang pernah berkuasa di Sumatera adalah...',
+                    options: ['Majapahit', 'Sriwijaya', 'Mataram Kuno', 'Gowa-Tallo'],
+                    correctAnswer: 'Sriwijaya',
+                },
+                {
+                    question: 'Legenda terkenal dari Sumatera Barat tentang anak durhaka adalah...',
+                    options: ['Roro Jonggrang', 'Sangkuriang', 'Malin Kundang', 'Timun Mas'],
+                    correctAnswer: 'Malin Kundang',
+                },
+                {
+                    question: 'Siapakah pahlawan yang memimpin Perang Padri melawan Belanda?',
+                    options: ['Sutan Sjahrir', 'Tuanku Imam Bonjol', 'Chairil Anwar', 'Gajah Mada'],
+                    correctAnswer: 'Tuanku Imam Bonjol',
+                },
+                {
+                    question: 'Makanan khas dari Palembang yang terbuat dari ikan dan sagu adalah...',
+                    options: ['Rendang', 'Gulai Ikan Patin', 'Bika Ambon', 'Pempek'],
+                    correctAnswer: 'Pempek',
+                },
+                {
+                    question: 'Kain tradisional khas suku Batak disebut...',
+                    options: ['Songket', 'Ulos', 'Batik', 'Kebaya'],
+                    correctAnswer: 'Ulos',
+                }
+            ]
         }
     },
     {
@@ -176,7 +203,34 @@ export const regionsData: Region[] = [
             clothing: 'Batik, Kebaya',
             clothingImageId: 'batik-kebaya',
             traditions: ['Sekaten', 'Upacara Kasada Bromo'],
-            traditionImageId: 'kasada-bromo'
+            traditionImageId: 'kasada-bromo',
+            quiz: [
+                {
+                    question: 'Candi Buddha terbesar di dunia yang terletak di Jawa adalah...',
+                    options: ['Candi Prambanan', 'Candi Borobudur', 'Candi Sewu', 'Candi Mendut'],
+                    correctAnswer: 'Candi Borobudur',
+                },
+                {
+                    question: 'Siapakah mahapatih Majapahit yang terkenal dengan Sumpah Palapa?',
+                    options: ['Hayam Wuruk', 'Raden Wijaya', 'Gajah Mada', 'Airlangga'],
+                    correctAnswer: 'Gajah Mada',
+                },
+                {
+                    question: 'Kisah legenda yang berhubungan dengan asal-usul Candi Prambanan adalah...',
+                    options: ['Malin Kundang', 'Roro Jonggrang', 'Sangkuriang', 'Lutung Kasarung'],
+                    correctAnswer: 'Roro Jonggrang',
+                },
+                {
+                    question: 'Makanan khas Yogyakarta yang terbuat dari nangka muda adalah...',
+                    options: ['Rawon', 'Sate Madura', 'Gudeg', 'Nasi Liwet'],
+                    correctAnswer: 'Gudeg',
+                },
+                {
+                    question: 'Upacara adat yang diselenggarakan oleh suku Tengger di Bromo adalah...',
+                    options: ['Sekaten', 'Grebeg Maulud', 'Nyepi', 'Kasada'],
+                    correctAnswer: 'Kasada',
+                }
+            ]
         }
     },
     {
@@ -197,7 +251,34 @@ export const regionsData: Region[] = [
             clothing: 'Baju adat Dayak',
             clothingImageId: 'dayak-clothing',
             traditions: ['Upacara adat Erau', 'Tato tradisional Dayak'],
-            traditionImageId: 'erau-ceremony'
+            traditionImageId: 'erau-ceremony',
+            quiz: [
+                {
+                    question: 'Kerajaan Hindu tertua di Indonesia yang terletak di Kalimantan adalah...',
+                    options: ['Sriwijaya', 'Majapahit', 'Kutai', 'Tarumanegara'],
+                    correctAnswer: 'Kutai',
+                },
+                {
+                    question: 'Siapakah pahlawan nasional dari Kesultanan Banjar yang melawan Belanda?',
+                    options: ['Tjilik Riwut', 'Pangeran Antasari', 'Sultan Hasanuddin', 'Pattimura'],
+                    correctAnswer: 'Pangeran Antasari',
+                },
+                {
+                    question: 'Suku asli terbesar yang mendiami pulau Kalimantan adalah suku...',
+                    options: ['Batak', 'Minang', 'Asmat', 'Dayak'],
+                    correctAnswer: 'Dayak',
+                },
+                {
+                    question: 'Makanan berkuah khas dari Banjarmasin adalah...',
+                    options: ['Ayam Cincane', 'Bubur Pedas', 'Soto Banjar', 'Rawon'],
+                    correctAnswer: 'Soto Banjar',
+                },
+                {
+                    question: 'Upacara adat besar yang diselenggarakan oleh Kesultanan Kutai Kartanegara adalah...',
+                    options: ['Erau', 'Ngaben', 'Rambu Solo', 'Sekaten'],
+                    correctAnswer: 'Erau',
+                }
+            ]
         }
     },
     {
@@ -218,7 +299,34 @@ export const regionsData: Region[] = [
             clothing: 'Baju Bodo',
             clothingImageId: 'baju-bodo',
             traditions: ['Rambu Solo (upacara pemakaman Toraja)', 'Pembuatan Kapal Phinisi'],
-            traditionImageId: 'rambu-solo'
+            traditionImageId: 'rambu-solo',
+            quiz: [
+                {
+                    question: 'Pelaut ulung dari Sulawesi yang terkenal dengan kapal Phinisi berasal dari suku...',
+                    options: ['Minahasa', 'Toraja', 'Bugis-Makassar', 'Mandar'],
+                    correctAnswer: 'Bugis-Makassar',
+                },
+                {
+                    question: 'Sultan dari Kerajaan Gowa yang dijuluki "Ayam Jantan dari Timur" adalah...',
+                    options: ['Sultan Agung', 'Sultan Baabullah', 'Sultan Hasanuddin', 'Sultan Iskandar Muda'],
+                    correctAnswer: 'Sultan Hasanuddin',
+                },
+                {
+                    question: 'Upacara pemakaman yang megah dan unik di Sulawesi dikenal dengan nama...',
+                    options: ['Ngaben', 'Rambu Solo', 'Pukul Sapu', 'Bakar Batu'],
+                    correctAnswer: 'Kunci Jawaban: Rambu Solo',
+                },
+                {
+                    question: 'Makanan khas Makassar yang berkuah kental dan kaya rempah adalah...',
+                    options: ['Sop Konro', 'Coto Makassar', 'Pallubasa', 'Semua jawaban benar'],
+                    correctAnswer: 'Semua jawaban benar',
+                },
+                {
+                    question: 'Pakaian adat tradisional wanita dari suku Bugis adalah...',
+                    options: ['Kebaya', 'Ulos', 'Baju Bodo', 'Baju Cele'],
+                    correctAnswer: 'Baju Bodo',
+                }
+            ]
         }
     },
     {
@@ -239,7 +347,34 @@ export const regionsData: Region[] = [
             clothing: 'Koteka, Rok Rumbai',
             clothingImageId: 'koteka',
             traditions: ['Tradisi Bakar Batu', 'Kerajinan Noken (Warisan UNESCO)'],
-            traditionImageId: 'bakar-batu'
+            traditionImageId: 'bakar-batu',
+            quiz: [
+                {
+                    question: 'Puncak tertinggi di Indonesia yang diselimuti salju abadi terletak di Papua, yaitu...',
+                    options: ['Gunung Rinjani', 'Gunung Semeru', 'Puncak Jaya', 'Gunung Kerinci'],
+                    correctAnswer: 'Puncak Jaya',
+                },
+                {
+                    question: 'Tas tradisional dari Papua yang diakui UNESCO sebagai warisan budaya takbenda adalah...',
+                    options: ['Ulos', 'Noken', 'Songket', 'Batik'],
+                    correctAnswer: 'Noken',
+                },
+                {
+                    question: 'Tradisi memasak bersama dengan menggunakan batu panas di Papua disebut...',
+                    options: ['Ngaben', 'Bakar Batu', 'Rambu Solo', 'Dugderan'],
+                    correctAnswer: 'Bakar Batu',
+                },
+                {
+                    question: 'Makanan pokok masyarakat Papua yang terbuat dari sagu adalah...',
+                    options: ['Nasi', 'Papeda', 'Roti', 'Jagung'],
+                    correctAnswer: 'Papeda',
+                },
+                {
+                    question: 'Siapakah pahlawan nasional yang wajahnya diabadikan dalam uang pecahan Rp 10.000 dan berasal dari Papua?',
+                    options: ['Silas Papare', 'Frans Kaisiepo', 'Pattimura', 'Tuanku Imam Bonjol'],
+                    correctAnswer: 'Frans Kaisiepo',
+                }
+            ]
         }
     },
     {
@@ -260,7 +395,34 @@ export const regionsData: Region[] = [
             clothing: 'Payas Agung (Bali)',
             clothingImageId: 'payas-agung',
             traditions: ['Upacara Ngaben', 'Sistem irigasi Subak (Warisan UNESCO)'],
-            traditionImageId: 'subak'
+            traditionImageId: 'subak',
+            quiz: [
+                {
+                    question: 'Upacara pembakaran jenazah di Bali dikenal dengan sebutan...',
+                    options: ['Rambu Solo', 'Sekaten', 'Ngaben', 'Kasada'],
+                    correctAnswer: 'Ngaben',
+                },
+                {
+                    question: 'Sistem irigasi tradisional di Bali yang diakui UNESCO adalah...',
+                    options: ['Tumpangsari', 'Subak', 'Sengkedan', 'Terasering'],
+                    correctAnswer: 'Subak',
+                },
+                {
+                    question: 'Pahlawan nasional yang memimpin perang Puputan Margarana di Bali adalah...',
+                    options: ['Pangeran Diponegoro', 'Sultan Hasanuddin', 'I Gusti Ngurah Rai', 'Pattimura'],
+                    correctAnswer: 'I Gusti Ngurah Rai',
+                },
+                {
+                    question: 'Pulau di Nusa Tenggara Timur yang menjadi habitat asli hewan purba Komodo adalah...',
+                    options: ['Pulau Flores', 'Pulau Sumba', 'Pulau Komodo', 'Pulau Lombok'],
+                    correctAnswer: 'Pulau Komodo',
+                },
+                {
+                    question: 'Makanan khas dari Lombok yang terkenal dengan rasa pedasnya adalah...',
+                    options: ['Ayam Betutu', 'Sate Lilit', 'Ayam Taliwang', 'Babi Guling'],
+                    correctAnswer: 'Ayam Taliwang',
+                }
+            ]
         }
     },
     {
@@ -281,7 +443,34 @@ export const regionsData: Region[] = [
             clothing: 'Baju Cele',
             clothingImageId: 'baju-cele',
             traditions: ['Tradisi Pukul Sapu', 'Upacara Cuci Negeri Soya'],
-            traditionImageId: 'pukul-sapu'
+            traditionImageId: 'pukul-sapu',
+            quiz: [
+                {
+                    question: 'Maluku dikenal di dunia sebagai...',
+                    options: ['Kepulauan Emas', 'Kepulauan Rempah', 'Kepulauan Sutra', 'Kepulauan Cendana'],
+                    correctAnswer: 'Kepulauan Rempah',
+                },
+                {
+                    question: 'Pahlawan nasional yang memimpin perlawanan terhadap Belanda di Maluku pada tahun 1817 adalah...',
+                    options: ['Sultan Baabullah', 'Kapitan Pattimura', 'Sultan Nuku', 'Martha Christina Tiahahu'],
+                    correctAnswer: 'Kapitan Pattimura',
+                },
+                {
+                    question: 'Dua jenis rempah yang paling dicari dari Maluku adalah...',
+                    options: ['Lada dan Kayu Manis', 'Cengkih dan Pala', 'Vanili dan Kapulaga', 'Kunyit dan Jahe'],
+                    correctAnswer: 'Cengkih dan Pala',
+                },
+                {
+                    question: 'Hidangan ikan mentah yang diasinkan dengan perasan lemon dan garam dari Ternate adalah...',
+                    options: ['Ikan Kuah Pala', 'Nasi Lapola', 'Gohu Ikan', 'Ikan Asar'],
+                    correctAnswer: 'Gohu Ikan',
+                },
+                {
+                    question: 'Tradisi adu kekuatan fisik menggunakan lidi aren di Maluku Tengah disebut...',
+                    options: ['Pukul Sapu', 'Cuci Negeri', 'Bambu Gila', 'Tari Cakalele'],
+                    correctAnswer: 'Pukul Sapu',
+                }
+            ]
         }
     },
 ];

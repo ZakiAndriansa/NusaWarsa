@@ -15,8 +15,14 @@ export interface TimelineEvent {
 
 export interface RegionFigure {
   name: string;
-  description: string;
+  description:string;
   imageId: string;
+}
+
+export interface QuizQuestion {
+  question: string;
+  options: string[];
+  correctAnswer: string;
 }
 
 export interface RegionDetails {
@@ -29,6 +35,7 @@ export interface RegionDetails {
   clothingImageId: string;
   traditions: string[];
   traditionImageId: string;
+  quiz: QuizQuestion[];
 }
 
 export interface Region {

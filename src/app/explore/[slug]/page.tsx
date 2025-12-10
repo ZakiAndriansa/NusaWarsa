@@ -166,6 +166,7 @@ export default async function RegionDetailPage({ params }: RegionDetailPageProps
              <InteractiveZone 
                 regionName={region.name} 
                 context={contextForAI} 
+                quizData={region.details.quiz}
              />
             
           </div>

@@ -1,52 +1,28 @@
 'use client';
 
-import { useState, useTransition, useEffect } from 'react';
+import { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { HelpCircle, Bot, Loader2 } from 'lucide-react';
+import { HelpCircle, Bot } from 'lucide-react';
 import QuizClient from './quiz-client';
 import ChatExpert from './chat-expert';
-import { generateRegionQuiz, type GenerateRegionQuizOutput } from '@/ai/flows/generate-region-quiz';
+import type { QuizQuestion } from '@/lib/types';
 
 interface InteractiveZoneProps {
   regionName: string;
   context: string;
+  quizData: QuizQuestion[];
 }
 
-export default function InteractiveZone({ regionName, context }: InteractiveZoneProps) {
+export default function InteractiveZone({ regionName, context, quizData }: InteractiveZoneProps) {
   const [activeTab, setActiveTab] = useState('quiz');
-  const [quizData, setQuizData] = useState<GenerateRegionQuizOutput['quiz'] | null>(null);
-  const [isPending, startTransition] = useTransition();
-  const [isFirstLoad, setIsFirstLoad] = useState(true);
-
-  const refreshQuiz = () => {
-    setQuizData(null); // Clear old quiz to show loading state
-    startTransition(async () => {
-      const newQuiz = await generateRegionQuiz({ context });
-      setQuizData(newQuiz.quiz);
-    });
-  }
-
-  useEffect(() => {
-    // Generate quiz on initial component mount for the first tab
-    if (isFirstLoad) {
-      refreshQuiz();
-      setIsFirstLoad(false);
-    }
-  }, [isFirstLoad, context]);
-
-
-  const handleTabChange = (value: string) => {
-    if (value === 'quiz' && activeTab !== 'quiz') {
-      // User is switching back to the quiz tab, let's refresh the questions.
-      refreshQuiz();
-    }
-    setActiveTab(value);
-  };
+  
+  // By passing a key to QuizClient that changes when the tab changes, we force it to re-mount and reset its state.
+  const quizKey = `${activeTab}-quiz-${quizData[0].question}`;
 
   return (
     <Card className="shadow-2xl border-2 border-primary/10 bg-card">
-      <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <CardHeader>
           <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto">
             <TabsTrigger value="quiz" className="gap-2">
@@ -67,14 +43,7 @@ export default function InteractiveZone({ regionName, context }: InteractiveZone
               Jawab 5 pertanyaan berikut untuk menguji seberapa baik Anda mengenal {regionName}. Setiap jawaban benar bernilai 20 poin.
             </CardDescription>
           </div>
-          {isPending || !quizData ? (
-            <div className="flex flex-col items-center justify-center min-h-[300px] text-muted-foreground">
-              <Loader2 className="h-10 w-10 animate-spin mb-4" />
-              <p>Memuat kuis baru...</p>
-            </div>
-          ) : (
-            <QuizClient key={quizData.length > 0 ? quizData[0].question : 'quiz'} quizData={quizData} />
-          )}
+          <QuizClient key={quizKey} quizData={quizData} />
         </TabsContent>
         <TabsContent value="ai-chat" className="px-6 pb-6">
            <div className="text-center mb-6">
