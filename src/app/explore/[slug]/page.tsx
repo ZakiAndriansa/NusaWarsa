@@ -5,7 +5,6 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Separator } from '@/components/ui/separator';
 import { Landmark, ScrollText, Users, Utensils, Shirt, Drama } from 'lucide-react';
 import AnimatedWrapper from '@/components/ui/animated-wrapper';
-import { generateRegionQuiz } from '@/ai/flows/generate-region-quiz';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import InteractiveZone from '@/components/explore/interactive-zone';
 import type { Region } from '@/lib/types';
@@ -58,10 +57,6 @@ export default async function RegionDetailPage({ params }: RegionDetailPageProps
     Pakaian Adat: ${region.details.clothing}
     Tradisi: ${region.details.traditions.join(', ')}
   `;
-
-  // We pre-generate the first quiz on the server for a fast initial load.
-  // The client can then re-generate it if needed.
-  const initialQuizData = await generateRegionQuiz({ context: contextForAI });
 
   const InfoCard = ({ icon, title, children }: { icon: React.ReactNode, title: string, children: React.ReactNode }) => (
     <Card className="flex flex-col h-full bg-card/50">
@@ -171,7 +166,6 @@ export default async function RegionDetailPage({ params }: RegionDetailPageProps
              <InteractiveZone 
                 regionName={region.name} 
                 context={contextForAI} 
-                initialQuizData={initialQuizData.quiz} 
              />
             
           </div>

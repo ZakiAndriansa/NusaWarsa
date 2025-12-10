@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useTransition } from 'react';
+import { useState, useTransition, useEffect } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { HelpCircle, Bot, Loader2 } from 'lucide-react';
@@ -11,21 +11,35 @@ import { generateRegionQuiz, type GenerateRegionQuizOutput } from '@/ai/flows/ge
 interface InteractiveZoneProps {
   regionName: string;
   context: string;
-  initialQuizData: GenerateRegionQuizOutput['quiz'];
 }
 
-export default function InteractiveZone({ regionName, context, initialQuizData }: InteractiveZoneProps) {
+export default function InteractiveZone({ regionName, context }: InteractiveZoneProps) {
   const [activeTab, setActiveTab] = useState('quiz');
-  const [quizData, setQuizData] = useState(initialQuizData);
+  const [quizData, setQuizData] = useState<GenerateRegionQuizOutput['quiz'] | null>(null);
   const [isPending, startTransition] = useTransition();
+  const [isFirstLoad, setIsFirstLoad] = useState(true);
+
+  const refreshQuiz = () => {
+    setQuizData(null); // Clear old quiz to show loading state
+    startTransition(async () => {
+      const newQuiz = await generateRegionQuiz({ context });
+      setQuizData(newQuiz.quiz);
+    });
+  }
+
+  useEffect(() => {
+    // Generate quiz on initial component mount for the first tab
+    if (isFirstLoad) {
+      refreshQuiz();
+      setIsFirstLoad(false);
+    }
+  }, [isFirstLoad, context]);
+
 
   const handleTabChange = (value: string) => {
     if (value === 'quiz' && activeTab !== 'quiz') {
       // User is switching back to the quiz tab, let's refresh the questions.
-      startTransition(async () => {
-        const newQuiz = await generateRegionQuiz({ context });
-        setQuizData(newQuiz.quiz);
-      });
+      refreshQuiz();
     }
     setActiveTab(value);
   };
@@ -53,7 +67,7 @@ export default function InteractiveZone({ regionName, context, initialQuizData }
               Jawab 5 pertanyaan berikut untuk menguji seberapa baik Anda mengenal {regionName}. Setiap jawaban benar bernilai 20 poin.
             </CardDescription>
           </div>
-          {isPending ? (
+          {isPending || !quizData ? (
             <div className="flex flex-col items-center justify-center min-h-[300px] text-muted-foreground">
               <Loader2 className="h-10 w-10 animate-spin mb-4" />
               <p>Memuat kuis baru...</p>
