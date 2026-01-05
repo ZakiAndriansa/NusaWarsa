@@ -1,68 +1,51 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
+import { HeroCarouselControls } from './hero-carousel-controls';
 
 const backgroundImages = [
-  '/pictures/landing-page/background-1.webp',
-  '/pictures/landing-page/background-2.webp',
-  '/pictures/landing-page/background-3.webp',
+  {
+    src: '/pictures/landing-page/background-1.webp',
+    alt: 'Indonesian cultural heritage scene 1',
+  },
+  {
+    src: '/pictures/landing-page/background-2.webp',
+    alt: 'Indonesian cultural heritage scene 2',
+  },
+  {
+    src: '/pictures/landing-page/background-3.webp',
+    alt: 'Indonesian cultural heritage scene 3',
+  },
 ];
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-
-  // Auto-rotate background every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % backgroundImages.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const handleNext = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setCurrentImageIndex((prev) => (prev + 1) % backgroundImages.length);
-    setTimeout(() => setIsTransitioning(false), 700);
-  };
-
-  const handlePrev = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setCurrentImageIndex((prev) => (prev - 1 + backgroundImages.length) % backgroundImages.length);
-    setTimeout(() => setIsTransitioning(false), 700);
-  };
-
-  const handleDotClick = (index: number) => {
-    if (isTransitioning || index === currentImageIndex) return;
-    setIsTransitioning(true);
-    setCurrentImageIndex(index);
-    setTimeout(() => setIsTransitioning(false), 700);
-  };
 
   return (
     <section id="home" className="relative flex min-h-screen h-screen w-full items-center justify-center overflow-hidden">
-      {/* Background Images - Server-side rendered with CSS */}
+      {/* Background Images - Optimized with Next.js Image */}
       {backgroundImages.map((image, index) => (
         <div
-          key={image}
+          key={image.src}
           className={`absolute inset-0 -z-10 transition-opacity duration-700 ${
             index === currentImageIndex ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{
-            backgroundImage: `url(${image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}
         >
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            priority={index === 0}
+            quality={90}
+            sizes="100vw"
+            className="object-cover"
+          />
           {/* Dark overlay for better text readability */}
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/40 z-10" />
         </div>
       ))}
 
@@ -70,20 +53,10 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-transparent to-background" />
 
       {/* Indicator Dots */}
-      <div className="absolute bottom-20 sm:bottom-24 left-1/2 -translate-x-1/2 z-10 flex gap-2">
-        {backgroundImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => handleDotClick(index)}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              index === currentImageIndex
-                ? 'w-8 bg-primary'
-                : 'w-2 bg-white/50 hover:bg-white/80'
-            }`}
-            aria-label={`Go to background ${index + 1}`}
-          />
-        ))}
-      </div>
+      <HeroCarouselControls
+        totalImages={backgroundImages.length}
+        onImageChange={setCurrentImageIndex}
+      />
 
       <div className="container text-center relative z-10 px-4 sm:px-6">
         <div className="animate-fade-in-up">

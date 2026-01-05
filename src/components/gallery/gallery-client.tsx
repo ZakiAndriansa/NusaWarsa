@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import Image from 'next/image';
 import { traditionsData } from '@/lib/data';
 import type { Tradition, TraditionCategory } from '@/lib/types';
 import { Card, CardContent } from '@/components/ui/card';
@@ -76,19 +77,16 @@ const TraditionCard = ({
         <Card className="group overflow-hidden relative shadow-lg hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 transform hover:-translate-y-2 bg-transparent border-none">
           {image && (
             <div className={`relative w-full overflow-hidden ${shape.mobileAspect} ${shape.tabletAspect} ${shape.desktopAspect} ${shape.borderRadius}`}>
-              <img
+              <Image
                 src={image.imageUrl}
                 alt={tradition.name}
-                className={`w-full h-full object-cover transition-all duration-700 ${
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                quality={85}
+                className={`object-cover transition-all duration-700 ${
                   isHovered ? 'scale-110 brightness-75' : 'scale-100 brightness-100'
                 }`}
                 data-ai-hint={image.imageHint}
-                loading="lazy"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/placeholder-image.jpg';
-                  target.onerror = null; // Prevent infinite loop
-                }}
               />
               {/* Overlay gradient */}
               <div className={`absolute inset-0 bg-gradient-to-t transition-opacity duration-500 ${
