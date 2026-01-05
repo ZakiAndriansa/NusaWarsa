@@ -5,6 +5,8 @@ import { Sparkles, Ship } from 'lucide-react';
 import ChatSejarawan from '@/components/timeline/chat-sejarawan';
 import AnimatedWrapper from '@/components/ui/animated-wrapper';
 import Image from 'next/image';
+import { useState } from 'react';
+import { HeroImageSkeleton } from '@/components/ui/image-skeleton';
 import type { TimelineEvent } from '@/lib/types';
 
 interface TimelineDetailClientProps {
@@ -13,6 +15,7 @@ interface TimelineDetailClientProps {
 }
 
 export default function TimelineDetailClient({ event, timelineImageUrl }: TimelineDetailClientProps) {
+  const [heroLoading, setHeroLoading] = useState(true);
   const getEraTitle = (era: string) => {
     switch(era) {
       case 'kerajaan': return 'Babak 1: Era Kejayaan Kerajaan';
@@ -28,14 +31,18 @@ export default function TimelineDetailClient({ event, timelineImageUrl }: Timeli
       {timelineImageUrl && (
         <AnimatedWrapper forceAnimate={true}>
           <div className="relative h-[40vh] sm:h-[50vh] lg:h-[60vh] w-full overflow-hidden">
+            {heroLoading && (
+              <HeroImageSkeleton className="h-[40vh] sm:h-[50vh] lg:h-[60vh] w-full" />
+            )}
             <Image
               src={timelineImageUrl}
               alt={event.title}
               fill
               priority
-              className="object-cover"
+              className={`object-cover transition-opacity duration-300 ${heroLoading ? 'opacity-0' : 'opacity-100'}`}
               sizes="100vw"
               quality={85}
+              onLoad={() => setHeroLoading(false)}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent z-10" />
           </div>

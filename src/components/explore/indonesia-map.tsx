@@ -136,13 +136,14 @@ function IndonesiaMapComponent({ regions }: IndonesiaMapProps) {
     <div className="w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-2xl border border-border">
       <div
         ref={mapRef}
-        className="w-full h-full bg-muted"
+        className="w-full h-full bg-muted relative"
       >
         {!mapLoaded && (
-          <div className="w-full h-full flex items-center justify-center">
+          <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-muted z-20">
             <div className="text-center text-muted-foreground">
-              <Loader2 className="h-10 w-10 animate-spin mx-auto mb-4" />
-              <p>Memuat Peta...</p>
+              <Loader2 className="h-10 w-10 sm:h-12 sm:w-12 animate-spin mx-auto mb-4 text-primary" />
+              <p className="text-sm sm:text-base font-medium">Memuat Peta Indonesia...</p>
+              <p className="text-xs sm:text-sm text-muted-foreground/70 mt-2">Mohon tunggu sebentar</p>
             </div>
           </div>
         )}

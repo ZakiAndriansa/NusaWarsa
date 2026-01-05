@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { ImageOff } from 'lucide-react';
+import { Skeleton } from './skeleton';
+import { cn } from '@/lib/utils';
 
 interface SafeImageProps {
   src: string;
@@ -14,6 +16,7 @@ interface SafeImageProps {
   priority?: boolean;
   sizes?: string;
   quality?: number;
+  showSkeleton?: boolean;
 }
 
 export default function SafeImage({
@@ -26,8 +29,10 @@ export default function SafeImage({
   priority = false,
   sizes,
   quality = 75,
+  showSkeleton = true,
 }: SafeImageProps) {
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   // Fallback placeholder image
   const fallbackSrc = '/placeholder-image.jpg';
@@ -35,7 +40,7 @@ export default function SafeImage({
   if (error) {
     return (
       <div
-        className={`flex items-center justify-center bg-muted ${className}`}
+        className={cn('flex items-center justify-center bg-muted', className)}
         style={fill ? undefined : { width, height }}
       >
         <div className="text-center text-muted-foreground">
@@ -47,19 +52,28 @@ export default function SafeImage({
   }
 
   return (
-    <Image
-      src={error ? fallbackSrc : src}
-      alt={alt}
-      width={width}
-      height={height}
-      fill={fill}
-      className={className}
-      priority={priority}
-      sizes={sizes}
-      quality={quality}
-      onError={() => setError(true)}
-      placeholder="blur"
-      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
-    />
+    <div className="relative">
+      {showSkeleton && loading && (
+        <Skeleton
+          className={cn('absolute inset-0 z-10', fill ? 'w-full h-full' : '')}
+          style={fill ? undefined : { width, height }}
+        />
+      )}
+      <Image
+        src={error ? fallbackSrc : src}
+        alt={alt}
+        width={width}
+        height={height}
+        fill={fill}
+        className={cn(className, loading && showSkeleton ? 'opacity-0' : 'opacity-100 transition-opacity duration-300')}
+        priority={priority}
+        sizes={sizes}
+        quality={quality}
+        onError={() => setError(true)}
+        onLoad={() => setLoading(false)}
+        placeholder="blur"
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
+      />
+    </div>
   );
 }

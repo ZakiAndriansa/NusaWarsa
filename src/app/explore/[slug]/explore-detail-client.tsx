@@ -9,6 +9,8 @@ import { Badge } from '@/components/ui/badge';
 import InteractiveZone from '@/components/explore/interactive-zone';
 import ChatBudayawan from '@/components/explore/chat-budayawan';
 import Image from 'next/image';
+import { useState } from 'react';
+import { HeroImageSkeleton, AvatarSkeleton, ImageSkeleton } from '@/components/ui/image-skeleton';
 import type { Region, Tradition } from '@/lib/types';
 
 interface ExploreDetailClientProps {
@@ -27,19 +29,25 @@ export default function ExploreDetailClient({ type, data, mainImageUrl }: Explor
 
 // Tradition Detail Component
 function TraditionDetailPage({ tradition, mainImageUrl }: { tradition: Tradition; mainImageUrl?: string }) {
+  const [heroLoading, setHeroLoading] = useState(true);
+
   return (
     <div className="bg-background">
       {mainImageUrl && (
         <AnimatedWrapper forceAnimate={true}>
           <div className="relative h-[40vh] sm:h-[50vh] lg:h-[60vh] w-full overflow-hidden">
+            {heroLoading && (
+              <HeroImageSkeleton className="h-[40vh] sm:h-[50vh] lg:h-[60vh] w-full" />
+            )}
             <Image
               src={mainImageUrl}
               alt={tradition.name}
               fill
               priority
-              className="object-cover"
+              className={`object-cover transition-opacity duration-300 ${heroLoading ? 'opacity-0' : 'opacity-100'}`}
               sizes="100vw"
               quality={85}
+              onLoad={() => setHeroLoading(false)}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent z-10" />
           </div>
@@ -160,6 +168,8 @@ function TraditionDetailPage({ tradition, mainImageUrl }: { tradition: Tradition
 
 // Region Detail Component (original code)
 function RegionDetailContent({ region, mainImageUrl }: { region: Region; mainImageUrl?: string }) {
+  const [heroLoading, setHeroLoading] = useState(true);
+  const [imageLoadingStates, setImageLoadingStates] = useState<Record<string, boolean>>({});
 
   const cuisineImage = PlaceHolderImages.find(img => img.id === region.details.cuisineImageId);
   const clothingImage = PlaceHolderImages.find(img => img.id === region.details.clothingImageId);
@@ -195,14 +205,18 @@ function RegionDetailContent({ region, mainImageUrl }: { region: Region; mainIma
       {mainImageUrl && (
         <AnimatedWrapper forceAnimate={true}>
           <div className="relative h-[40vh] sm:h-[50vh] lg:h-[60vh] w-full overflow-hidden">
+            {heroLoading && (
+              <HeroImageSkeleton className="h-[40vh] sm:h-[50vh] lg:h-[60vh] w-full" />
+            )}
             <Image
               src={mainImageUrl}
               alt={region.name}
               fill
               priority
-              className="object-cover"
+              className={`object-cover transition-opacity duration-300 ${heroLoading ? 'opacity-0' : 'opacity-100'}`}
               sizes="100vw"
               quality={85}
+              onLoad={() => setHeroLoading(false)}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent z-10" />
           </div>
@@ -237,15 +251,19 @@ function RegionDetailContent({ region, mainImageUrl }: { region: Region; mainIma
                                 <div key={figure.name} className="flex gap-2 sm:gap-3 md:gap-4 items-start">
                                     {figureImage && (
                                         <div className="relative rounded-full aspect-square border-2 border-primary/20 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 flex-shrink-0 overflow-hidden">
+                                            {imageLoadingStates[figure.name] !== false && (
+                                              <AvatarSkeleton className="absolute inset-0" size="md" />
+                                            )}
                                             <Image
                                               src={figureImage.imageUrl}
                                               alt={figure.name}
                                               fill
-                                              className="object-cover"
+                                              className={`object-cover transition-opacity duration-300 ${imageLoadingStates[figure.name] === false ? 'opacity-100' : 'opacity-0'}`}
                                               data-ai-hint={figureImage.imageHint}
                                               sizes="(max-width: 640px) 48px, (max-width: 768px) 64px, 80px"
                                               placeholder="blur"
                                               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
+                                              onLoad={() => setImageLoadingStates(prev => ({ ...prev, [figure.name]: false }))}
                                             />
                                         </div>
                                     )}
@@ -263,15 +281,19 @@ function RegionDetailContent({ region, mainImageUrl }: { region: Region; mainIma
                      <InfoCard icon={<Utensils size={24} />} title="Kuliner Khas">
                         {cuisineImage && (
                            <div className="relative aspect-video rounded-md overflow-hidden mb-2 sm:mb-3 md:mb-4">
+                                {imageLoadingStates['cuisine'] !== false && (
+                                  <ImageSkeleton aspectRatio="video" className="absolute inset-0" />
+                                )}
                                 <Image
                                   src={cuisineImage.imageUrl}
                                   alt="Kuliner Khas"
                                   fill
-                                  className="object-cover"
+                                  className={`object-cover transition-opacity duration-300 ${imageLoadingStates['cuisine'] === false ? 'opacity-100' : 'opacity-0'}`}
                                   data-ai-hint={cuisineImage.imageHint}
                                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                                   placeholder="blur"
                                   blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
+                                  onLoad={() => setImageLoadingStates(prev => ({ ...prev, cuisine: false }))}
                                 />
                            </div>
                         )}
@@ -282,15 +304,19 @@ function RegionDetailContent({ region, mainImageUrl }: { region: Region; mainIma
                      <InfoCard icon={<Shirt size={24} />} title="Pakaian Adat">
                         {clothingImage && (
                            <div className="relative aspect-video rounded-md overflow-hidden mb-2 sm:mb-3 md:mb-4">
+                                {imageLoadingStates['clothing'] !== false && (
+                                  <ImageSkeleton aspectRatio="video" className="absolute inset-0" />
+                                )}
                                 <Image
                                   src={clothingImage.imageUrl}
                                   alt="Pakaian Adat"
                                   fill
-                                  className="object-cover"
+                                  className={`object-cover transition-opacity duration-300 ${imageLoadingStates['clothing'] === false ? 'opacity-100' : 'opacity-0'}`}
                                   data-ai-hint={clothingImage.imageHint}
                                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                                   placeholder="blur"
                                   blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
+                                  onLoad={() => setImageLoadingStates(prev => ({ ...prev, clothing: false }))}
                                 />
                            </div>
                         )}
@@ -301,15 +327,19 @@ function RegionDetailContent({ region, mainImageUrl }: { region: Region; mainIma
                      <InfoCard icon={<Drama size={24} />} title="Tradisi Unik">
                         {traditionImage && (
                            <div className="relative aspect-video rounded-md overflow-hidden mb-2 sm:mb-3 md:mb-4">
+                                {imageLoadingStates['tradition'] !== false && (
+                                  <ImageSkeleton aspectRatio="video" className="absolute inset-0" />
+                                )}
                                 <Image
                                   src={traditionImage.imageUrl}
                                   alt="Tradisi Unik"
                                   fill
-                                  className="object-cover"
+                                  className={`object-cover transition-opacity duration-300 ${imageLoadingStates['tradition'] === false ? 'opacity-100' : 'opacity-0'}`}
                                   data-ai-hint={traditionImage.imageHint}
                                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                                   placeholder="blur"
                                   blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
+                                  onLoad={() => setImageLoadingStates(prev => ({ ...prev, tradition: false }))}
                                 />
                            </div>
                         )}
