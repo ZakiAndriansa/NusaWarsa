@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import InteractiveZone from '@/components/explore/interactive-zone';
 import ChatBudayawan from '@/components/explore/chat-budayawan';
+import Image from 'next/image';
 import type { Region, Tradition } from '@/lib/types';
 
 interface ExploreDetailClientProps {
@@ -30,16 +31,17 @@ function TraditionDetailPage({ tradition, mainImageUrl }: { tradition: Tradition
     <div className="bg-background">
       {mainImageUrl && (
         <AnimatedWrapper forceAnimate={true}>
-          <div
-            className="relative h-[40vh] sm:h-[50vh] lg:h-[60vh] w-full"
-            style={{
-              backgroundImage: `url(${mainImageUrl})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-            }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />
+          <div className="relative h-[40vh] sm:h-[50vh] lg:h-[60vh] w-full overflow-hidden">
+            <Image
+              src={mainImageUrl}
+              alt={tradition.name}
+              fill
+              priority
+              className="object-cover"
+              sizes="100vw"
+              quality={85}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent z-10" />
           </div>
         </AnimatedWrapper>
       )}
@@ -192,16 +194,17 @@ function RegionDetailContent({ region, mainImageUrl }: { region: Region; mainIma
     <div className="bg-background">
       {mainImageUrl && (
         <AnimatedWrapper forceAnimate={true}>
-          <div
-            className="relative h-[40vh] sm:h-[50vh] lg:h-[60vh] w-full"
-            style={{
-              backgroundImage: `url(${mainImageUrl})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-            }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />
+          <div className="relative h-[40vh] sm:h-[50vh] lg:h-[60vh] w-full overflow-hidden">
+            <Image
+              src={mainImageUrl}
+              alt={region.name}
+              fill
+              priority
+              className="object-cover"
+              sizes="100vw"
+              quality={85}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent z-10" />
           </div>
         </AnimatedWrapper>
       )}
@@ -233,13 +236,18 @@ function RegionDetailContent({ region, mainImageUrl }: { region: Region; mainIma
                             return (
                                 <div key={figure.name} className="flex gap-2 sm:gap-3 md:gap-4 items-start">
                                     {figureImage && (
-                                        <img
-                                          src={figureImage.imageUrl}
-                                          alt={figure.name}
-                                          className="rounded-full aspect-square object-cover border-2 border-primary/20 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 flex-shrink-0"
-                                          data-ai-hint={figureImage.imageHint}
-                                          loading="lazy"
-                                        />
+                                        <div className="relative rounded-full aspect-square border-2 border-primary/20 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 flex-shrink-0 overflow-hidden">
+                                            <Image
+                                              src={figureImage.imageUrl}
+                                              alt={figure.name}
+                                              fill
+                                              className="object-cover"
+                                              data-ai-hint={figureImage.imageHint}
+                                              sizes="(max-width: 640px) 48px, (max-width: 768px) 64px, 80px"
+                                              placeholder="blur"
+                                              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
+                                            />
+                                        </div>
                                     )}
                                     <div className="flex-1 min-w-0">
                                         <h4 className="font-bold text-foreground text-xs sm:text-sm md:text-base">{figure.name}</h4>
@@ -255,12 +263,15 @@ function RegionDetailContent({ region, mainImageUrl }: { region: Region; mainIma
                      <InfoCard icon={<Utensils size={24} />} title="Kuliner Khas">
                         {cuisineImage && (
                            <div className="relative aspect-video rounded-md overflow-hidden mb-2 sm:mb-3 md:mb-4">
-                                <img
+                                <Image
                                   src={cuisineImage.imageUrl}
                                   alt="Kuliner Khas"
-                                  className="w-full h-full object-cover"
+                                  fill
+                                  className="object-cover"
                                   data-ai-hint={cuisineImage.imageHint}
-                                  loading="lazy"
+                                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                                  placeholder="blur"
+                                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
                                 />
                            </div>
                         )}
@@ -271,12 +282,15 @@ function RegionDetailContent({ region, mainImageUrl }: { region: Region; mainIma
                      <InfoCard icon={<Shirt size={24} />} title="Pakaian Adat">
                         {clothingImage && (
                            <div className="relative aspect-video rounded-md overflow-hidden mb-2 sm:mb-3 md:mb-4">
-                                <img
+                                <Image
                                   src={clothingImage.imageUrl}
                                   alt="Pakaian Adat"
-                                  className="w-full h-full object-cover"
+                                  fill
+                                  className="object-cover"
                                   data-ai-hint={clothingImage.imageHint}
-                                  loading="lazy"
+                                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                                  placeholder="blur"
+                                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
                                 />
                            </div>
                         )}
@@ -287,12 +301,15 @@ function RegionDetailContent({ region, mainImageUrl }: { region: Region; mainIma
                      <InfoCard icon={<Drama size={24} />} title="Tradisi Unik">
                         {traditionImage && (
                            <div className="relative aspect-video rounded-md overflow-hidden mb-2 sm:mb-3 md:mb-4">
-                                <img
+                                <Image
                                   src={traditionImage.imageUrl}
                                   alt="Tradisi Unik"
-                                  className="w-full h-full object-cover"
+                                  fill
+                                  className="object-cover"
                                   data-ai-hint={traditionImage.imageHint}
-                                  loading="lazy"
+                                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                                  placeholder="blur"
+                                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
                                 />
                            </div>
                         )}

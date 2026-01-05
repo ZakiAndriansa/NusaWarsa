@@ -4,6 +4,7 @@ import { Separator } from '@/components/ui/separator';
 import { Sparkles, Ship } from 'lucide-react';
 import ChatSejarawan from '@/components/timeline/chat-sejarawan';
 import AnimatedWrapper from '@/components/ui/animated-wrapper';
+import Image from 'next/image';
 import type { TimelineEvent } from '@/lib/types';
 
 interface TimelineDetailClientProps {
@@ -26,16 +27,17 @@ export default function TimelineDetailClient({ event, timelineImageUrl }: Timeli
     <div className="bg-background">
       {timelineImageUrl && (
         <AnimatedWrapper forceAnimate={true}>
-          <div
-            className="relative h-[40vh] sm:h-[50vh] lg:h-[60vh] w-full"
-            style={{
-              backgroundImage: `url(${timelineImageUrl})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-            }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />
+          <div className="relative h-[40vh] sm:h-[50vh] lg:h-[60vh] w-full overflow-hidden">
+            <Image
+              src={timelineImageUrl}
+              alt={event.title}
+              fill
+              priority
+              className="object-cover"
+              sizes="100vw"
+              quality={85}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent z-10" />
           </div>
         </AnimatedWrapper>
       )}

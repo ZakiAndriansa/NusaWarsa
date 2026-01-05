@@ -13,6 +13,7 @@ interface SafeImageProps {
   fill?: boolean;
   priority?: boolean;
   sizes?: string;
+  quality?: number;
 }
 
 export default function SafeImage({
@@ -24,9 +25,9 @@ export default function SafeImage({
   fill = false,
   priority = false,
   sizes,
+  quality = 75,
 }: SafeImageProps) {
   const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(true);
 
   // Fallback placeholder image
   const fallbackSrc = '/placeholder-image.jpg';
@@ -46,20 +47,19 @@ export default function SafeImage({
   }
 
   return (
-    <div className={`relative ${loading ? 'animate-pulse bg-muted' : ''}`}>
-      <Image
-        src={error ? fallbackSrc : src}
-        alt={alt}
-        width={width}
-        height={height}
-        fill={fill}
-        className={className}
-        priority={priority}
-        sizes={sizes}
-        onError={() => setError(true)}
-        onLoad={() => setLoading(false)}
-        loading={priority ? undefined : 'lazy'}
-      />
-    </div>
+    <Image
+      src={error ? fallbackSrc : src}
+      alt={alt}
+      width={width}
+      height={height}
+      fill={fill}
+      className={className}
+      priority={priority}
+      sizes={sizes}
+      quality={quality}
+      onError={() => setError(true)}
+      placeholder="blur"
+      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
+    />
   );
 }
