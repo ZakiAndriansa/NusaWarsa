@@ -176,196 +176,6 @@ export const culturalScenarios: CulturalScenario[] = [
     relatedTraditions: ['batik', 'gamelan']
   },
   {
-    id: 'minang-proposal',
-    title: 'Meminang Gadis Minangkabau',
-    description: 'Panduan lengkap meminang dalam adat Minangkabau',
-    region: 'Sumatera Barat',
-    category: 'wedding',
-    difficulty: 'advanced',
-    context: 'Anda (pria) ingin meminang seorang wanita Minang. Dalam adat Minang, yang meminang adalah pihak wanita! Anda dan keluarga perlu memahami prosesi yang unik ini.',
-    learningObjectives: [
-      'Memahami sistem matrilineal Minang',
-      'Mengerti peran mamak (paman dari ibu)',
-      'Belajar tahapan meminang yang benar',
-      'Memahami filosofi siriah carano'
-    ],
-    steps: [
-      {
-        id: 'step-1',
-        order: 1,
-        title: 'Persiapan: Pahami Adat Matrilineal',
-        description: 'Memahami sistem keluarga matrilineal Minangkabau',
-        doList: [
-          'Pahami bahwa pihak wanita yang akan "meminang" pihak pria',
-          'Hormati peran mamak (paman dari ibu) sebagai pengambil keputusan',
-          'Siapkan mental untuk dikunjungi pihak wanita',
-          'Konsultasi dengan keluarga tentang kesiapan',
-          'Pelajari tentang filosofi adat Minang'
-        ],
-        dontList: [
-          'Jangan memaksakan kehendak atau terburu-buru',
-          'Hindari membicarakan adat dengan sembarangan',
-          'Jangan meremehkan peran mamak',
-          'Hindari mengubah adat sesuai keinginan sendiri'
-        ],
-        keyPhrases: [
-          {
-            phrase: 'Kami datang baampuah siriah, basasok pinang',
-            meaning: 'Kami datang membawa sirih dan pinang (pembukaan pinangan)',
-            whenToUse: 'Ucapan pembuka dari pihak wanita saat datang melamar'
-          }
-        ]
-      },
-      {
-        id: 'step-2',
-        order: 2,
-        title: 'Maresek (Penjajakan Awal)',
-        description: 'Tahap awal penjajakan dari pihak wanita',
-        doList: [
-          'Terima kunjungan pihak wanita dengan hormat',
-          'Sediakan sirih dalam carano (tempat sirih)',
-          'Dengarkan maksud kedatangan mereka',
-          'Berikan jawaban yang bijak dan sopan',
-          'Diskusikan dengan keluarga setelahnya'
-        ],
-        dontList: [
-          'Jangan langsung menolak atau menerima',
-          'Hindari sikap sombong atau meremehkan',
-          'Jangan lupa menyediakan jamuan',
-          'Hindari membahas materi terlalu detail di tahap ini'
-        ]
-      },
-      {
-        id: 'step-3',
-        order: 3,
-        title: 'Maminang (Pinangan Resmi)',
-        description: 'Pinangan resmi dari pihak keluarga wanita',
-        doList: [
-          'Sambut rombongan dengan tata cara adat',
-          'Sediakan uang japuik (uang jemputan) sesuai kesepakatan',
-          'Terima tando (tanda) dari pihak wanita',
-          'Diskusikan tanggal pernikahan',
-          'Catat semua kesepakatan dengan jelas'
-        ],
-        dontList: [
-          'Jangan menawar uang japuik dengan tidak sopan',
-          'Hindari perdebatan di depan banyak orang',
-          'Jangan terburu-buru menentukan tanggal',
-          'Hindari sikap tidak menghargai adat'
-        ],
-        keyPhrases: [
-          {
-            phrase: 'Alhamdulillah, kami tarimo jo senang hati',
-            meaning: 'Alhamdulillah, kami terima dengan senang hati',
-            whenToUse: 'Saat menerima pinangan'
-          }
-        ]
-      }
-    ],
-    tips: [
-      'Pihak pria perlu menyiapkan "uang hilang" dan "uang japuik" sesuai kesanggupan',
-      'Hormati peran mamak, mereka yang memutuskan',
-      'Jangan bandingkan dengan adat daerah lain',
-      'Siapkan siriah carano sebagai simbol penghormatan'
-    ],
-    commonMistakes: [
-      'Pihak pria yang aktif melamar (salah dalam adat Minang)',
-      'Mengabaikan peran mamak dalam pengambilan keputusan',
-      'Menawar uang japuik dengan cara yang tidak sopan',
-      'Tidak memahami filosofi di balik setiap tahapan'
-    ],
-    relatedTraditions: ['rendang']
-  },
-  {
-    id: 'toraja-rambu-solo',
-    title: 'Menghadiri Rambu Solo di Toraja',
-    description: 'Panduan menghadiri upacara pemakaman besar Rambu Solo',
-    region: 'Sulawesi Selatan',
-    category: 'funeral',
-    difficulty: 'advanced',
-    context: 'Anda diundang ke upacara Rambu Solo di Tana Toraja, salah satu upacara pemakaman paling megah di Indonesia. Upacara ini bisa berlangsung berhari-hari dengan berbagai prosesi unik.',
-    learningObjectives: [
-      'Memahami kepercayaan Aluk Todolo',
-      'Mengerti prosesi Ma\'nene (ritual jenazah)',
-      'Belajar tentang penyembelihan kerbau sebagai simbol status',
-      'Memahami peran keluarga dalam upacara'
-    ],
-    steps: [
-      {
-        id: 'step-1',
-        order: 1,
-        title: 'Persiapan & Kedatangan',
-        description: 'Mempersiapkan diri untuk upacara multi-hari',
-        doList: [
-          'Siapkan pakaian hitam atau gelap untuk hari pemakaman',
-          'Bawa amplop sesuai kemampuan',
-          'Datang dengan rasa hormat pada kepercayaan Aluk Todolo',
-          'Siapkan stamina untuk upacara yang panjang',
-          'Tanyakan kepada keluarga tentang jadwal prosesi'
-        ],
-        dontList: [
-          'Jangan datang dengan pakaian terlalu cerah atau mencolok',
-          'Hindari sikap tidak hormat pada ritual',
-          'Jangan kaget dengan penyembelihan kerbau (ini bagian dari adat)',
-          'Hindari memaksakan pandangan agama sendiri'
-        ]
-      },
-      {
-        id: 'step-2',
-        order: 2,
-        title: 'Prosesi Penyembelihan Kerbau',
-        description: 'Menyaksikan prosesi penyembelihan kerbau sebagai penghormatan',
-        doList: [
-          'Pahami bahwa jumlah kerbau menandakan status sosial almarhum',
-          'Hormati prosesi dengan tenang',
-          'Tetap di area yang aman dan ditentukan',
-          'Pahami makna spiritual di balik ritual',
-          'Boleh memotret dari jarak aman jika diizinkan'
-        ],
-        dontList: [
-          'Jangan menunjukkan rasa tidak nyaman atau jijik',
-          'Hindari menghalangi prosesi',
-          'Jangan terlalu dekat dengan area penyembelihan',
-          'Hindari komentar negatif tentang tradisi'
-        ]
-      },
-      {
-        id: 'step-3',
-        order: 3,
-        title: 'Pemakaman di Liang (Gua)',
-        description: 'Prosesi pemakaman di liang batu atau gua',
-        doList: [
-          'Ikuti keluarga menuju liang (gua pemakaman)',
-          'Hormati tau-tau (patung kayu perwakilan almarhum)',
-          'Berikan doa sesuai kepercayaan masing-masing',
-          'Ikuti arahan keluarga dan to minaa (pemimpin adat)',
-          'Tetap khidmat saat jenazah dimasukkan ke liang'
-        ],
-        dontList: [
-          'Jangan menyentuh tau-tau tanpa izin',
-          'Hindari memasuki area liang yang terlarang',
-          'Jangan membuat keributan',
-          'Hindari meninggalkan acara sebelum prosesi selesai'
-        ]
-      }
-    ],
-    tips: [
-      'Rambu Solo bisa berlangsung 3-7 hari, tanyakan bagian mana yang wajib dihadiri',
-      'Bawa uang tunai untuk sumbangan (bisa mencapai jutaan untuk keluarga dekat)',
-      'Siapkan mental untuk melihat penyembelihan hewan',
-      'Hormati setiap prosesi meski berbeda dengan kepercayaan Anda',
-      'Bawa kamera jika ingin dokumentasi, tapi selalu minta izin'
-    ],
-    commonMistakes: [
-      'Terkejut atau menunjukkan ketidaknyamanan saat penyembelihan kerbau',
-      'Tidak memahami bahwa upacara ini sangat mahal dan bergengsi',
-      'Meninggalkan acara terlalu cepat',
-      'Tidak menghormati tau-tau dan simbol-simbol adat',
-      'Membandingkan dengan upacara pemakaman di daerah lain'
-    ],
-    relatedTraditions: ['rambu-solo', 'ukiran-toraja']
-  },
-  {
     id: 'balinese-ngaben',
     title: 'Menghadiri Upacara Ngaben di Bali',
     description: 'Panduan menghadiri upacara kremasi Ngaben',
@@ -684,7 +494,198 @@ export const culturalScenarios: CulturalScenario[] = [
       'Makan dengan tangan kiri atau tidak membaca doa'
     ],
     relatedTraditions: ['saman-aceh', 'meuseukat']
-  }
+  },
+  {
+    id: 'minang-proposal',
+    title: 'Meminang Gadis Minangkabau',
+    description: 'Panduan lengkap meminang dalam adat Minangkabau',
+    region: 'Sumatera Barat',
+    category: 'wedding',
+    difficulty: 'advanced',
+    context: 'Anda (pria) ingin meminang seorang wanita Minang. Dalam adat Minang, yang meminang adalah pihak wanita! Anda dan keluarga perlu memahami prosesi yang unik ini.',
+    learningObjectives: [
+      'Memahami sistem matrilineal Minang',
+      'Mengerti peran mamak (paman dari ibu)',
+      'Belajar tahapan meminang yang benar',
+      'Memahami filosofi siriah carano'
+    ],
+    steps: [
+      {
+        id: 'step-1',
+        order: 1,
+        title: 'Persiapan: Pahami Adat Matrilineal',
+        description: 'Memahami sistem keluarga matrilineal Minangkabau',
+        doList: [
+          'Pahami bahwa pihak wanita yang akan "meminang" pihak pria',
+          'Hormati peran mamak (paman dari ibu) sebagai pengambil keputusan',
+          'Siapkan mental untuk dikunjungi pihak wanita',
+          'Konsultasi dengan keluarga tentang kesiapan',
+          'Pelajari tentang filosofi adat Minang'
+        ],
+        dontList: [
+          'Jangan memaksakan kehendak atau terburu-buru',
+          'Hindari membicarakan adat dengan sembarangan',
+          'Jangan meremehkan peran mamak',
+          'Hindari mengubah adat sesuai keinginan sendiri'
+        ],
+        keyPhrases: [
+          {
+            phrase: 'Kami datang baampuah siriah, basasok pinang',
+            meaning: 'Kami datang membawa sirih dan pinang (pembukaan pinangan)',
+            whenToUse: 'Ucapan pembuka dari pihak wanita saat datang melamar'
+          }
+        ]
+      },
+      {
+        id: 'step-2',
+        order: 2,
+        title: 'Maresek (Penjajakan Awal)',
+        description: 'Tahap awal penjajakan dari pihak wanita',
+        doList: [
+          'Terima kunjungan pihak wanita dengan hormat',
+          'Sediakan sirih dalam carano (tempat sirih)',
+          'Dengarkan maksud kedatangan mereka',
+          'Berikan jawaban yang bijak dan sopan',
+          'Diskusikan dengan keluarga setelahnya'
+        ],
+        dontList: [
+          'Jangan langsung menolak atau menerima',
+          'Hindari sikap sombong atau meremehkan',
+          'Jangan lupa menyediakan jamuan',
+          'Hindari membahas materi terlalu detail di tahap ini'
+        ]
+      },
+      {
+        id: 'step-3',
+        order: 3,
+        title: 'Maminang (Pinangan Resmi)',
+        description: 'Pinangan resmi dari pihak keluarga wanita',
+        doList: [
+          'Sambut rombongan dengan tata cara adat',
+          'Sediakan uang japuik (uang jemputan) sesuai kesepakatan',
+          'Terima tando (tanda) dari pihak wanita',
+          'Diskusikan tanggal pernikahan',
+          'Catat semua kesepakatan dengan jelas'
+        ],
+        dontList: [
+          'Jangan menawar uang japuik dengan tidak sopan',
+          'Hindari perdebatan di depan banyak orang',
+          'Jangan terburu-buru menentukan tanggal',
+          'Hindari sikap tidak menghargai adat'
+        ],
+        keyPhrases: [
+          {
+            phrase: 'Alhamdulillah, kami tarimo jo senang hati',
+            meaning: 'Alhamdulillah, kami terima dengan senang hati',
+            whenToUse: 'Saat menerima pinangan'
+          }
+        ]
+      }
+    ],
+    tips: [
+      'Pihak pria perlu menyiapkan "uang hilang" dan "uang japuik" sesuai kesanggupan',
+      'Hormati peran mamak, mereka yang memutuskan',
+      'Jangan bandingkan dengan adat daerah lain',
+      'Siapkan siriah carano sebagai simbol penghormatan'
+    ],
+    commonMistakes: [
+      'Pihak pria yang aktif melamar (salah dalam adat Minang)',
+      'Mengabaikan peran mamak dalam pengambilan keputusan',
+      'Menawar uang japuik dengan cara yang tidak sopan',
+      'Tidak memahami filosofi di balik setiap tahapan'
+    ],
+    relatedTraditions: ['rendang']
+  },
+  {
+    id: 'toraja-rambu-solo',
+    title: 'Menghadiri Rambu Solo di Toraja',
+    description: 'Panduan menghadiri upacara pemakaman besar Rambu Solo',
+    region: 'Sulawesi Selatan',
+    category: 'funeral',
+    difficulty: 'advanced',
+    context: 'Anda diundang ke upacara Rambu Solo di Tana Toraja, salah satu upacara pemakaman paling megah di Indonesia. Upacara ini bisa berlangsung berhari-hari dengan berbagai prosesi unik.',
+    learningObjectives: [
+      'Memahami kepercayaan Aluk Todolo',
+      'Mengerti prosesi Ma\'nene (ritual jenazah)',
+      'Belajar tentang penyembelihan kerbau sebagai simbol status',
+      'Memahami peran keluarga dalam upacara'
+    ],
+    steps: [
+      {
+        id: 'step-1',
+        order: 1,
+        title: 'Persiapan & Kedatangan',
+        description: 'Mempersiapkan diri untuk upacara multi-hari',
+        doList: [
+          'Siapkan pakaian hitam atau gelap untuk hari pemakaman',
+          'Bawa amplop sesuai kemampuan',
+          'Datang dengan rasa hormat pada kepercayaan Aluk Todolo',
+          'Siapkan stamina untuk upacara yang panjang',
+          'Tanyakan kepada keluarga tentang jadwal prosesi'
+        ],
+        dontList: [
+          'Jangan datang dengan pakaian terlalu cerah atau mencolok',
+          'Hindari sikap tidak hormat pada ritual',
+          'Jangan kaget dengan penyembelihan kerbau (ini bagian dari adat)',
+          'Hindari memaksakan pandangan agama sendiri'
+        ]
+      },
+      {
+        id: 'step-2',
+        order: 2,
+        title: 'Prosesi Penyembelihan Kerbau',
+        description: 'Menyaksikan prosesi penyembelihan kerbau sebagai penghormatan',
+        doList: [
+          'Pahami bahwa jumlah kerbau menandakan status sosial almarhum',
+          'Hormati prosesi dengan tenang',
+          'Tetap di area yang aman dan ditentukan',
+          'Pahami makna spiritual di balik ritual',
+          'Boleh memotret dari jarak aman jika diizinkan'
+        ],
+        dontList: [
+          'Jangan menunjukkan rasa tidak nyaman atau jijik',
+          'Hindari menghalangi prosesi',
+          'Jangan terlalu dekat dengan area penyembelihan',
+          'Hindari komentar negatif tentang tradisi'
+        ]
+      },
+      {
+        id: 'step-3',
+        order: 3,
+        title: 'Pemakaman di Liang (Gua)',
+        description: 'Prosesi pemakaman di liang batu atau gua',
+        doList: [
+          'Ikuti keluarga menuju liang (gua pemakaman)',
+          'Hormati tau-tau (patung kayu perwakilan almarhum)',
+          'Berikan doa sesuai kepercayaan masing-masing',
+          'Ikuti arahan keluarga dan to minaa (pemimpin adat)',
+          'Tetap khidmat saat jenazah dimasukkan ke liang'
+        ],
+        dontList: [
+          'Jangan menyentuh tau-tau tanpa izin',
+          'Hindari memasuki area liang yang terlarang',
+          'Jangan membuat keributan',
+          'Hindari meninggalkan acara sebelum prosesi selesai'
+        ]
+      }
+    ],
+    tips: [
+      'Rambu Solo bisa berlangsung 3-7 hari, tanyakan bagian mana yang wajib dihadiri',
+      'Bawa uang tunai untuk sumbangan (bisa mencapai jutaan untuk keluarga dekat)',
+      'Siapkan mental untuk melihat penyembelihan hewan',
+      'Hormati setiap prosesi meski berbeda dengan kepercayaan Anda',
+      'Bawa kamera jika ingin dokumentasi, tapi selalu minta izin'
+    ],
+    commonMistakes: [
+      'Terkejut atau menunjukkan ketidaknyamanan saat penyembelihan kerbau',
+      'Tidak memahami bahwa upacara ini sangat mahal dan bergengsi',
+      'Meninggalkan acara terlalu cepat',
+      'Tidak menghormati tau-tau dan simbol-simbol adat',
+      'Membandingkan dengan upacara pemakaman di daerah lain'
+    ],
+    relatedTraditions: ['rambu-solo', 'ukiran-toraja']
+  },
+  
 ];
 
 // Helper function to get scenarios by category
