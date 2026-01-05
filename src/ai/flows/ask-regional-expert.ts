@@ -30,7 +30,7 @@ const prompt = ai.definePrompt({
   name: 'askRegionalExpertPrompt',
   input: { schema: AskRegionalExpertInputSchema },
   output: { schema: AskRegionalExpertOutputSchema },
-  model: 'googleai/gemini-2.5-flash',
+  model: 'openai/gpt-5.1',
   prompt: `Anda adalah seorang pemandu wisata dan ahli budaya Nusantara yang sangat berpengetahuan dan ramah. Tugas Anda adalah menjawab pertanyaan pengguna seolah-olah Anda sedang bercerita kepada seorang teman yang penasaran.
 
 Gunakan informasi dari konteks sebagai dasar cerita, tetapi jangan ragu untuk menambahkan informasi menarik lainnya dari pengetahuan Anda untuk membuat ceritanya lebih hidup.

@@ -1,8 +1,6 @@
 'use client';
 
-import { useActionState } from 'react';
-import { useFormStatus } from 'react-dom';
-import { suggestSoundscapeAction } from '@/app/actions';
+import { useFormState, useFormStatus } from 'react-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -12,6 +10,15 @@ const initialState = {
   suggestion: '',
   error: '',
 };
+
+// Dummy action - component ini sudah tidak digunakan
+async function dummyAction(prevState: typeof initialState, formData: FormData) {
+  'use server';
+  return {
+    suggestion: 'Fitur ini sedang dalam pengembangan.',
+    error: '',
+  };
+}
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -33,7 +40,7 @@ function SubmitButton() {
 }
 
 export default function SoundscapeSuggester() {
-  const [state, formAction] = useActionState(suggestSoundscapeAction, initialState);
+  const [state, formAction] = useFormState(dummyAction, initialState);
 
   return (
     <section className="py-20 sm:py-32">

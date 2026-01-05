@@ -30,7 +30,7 @@ const prompt = ai.definePrompt({
   name: 'askHistorianPrompt',
   input: {schema: AskHistorianInputSchema},
   output: {schema: AskHistorianOutputSchema},
-  model: 'googleai/gemini-2.5-flash',
+  model: 'openai/gpt-5.1',
   prompt: `Anda adalah seorang sejarawan dan pendongeng ahli Indonesia yang karismatik. Tugas Anda adalah menjawab pertanyaan pengguna dengan cara yang informatif, menarik, dan mudah dipahami.
 
 Anggaplah konteks yang diberikan sebagai sebuah panggung utama. Jawaban Anda harus berpusat di panggung ini, tetapi jangan ragu untuk membawa properti atau cerita dari "belakang panggung" (pengetahuan umum Anda) untuk memperkaya narasi.

@@ -3,404 +3,554 @@
     {
       "id": "hero-bg",
       "description": "Subtle batik pattern for hero background",
-      "imageUrl": "https://images.unsplash.com/photo-1761516659766-c092d4b1209d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYXRpayUyMHBhdHRlcm58ZW58MHx8fHwxNzY1MjU5NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/landing-page/background-1.webp",
       "imageHint": "batik pattern"
     },
     {
       "id": "sriwijaya-ship",
       "description": "Illustration of a Sriwijayan ship, representing maritime power",
-      "imageUrl": "https://images.unsplash.com/photo-1656682775443-02b6d853a1f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhbmNpZW50JTIwc2hpcHxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/timeline/sriwijaya.webp",
       "imageHint": "ancient ship"
     },
     {
       "id": "majapahit-temple",
       "description": "A grand Indonesian temple, representing Majapahit's architectural prowess.",
-      "imageUrl": "https://images.unsplash.com/photo-1655793488799-1ffba5b22cbd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbmRvbmVzaWFuJTIwdGVtcGxlfGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/timeline/majapahit.webp",
       "imageHint": "indonesian temple"
     },
     {
       "id": "phinisi-ship",
       "description": "A majestic Phinisi ship, symbolizing the seafaring skills of Bugis-Makassar people.",
-      "imageUrl": "https://images.unsplash.com/photo-1595026652393-241f23781524?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwaGluaXNpfGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/timeline/ternate-tidore.webp",
       "imageHint": "phinisi ship"
     },
     {
       "id": "maluku-fort",
       "description": "A colonial fort in the Spice Islands (Maluku).",
-      "imageUrl": "https://images.unsplash.com/photo-1622395420352-0943905b3815?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2xvbmlhbCUyMGZvcnR8ZW58MHx8fHwxNzY1MjU5NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/timeline/ternate-tidore.webp",
       "imageHint": "colonial fort"
     },
     {
       "id": "batavia-old-town",
       "description": "The bustling atmosphere of Batavia's old town (Kota Tua).",
-      "imageUrl": "https://images.unsplash.com/photo-1595183389859-052b003c035f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrb3RhJTIwdHVhJTIwamFrYXJ0YXxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/timeline/voc-batavia.webp",
       "imageHint": "jakarta oldtown"
     },
     {
       "id": "aceh-mosque",
       "description": "The grand Baiturrahman Mosque in Aceh, the 'Veranda of Mecca'.",
-      "imageUrl": "https://images.unsplash.com/photo-1605333502935-513645511b8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhY2VoJTIwbW9zcXVlfGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/timeline/kesultanan-aceh.webp",
       "imageHint": "aceh mosque"
     },
     {
       "id": "bali-modern",
       "description": "A modern cafe in Bali, representing the digital nomad lifestyle.",
-      "imageUrl": "https://images.unsplash.com/photo-1559599422-9f3f31481b24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiYWxpJTIwY2FmZXxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/baliBackground.webp",
       "imageHint": "bali cafe"
     },
     {
       "id": "yogyakarta-art",
       "description": "Contemporary art scene in Yogyakarta.",
-      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcnQlMjBnYWxsZXJ5fGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/timeline/borobudur.webp",
       "imageHint": "art gallery"
     },
     {
       "id": "papua-modern",
       "description": "A blend of nature and infrastructure in Papua.",
-      "imageUrl": "https://images.unsplash.com/photo-1595191839213-7804a625894b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYXB1YSUyMGJyaWRnZXxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/papuaBackground.webp",
       "imageHint": "papua bridge"
     },
     {
       "id": "ikn-nusantara",
       "description": "Architectural render of the new capital city, IKN Nusantara",
-      "imageUrl": "https://images.unsplash.com/photo-1512364615838-8088a04a778b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmdXR1cmlzdGljJTIwY2l0eXxlbnwwfHx8fDE3NjUyNDIzMjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/timeline/ikn.webp",
       "imageHint": "futuristic city"
     },
     {
       "id": "map-background",
       "description": "Artistic map of Indonesia",
-      "imageUrl": "https://images.unsplash.com/photo-1586863065451-6a82fa7e81b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxpbmRvbmVzaWElMjBtYXB8ZW58MHx8fHwxNzY1MjQ4Mjc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/landing-page/background-2.webp",
       "imageHint": "indonesia map"
     },
     {
       "id": "sumatera-region",
       "description": "Scenery from Sumatera",
-      "imageUrl": "https://images.unsplash.com/photo-1642762428067-7ef09dee28f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzdW1hdGVyYSUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/sumatraBackground.webp",
       "imageHint": "sumatera landscape"
     },
     {
       "id": "jawa-region",
       "description": "Scenery from Jawa",
-      "imageUrl": "https://images.unsplash.com/photo-1722016145515-b0ca4961e18f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYXdhJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/jawaBackground.webp",
       "imageHint": "jawa landscape"
     },
     {
       "id": "kalimantan-region",
       "description": "Scenery from Kalimantan",
-      "imageUrl": "https://images.unsplash.com/photo-1719546744531-f004a0b5fe3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxrYWxpbWFudGFuJTIwZm9yZXN0fGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/kalimantanBackground.webp",
       "imageHint": "kalimantan forest"
     },
     {
       "id": "sulawesi-region",
       "description": "Scenery from Sulawesi",
-      "imageUrl": "https://images.unsplash.com/photo-1696326790529-e6a24574db1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzdWxhd2VzaSUyMGJlYWNofGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/sulawesiBackground.webp",
       "imageHint": "sulawesi beach"
     },
     {
       "id": "papua-region",
       "description": "Scenery from Papua",
-      "imageUrl": "https://images.unsplash.com/photo-1700144068847-d2b8f5c07dae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwYXB1YSUyMG1vdW50YWluc3xlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/papuaBackground.webp",
       "imageHint": "papua mountains"
     },
     {
       "id": "bali-nt-region",
       "description": "Scenery from Bali & Nusa Tenggara",
-      "imageUrl": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYWxpJTIwdGVtcGxlfGVufDB8fHx8MTc2NTI0ODI3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/baliBackground.webp",
       "imageHint": "bali temple"
     },
     {
       "id": "maluku-region",
       "description": "Scenery from Maluku",
-      "imageUrl": "https://images.unsplash.com/photo-1660307892397-ca716548d577?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWx1a3UlMjBpc2xhbmRzfGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/malukuBackground.webp",
       "imageHint": "maluku islands"
     },
     {
       "id": "tari-piring",
       "description": "Tari Piring dance",
-      "imageUrl": "https://images.unsplash.com/photo-1749718278933-9359bdcc7c00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwbGF0ZSUyMGRhbmNlfGVufDB8fHx8MTc2NTI3NjAyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/gallery/tari-piring.webp",
       "imageHint": "plate dance"
     },
     {
       "id": "tari-saman",
       "description": "Tari Saman dance",
-      "imageUrl": "https://images.unsplash.com/photo-1520732789276-a0ebed2eeabd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxncm91cCUyMGRhbmNlfGVufDB8fHx8MTc2NTE3MTkyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/gallery/tari-saman.webp",
       "imageHint": "group dance"
     },
     {
       "id": "tari-kecak",
       "description": "Tari Kecak dance",
-      "imageUrl": "https://images.unsplash.com/photo-1714738041039-e3a874e35934?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmaXJlJTIwZGFuY2V8ZW58MHx8fHwxNzY1MjQ4Mjc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/gallery/tari-kecak.webp",
       "imageHint": "fire dance"
     },
     {
       "id": "batik",
       "description": "Batik crafting",
-      "imageUrl": "https://images.unsplash.com/photo-1761516659902-2994696b362e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiYXRpayUyMGZhYnJpY3xlbnwwfHx8fDE3NjUxNjk4NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/gallery/batik.webp",
       "imageHint": "batik fabric"
     },
     {
       "id": "tenun",
       "description": "Tenun weaving",
-      "imageUrl": "https://images.unsplash.com/photo-1612978277713-8af3d4665036?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMHdlYXZpbmd8ZW58MHx8fHwxNzY1MjU5NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/gallery/tenun.webp",
       "imageHint": "traditional weaving"
     },
     {
       "id": "wayang",
       "description": "Wayang Kulit shadow puppets",
-      "imageUrl": "https://images.unsplash.com/photo-1620409123739-3849e65df57a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzaGFkb3clMjBwdXBwZXRzfGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/gallery/wayang-kulit.webp",
       "imageHint": "shadow puppets"
     },
     {
       "id": "ngaben",
       "description": "Ngaben ceremony",
-      "imageUrl": "https://images.unsplash.com/photo-1634909995140-82b10b08bd2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiYWxpbmVzZSUyMGNlcmVtb255fGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/gallery/ngaben.webp",
       "imageHint": "balinese ceremony"
     },
     {
       "id": "gamelan",
       "description": "Gamelan instruments",
-      "imageUrl": "https://images.unsplash.com/photo-1564528183203-ec84690e06a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtdXNpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzY1MTc0ODk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/gallery/gamelan.webp",
       "imageHint": "musical instruments"
     },
     {
       "id": "default-tradition-1",
       "description": "Default image for tradition gallery",
-      "imageUrl": "https://images.unsplash.com/photo-1643259993518-02a4d3088f46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbmRvbmVzaWFuJTIwY3VsdHVyZXxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/gallery/batik.webp",
       "imageHint": "indonesian culture"
     },
     {
       "id": "default-tradition-2",
       "description": "Default image for tradition gallery",
-      "imageUrl": "https://images.unsplash.com/photo-1760638260787-5f9e4f32a69e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0cmFkaXRpb25hbCUyMGFydHxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/gallery/wayang-kulit.webp",
       "imageHint": "traditional art"
     },
     {
       "id": "default-tradition-3",
       "description": "Default image for tradition gallery",
-      "imageUrl": "https://images.unsplash.com/photo-1721508490082-2c32c0abf8dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsb2NhbCUyMGNyYWZ0fGVufDB8fHx8MTc2NTI1OTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/gallery/tenun.webp",
       "imageHint": "local craft"
     },
     {
       "id": "imam-bonjol",
       "description": "Portrait of Tuanku Imam Bonjol",
-      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFsZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NTI3OTkyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/Tuanku-Imam-Bonjol.webp",
       "imageHint": "male portrait"
     },
     {
       "id": "sutan-sjahrir",
       "description": "Portrait of Sutan Sjahrir",
-      "imageUrl": "https://images.unsplash.com/photo-1656338997878-279d71d48f6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1Mjc5OTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/SutanSjahrir.webp",
       "imageHint": "male portrait"
     },
     {
       "id": "chairil-anwar",
       "description": "Portrait of Chairil Anwar",
-      "imageUrl": "https://images.unsplash.com/photo-1692197393247-c76e1bd8f29e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1Mjc5OTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/chairilAnwar.webp",
       "imageHint": "male portrait"
     },
     {
       "id": "gajah-mada",
       "description": "Illustration of Gajah Mada",
-      "imageUrl": "https://images.unsplash.com/photo-1743965127365-b184dd9020b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3YXJyaW9yJTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc2NTI5NTA2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/landing-page/background-3.webp",
       "imageHint": "warrior illustration"
     },
     {
       "id": "diponegoro",
       "description": "Portrait of Pangeran Diponegoro",
-      "imageUrl": "https://images.unsplash.com/photo-1596701957770-ce421a997579?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyb3lhbCUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NTI5NTA2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/landing-page/background-3.webp",
       "imageHint": "royal portrait"
     },
     {
       "id": "kartini",
       "description": "Portrait of R.A. Kartini",
-      "imageUrl": "https://images.unsplash.com/photo-1634149134664-ca3598f29da5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmZW1hbGUlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjUyODUyNDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/landing-page/background-3.webp",
       "imageHint": "female portrait"
     },
     {
       "id": "antasari",
       "description": "Portrait of Pangeran Antasari",
-      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1Mjc5OTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/pangeranAntasari.webp",
       "imageHint": "male portrait"
     },
     {
       "id": "tjilik-riwut",
       "description": "Portrait of Tjilik Riwut",
-      "imageUrl": "https://images.unsplash.com/photo-1692197393247-c76e1bd8f29e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1Mjc5OTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/tjilikRiwut.webp",
       "imageHint": "male portrait"
     },
     {
       "id": "hasanuddin",
       "description": "Illustration of Sultan Hasanuddin",
-      "imageUrl": "https://images.unsplash.com/photo-1715625911582-afd2db935496?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdWx0YW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/sultanHasanudin.webp",
       "imageHint": "sultan portrait"
     },
     {
       "id": "emmy-saelan",
       "description": "Portrait of Emmy Saelan",
-      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjUyODUyNDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/emmySaelan.webp",
       "imageHint": "female portrait"
     },
     {
       "id": "frans-kaisiepo",
       "description": "Portrait of Frans Kaisiepo",
-      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1Mjc5OTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/fransKaisiepo.webp",
       "imageHint": "male portrait"
     },
     {
       "id": "silas-papare",
       "description": "Portrait of Silas Papare",
-      "imageUrl": "https://images.unsplash.com/photo-1715423058726-ddea1ec51b66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1Mjc5OTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/silasPapare.webp",
       "imageHint": "male portrait"
     },
     {
       "id": "ngurah-rai",
       "description": "Portrait of I Gusti Ngurah Rai",
-      "imageUrl": "https://images.unsplash.com/photo-1700774607216-c37bdeaf9869?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtaWxpdGFyeSUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NTI5NTA2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/Gusti_ngurah_rai.webp",
       "imageHint": "military portrait"
     },
     {
       "id": "walter-spies",
       "description": "Portrait of Walter Spies",
-      "imageUrl": "https://images.unsplash.com/photo-1614204424926-196a80bf0be8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcnRpc3QlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/walterSpies.webp",
       "imageHint": "artist portrait"
     },
     {
       "id": "pattimura",
       "description": "Illustration of Kapitan Pattimura",
-      "imageUrl": "https://images.unsplash.com/photo-1543844481-52e5d6b93760?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3YXJyaW9yJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1Mjk1MDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/kapitanPattimura.webp",
       "imageHint": "warrior portrait"
     },
     {
       "id": "baabullah",
       "description": "Illustration of Sultan Baabullah",
-      "imageUrl": "https://images.unsplash.com/photo-1729342036455-608a3d1f164a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdWx0YW4lMjBpbGx1c3RyYXRpb258ZW58MHx8fHwxNzY1Mjk1MDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/sultanBaabullah.webp",
       "imageHint": "sultan illustration"
     },
     {
       "id": "lompat-batu",
       "description": "Nias stone jumping tradition",
-      "imageUrl": "https://images.unsplash.com/photo-1763656448126-b2f8c149df99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjdWx0dXJhbCUyMHJpdHVhbHxlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/tabuik.webp",
       "imageHint": "cultural ritual"
     },
     {
       "id": "ulos",
       "description": "Ulos fabric from Batak",
-      "imageUrl": "https://images.unsplash.com/photo-1762111908782-fabda1a1fe1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0cmFkaXRpb25hbCUyMGZhYnJpY3xlbnwwfHx8fDE3NjUyNDgyNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/ulos.webp",
       "imageHint": "traditional fabric"
     },
     {
       "id": "rendang",
       "description": "Rendang dish",
-      "imageUrl": "https://images.unsplash.com/photo-1484980972926-edee96e0960d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmb29kJTIwZGlzaHxlbnwwfHx8fDE3NjUyNTk2MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/rendang.webp",
       "imageHint": "food dish"
     },
     {
       "id": "kasada-bromo",
       "description": "Kasada Bromo ceremony",
-      "imageUrl": "https://images.unsplash.com/photo-1700539944979-727d8827ed4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx2b2xjYW5vJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzY1Mjk1MDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/gallery/kasada.webp",
       "imageHint": "volcano ceremony"
     },
     {
       "id": "batik-kebaya",
       "description": "Woman wearing Batik and Kebaya",
-      "imageUrl": "https://images.unsplash.com/photo-1743080331401-b5164105b070?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0cmFkaXRpb25hbCUyMGRyZXNzfGVufDB8fHx8MTc2NTE4MzYyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/gallery/batik.webp",
       "imageHint": "traditional dress"
     },
     {
       "id": "gudeg",
       "description": "Gudeg dish from Yogyakarta",
-      "imageUrl": "https://images.unsplash.com/photo-1618666185697-b4aabeedd8bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Zm9vZCUyMGRpc2h8ZW58MHx8fHwxNzY1MjU5NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/gallery/gudeg.webp",
       "imageHint": "food dish"
     },
     {
       "id": "erau-ceremony",
       "description": "Erau festival in Kalimantan",
-      "imageUrl": "https://images.unsplash.com/photo-1765248228659-e36323cc966c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjdWx0dXJhbCUyMGZlc3RpdmFsfGVufDB8fHx8MTc2NTI3MTMzNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/UpacaraadatErau.webp",
       "imageHint": "cultural festival"
     },
     {
       "id": "dayak-clothing",
       "description": "Dayak traditional attire",
-      "imageUrl": "https://images.unsplash.com/photo-1760637626138-3c2ff9eca63f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cmliYWwlMjBjbG90aGluZ3xlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/bajuAdatDayak.webp",
       "imageHint": "tribal clothing"
     },
     {
       "id": "soto-banjar",
       "description": "Soto Banjar soup",
-      "imageUrl": "https://images.unsplash.com/photo-1734772682896-2db9bf254596?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c291cCUyMGRpc2h8ZW58MHx8fHwxNzY1Mjk1MDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/sotoBanjar.webp",
       "imageHint": "soup dish"
     },
     {
       "id": "rambu-solo",
       "description": "Rambu Solo funeral ceremony in Toraja",
-      "imageUrl": "https://images.unsplash.com/photo-1644665357133-7dd19a96c168?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmdW5lcmFsJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzY1MjQ4Mjc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/rambuSolo.webp",
       "imageHint": "funeral ceremony"
     },
     {
       "id": "baju-bodo",
       "description": "Baju Bodo, traditional clothing from South Sulawesi",
-      "imageUrl": "https://images.unsplash.com/photo-1614440455218-e4469b5d899e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGRyZXNzfGVufDB8fHx8MTc2NTE4MzYyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/baju-bodo.webp",
       "imageHint": "traditional dress"
     },
     {
       "id": "coto-makassar",
       "description": "Coto Makassar soup",
-      "imageUrl": "https://images.unsplash.com/photo-1615444431936-df9a932734f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YmVlZiUyMHNvdXB8ZW58MHx8fHwxNzY1MjQ4Mjc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/sotoMakasar.webp",
       "imageHint": "beef soup"
     },
     {
       "id": "bakar-batu",
       "description": "Bakar Batu (burning stone) cooking tradition in Papua",
-      "imageUrl": "https://images.unsplash.com/photo-1680695303876-7feec37520d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb29raW5nJTIwcml0dWFsfGVufDB8fHx8MTc2NTI5NTA2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/tradisiBakarBatu.webp",
       "imageHint": "cooking ritual"
     },
     {
       "id": "koteka",
       "description": "Man wearing Koteka in Papua",
-      "imageUrl": "https://images.unsplash.com/photo-1584137283390-2284026dc0e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmliYWwlMjBhdHRpcmV8ZW58MHx8fHwxNzY1Mjk1MDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/koteka.webp",
       "imageHint": "tribal attire"
     },
     {
       "id": "papeda",
       "description": "Papeda, sago porridge from Papua",
-      "imageUrl": "https://images.unsplash.com/photo-1682692094951-2972f739cc6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwb3JyaWRnZSUyMGRpc2h8ZW58MHx8fHwxNzY1Mjk1MDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/papeda.webp",
       "imageHint": "porridge dish"
     },
     {
       "id": "subak",
       "description": "Subak irrigation system in Bali",
-      "imageUrl": "https://images.unsplash.com/photo-1665030996710-3661497490e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxyaWNlJTIwcGFkZGllc3xlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/ngaben.webp",
       "imageHint": "rice paddies"
     },
     {
       "id": "payas-agung",
       "description": "Balinese Payas Agung wedding attire",
-      "imageUrl": "https://images.unsplash.com/photo-1600287792237-3f66db635a73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2VkZGluZyUyMGRyZXNzfGVufDB8fHx8MTc2NTIzNTEzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/payasAgung.webp",
       "imageHint": "wedding dress"
     },
     {
       "id": "ayam-betutu",
       "description": "Ayam Betutu dish from Bali",
-      "imageUrl": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjaGlja2VuJTIwZGlzaHxlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/ayamBetutu.webp",
       "imageHint": "chicken dish"
     },
     {
       "id": "pukul-sapu",
       "description": "Pukul Sapu tradition in Maluku",
-      "imageUrl": "https://images.unsplash.com/photo-1707405432940-6124db71c729?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyaXR1YWwlMjBmaWdodHxlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/tradisiPukulSapu.webp",
       "imageHint": "ritual fight"
     },
     {
       "id": "baju-cele",
       "description": "Baju Cele from Maluku",
-      "imageUrl": "https://images.unsplash.com/photo-1624001051001-8287dfecc07c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwYXR0ZXJuZWQlMjBkcmVzc3xlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/bajuCele.webp",
       "imageHint": "patterned dress"
     },
     {
       "id": "ikan-kuah-pala",
       "description": "Ikan Kuah Pala Banda dish",
-      "imageUrl": "https://images.unsplash.com/photo-1637699612253-b2d5f7a4ea59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmaXNoJTIwc291cHxlbnwwfHx8fDE3NjUyOTUwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/pictures/regions/ikanKuahPalaBanda.webp",
       "imageHint": "fish soup"
+    },
+    {
+      "id": "tari-pendet",
+      "description": "Tari Pendet dance from Bali",
+      "imageUrl": "/pictures/gallery/tari-pendet.webp",
+      "imageHint": "balinese dance"
+    },
+    {
+      "id": "tari-tor-tor",
+      "description": "Tari Tor-Tor dance from Batak",
+      "imageUrl": "/pictures/gallery/tari-tor-tor.webp",
+      "imageHint": "batak dance"
+    },
+    {
+      "id": "tari-jaipong",
+      "description": "Tari Jaipong dance from West Java",
+      "imageUrl": "/pictures/gallery/tari-jaipong.webp",
+      "imageHint": "sundanese dance"
+    },
+    {
+      "id": "angklung",
+      "description": "Angklung musical instrument",
+      "imageUrl": "/pictures/gallery/angklung.webp",
+      "imageHint": "bamboo instrument"
+    },
+    {
+      "id": "sasando",
+      "description": "Sasando musical instrument from NTT",
+      "imageUrl": "/pictures/gallery/sasando.webp",
+      "imageHint": "traditional string instrument"
+    },
+    {
+      "id": "kolintang",
+      "description": "Kolintang musical instrument from North Sulawesi",
+      "imageUrl": "/pictures/gallery/kolintang.webp",
+      "imageHint": "wooden percussion instrument"
+    },
+    {
+      "id": "ukiran-asmat",
+      "description": "Asmat wood carving from Papua",
+      "imageUrl": "/pictures/gallery/ukiran-asmat.webp",
+      "imageHint": "tribal wood carving"
+    },
+    {
+      "id": "songket",
+      "description": "Songket traditional fabric",
+      "imageUrl": "/pictures/gallery/songket.webp",
+      "imageHint": "woven fabric with gold threads"
+    },
+    {
+      "id": "keris",
+      "description": "Keris traditional dagger",
+      "imageUrl": "/pictures/gallery/keris.webp",
+      "imageHint": "traditional weapon"
+    },
+    {
+      "id": "sekaten",
+      "description": "Sekaten ceremony in Yogyakarta",
+      "imageUrl": "/pictures/gallery/sekaten.webp",
+      "imageHint": "javanese ceremony"
+    },
+    {
+      "id": "tabuik",
+      "description": "Tabuik ceremony in West Sumatra",
+      "imageUrl": "/pictures/gallery/tabuik.webp",
+      "imageHint": "cultural ceremony"
+    },
+    {
+      "id": "pempek",
+      "description": "Pempek fish cake from Palembang",
+      "imageUrl": "/pictures/gallery/pempek.webp",
+      "imageHint": "fish cake dish"
+    },
+    {
+      "id": "tari-reog",
+      "description": "Tari Reog Ponorogo",
+      "imageUrl": "/pictures/gallery/tari-reog-riponegoro.webp",
+      "imageHint": "reog dance"
+    },
+    {
+      "id": "tari-serimpi",
+      "description": "Tari Serimpi from Central Java",
+      "imageUrl": "/pictures/gallery/tari-serimpi.webp",
+      "imageHint": "javanese court dance"
+    },
+    {
+      "id": "tari-gantar",
+      "description": "Tari Gantar from Kalimantan",
+      "imageUrl": "/pictures/gallery/tari-gantar.webp",
+      "imageHint": "dayak dance"
+    },
+    {
+      "id": "ukiran-toraja",
+      "description": "Toraja wood carving",
+      "imageUrl": "/pictures/gallery/ukiran-toraja.webp",
+      "imageHint": "toraja carving"
+    },
+    {
+      "id": "fahombo",
+      "description": "Fahombo stone jumping tradition from Nias",
+      "imageUrl": "/pictures/gallery/fahombo.webp",
+      "imageHint": "stone jumping"
+    },
+    {
+      "id": "mappalili",
+      "description": "Mappalili planting ceremony from Sulawesi",
+      "imageUrl": "/pictures/gallery/mappalili.webp",
+      "imageHint": "planting ceremony"
+    },
+    {
+      "id": "ayam-taliwang",
+      "description": "Ayam Taliwang from Lombok",
+      "imageUrl": "/pictures/gallery/ayam-taliwang.webp",
+      "imageHint": "grilled chicken dish"
+    },
+    {
+      "id": "mie-aceh",
+      "description": "Mie Aceh spicy noodles",
+      "imageUrl": "/pictures/gallery/mie-aceh.webp",
+      "imageHint": "spicy noodles"
+    },
+    {
+      "id": "tifa",
+      "description": "Tifa drum from Papua and Maluku",
+      "imageUrl": "/pictures/gallery/tifa.webp",
+      "imageHint": "traditional drum"
+    },
+    {
+      "id": "saluang",
+      "description": "Saluang bamboo flute from West Sumatra",
+      "imageUrl": "/pictures/gallery/saluang.webp",
+      "imageHint": "bamboo flute"
+    },
+    {
+      "id": "gong-gede",
+      "description": "Gong Gede ensemble from Bali",
+      "imageUrl": "/pictures/gallery/gong-gede.webp",
+      "imageHint": "balinese gong"
+    },
+    {
+      "id": "anyaman-purun",
+      "description": "Anyaman Purun woven craft from South Kalimantan",
+      "imageUrl": "/pictures/gallery/anyaman-purun.webp",
+      "imageHint": "woven craft"
+    },
+    {
+      "id": "kasada",
+      "description": "Kasada ceremony at Mount Bromo",
+      "imageUrl": "/pictures/gallery/kasada.webp",
+      "imageHint": "bromo ceremony"
     }
   ]
 }

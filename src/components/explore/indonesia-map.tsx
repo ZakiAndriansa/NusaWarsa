@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useRef, useState, memo } from 'react';
 import type { Region } from '@/lib/types';
 import { Loader2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
@@ -9,57 +9,30 @@ interface IndonesiaMapProps {
   regions: Region[];
 }
 
-export default function IndonesiaMap({ regions }: IndonesiaMapProps) {
+function IndonesiaMapComponent({ regions }: IndonesiaMapProps) {
   const [mapLoaded, setMapLoaded] = useState(false);
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<any>(null);
   const router = useRouter();
 
   useEffect(() => {
-    // Load Leaflet from CDN
-    const loadLeaflet = async () => {
-      if (typeof window === 'undefined') return;
+    // Only run on client side
+    if (typeof window === 'undefined') return;
 
-      // Load Leaflet CSS
-      if (!document.querySelector('link[href*="leaflet.css"]')) {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-        link.integrity = 'sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';
-        link.crossOrigin = '';
-        document.head.appendChild(link);
-      }
+    // Dynamic import of Leaflet (only on client)
+    const initMap = async () => {
+      const L = (await import('leaflet')).default;
 
-      // Load Leaflet JS
-      if (!(window as any).L) {
-        const script = document.createElement('script');
-        script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-        script.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
-        script.crossOrigin = '';
-        script.onload = () => initMap();
-        document.head.appendChild(script);
-      } else {
-        initMap();
-      }
-    };
+      if (!mapRef.current || mapInstanceRef.current) return;
 
-    const handleRegionClick = (region: Region) => {
-        router.push(`/explore/${region.id}`);
-    };
-    
-    // Make it globally accessible for the popup button
-    (window as any).selectRegion = (regionId: string) => {
-        const region = regions.find(r => r.id === regionId);
-        if (region) {
-            handleRegionClick(region);
-        }
-    };
+      // Fix default icon paths for local Leaflet
+      delete (L.Icon.Default.prototype as any)._getIconUrl;
+      L.Icon.Default.mergeOptions({
+        iconRetinaUrl: '/leaflet/marker-icon-2x.png',
+        iconUrl: '/leaflet/marker-icon.png',
+        shadowUrl: '/leaflet/marker-shadow.png',
+      });
 
-    const initMap = () => {
-      if (!mapRef.current || mapInstanceRef.current || !(window as any).L) return;
-
-      const L = (window as any).L;
-      
       // Initialize map
       const map = L.map(mapRef.current, {
         center: [-2.5, 118],
@@ -73,68 +46,96 @@ export default function IndonesiaMap({ regions }: IndonesiaMapProps) {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }).addTo(map);
 
+      // Handler for region click
+      const handleRegionClick = (region: Region) => {
+        router.push(`/explore/${region.id}`);
+      };
+
       // Add markers
       regions.forEach((region) => {
-        const marker = L.marker(region.coordinates, {
-          icon: L.icon({
-            iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
-            iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
-            shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-            iconSize: [25, 41],
-            iconAnchor: [12, 41],
-            popupAnchor: [1, -34],
-          })
-        }).addTo(map);
-        
-        const popupContent = `
-          <div style="padding: 0; min-width: 200px; font-family: 'Poppins', sans-serif;">
+        const marker = L.marker(region.coordinates).addTo(map);
+
+        const tooltipContent = `
+          <div style="padding: 12px 12px 12px 16px; min-width: 200px; font-family: 'Poppins', sans-serif;">
             <h3 style="font-family: 'Playfair Display', serif; font-weight: bold; font-size: 18px; margin-bottom: 8px; color: #111827;">
               ${region.name}
             </h3>
             <p style="font-size: 14px; color: #4b5563; margin: 0; line-height: 1.5;">
               Klik untuk memulai kuis!
             </p>
-            <button 
-              onclick="window.selectRegion('${region.id}')"
+            <button
+              data-region-id="${region.id}"
+              class="region-button"
               style="margin-top: 12px; color: #c2882f; font-size: 14px; font-weight: 600; cursor: pointer; background: none; border: none; padding: 0;"
             >
               Mulai Petualangan →
             </button>
           </div>
         `;
-        marker.bindPopup(popupContent);
+
+        // Bind tooltip yang muncul saat hover
+        marker.bindTooltip(tooltipContent, {
+          permanent: false,
+          direction: 'top',
+          offset: [0, -30],
+          className: 'custom-tooltip'
+        });
+
+        // Efek hover dengan filter brightness
+        marker.on('mouseover', function(this: L.Marker) {
+          const icon = this.getElement();
+          if (icon) {
+            icon.style.filter = 'brightness(1.3) drop-shadow(0 0 8px rgba(194, 136, 47, 0.6))';
+            icon.style.transition = 'filter 0.2s ease';
+            icon.style.zIndex = '1000';
+          }
+        });
+
+        marker.on('mouseout', function(this: L.Marker) {
+          const icon = this.getElement();
+          if (icon) {
+            icon.style.filter = '';
+            icon.style.zIndex = '';
+          }
+        });
 
         marker.on('click', () => {
           handleRegionClick(region);
+        });
+
+        // Add event listener to tooltip buttons
+        marker.on('tooltipopen', () => {
+          const button = document.querySelector(`button[data-region-id="${region.id}"]`);
+          if (button) {
+            button.addEventListener('click', () => handleRegionClick(region));
+          }
         });
       });
 
       // Fit bounds
       if (regions.length > 0) {
         const bounds = regions.map(r => r.coordinates);
-        map.fitBounds(bounds, { padding: [50, 50] });
+        map.fitBounds(bounds as any, { padding: [50, 50] });
       }
-      
+
       mapInstanceRef.current = map;
       setMapLoaded(true);
     };
 
-
-    loadLeaflet();
+    initMap();
 
     return () => {
       if (mapInstanceRef.current) {
         mapInstanceRef.current.remove();
         mapInstanceRef.current = null;
       }
-      delete (window as any).selectRegion;
     };
   }, [regions, router]);
 
   return (
     <div className="w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-2xl border border-border">
-      <div 
-        ref={mapRef} 
+      <div
+        ref={mapRef}
         className="w-full h-full bg-muted"
       >
         {!mapLoaded && (
@@ -149,3 +150,6 @@ export default function IndonesiaMap({ regions }: IndonesiaMapProps) {
     </div>
   );
 }
+
+// Memoize to prevent unnecessary re-renders
+export default memo(IndonesiaMapComponent);

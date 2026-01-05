@@ -1,11 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, XCircle, RotateCw, Award, Target } from 'lucide-react';
+import { RotateCw, Award, Target, CheckCircle2, XCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import Confetti from 'react-dom-confetti';
+import Confetti from '@/components/ui/confetti';
 import AnimatedWrapper from '../ui/animated-wrapper';
 
 interface Question {
@@ -16,29 +16,33 @@ interface Question {
 
 interface QuizClientProps {
   quizData: Question[];
+  onRestart?: () => void;
 }
 
-export default function QuizClient({ quizData }: QuizClientProps) {
+export default function QuizClient({ quizData, onRestart }: QuizClientProps) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<(string | null)[]>(Array(quizData.length).fill(null));
   const [isFinished, setIsFinished] = useState(false);
   const [score, setScore] = useState(0);
   const [showConfetti, setShowConfetti] = useState(false);
+  const [showRecap, setShowRecap] = useState(false);
 
-  const handleAnswerSelect = (answer: string) => {
+  const handleAnswerSelect = useCallback((answer: string) => {
     if (isFinished) return;
-    const newAnswers = [...selectedAnswers];
-    newAnswers[currentQuestionIndex] = answer;
-    setSelectedAnswers(newAnswers);
-  };
+    setSelectedAnswers(prev => {
+      const newAnswers = [...prev];
+      newAnswers[currentQuestionIndex] = answer;
+      return newAnswers;
+    });
+  }, [isFinished, currentQuestionIndex]);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     if (currentQuestionIndex < quizData.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     }
-  };
+  }, [currentQuestionIndex, quizData.length]);
 
-  const handleSubmit = () => {
+  const handleSubmit = useCallback(() => {
     let finalScore = 0;
     quizData.forEach((q, index) => {
       if (selectedAnswers[index] === q.correctAnswer) {
@@ -50,12 +54,21 @@ export default function QuizClient({ quizData }: QuizClientProps) {
     if (finalScore === 100) {
         setTimeout(() => setShowConfetti(true), 300);
     }
-  };
-  
-  const handleRestart = () => {
-    // This will just reset the state. To get new questions, the page needs to be reloaded.
-    window.location.reload();
-  };
+  }, [quizData, selectedAnswers]);
+
+  const handleRestart = useCallback(() => {
+    // Call the parent's onRestart to regenerate questions
+    if (onRestart) {
+      onRestart();
+    }
+    // Reset local state
+    setCurrentQuestionIndex(0);
+    setSelectedAnswers(Array(quizData.length).fill(null));
+    setIsFinished(false);
+    setScore(0);
+    setShowConfetti(false);
+    setShowRecap(false);
+  }, [quizData.length, onRestart]);
 
   const currentQuestion = quizData[currentQuestionIndex];
   const selectedAnswer = selectedAnswers[currentQuestionIndex];
@@ -63,26 +76,92 @@ export default function QuizClient({ quizData }: QuizClientProps) {
   if (isFinished) {
     return (
       <AnimatedWrapper>
-        <div className="text-center p-8 max-w-lg mx-auto relative">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <Confetti active={showConfetti} config={{
-                angle: 90,
-                spread: 360,
-                startVelocity: 40,
-                elementCount: 100,
-                decay: 0.9,
-            }}/>
+        <div className="max-w-3xl mx-auto relative">
+          {score === 100 && <Confetti active={showConfetti} />}
+
+          {/* Score Summary */}
+          <div className="text-center pt-8 pb-1">
+            <Award className="h-20 w-20 text-primary mx-auto mb-4 -mt-6" />
+            <h2 className="text-3xl font-bold font-headline">Kuis Selesai!</h2>
+            <p className="text-5xl font-bold my-4 text-foreground">{score}<span className="text-2xl text-muted-foreground">/100</span></p>
+            <p className="text-muted-foreground mb-8">
+              {score === 100 ? "Luar biasa! Anda benar-benar seorang ahli Nusantara." : "Kerja bagus! Teruslah belajar untuk menjadi seorang ahli."}
+            </p>
           </div>
-          <Award className="h-20 w-20 text-primary mx-auto mb-4" />
-          <h2 className="text-3xl font-bold font-headline">Kuis Selesai!</h2>
-          <p className="text-5xl font-bold my-4 text-foreground">{score}<span className="text-2xl text-muted-foreground">/100</span></p>
-          <p className="text-muted-foreground mb-6">
-            {score === 100 ? "Luar biasa! Anda benar-benar seorang ahli Nusantara." : "Kerja bagus! Teruslah belajar untuk menjadi seorang ahli."}
-          </p>
-          <Button onClick={handleRestart}>
-            <RotateCw className="mr-2" />
-            Coba Lagi dengan Soal Baru
-          </Button>
+
+          {/* Answer Recap - Collapsible */}
+          <div className="mb-8">
+            <button
+              onClick={() => setShowRecap(!showRecap)}
+              className="w-full flex items-center justify-center gap-3 py-2 hover:opacity-70 transition-opacity duration-200 cursor-pointer group"
+            >
+              <span className="text-2xl font-headline font-semibold text-amber-800 dark:text-amber-600">Rekap Jawaban</span>
+              {showRecap ? (
+                <ChevronUp className="h-6 w-6 text-amber-800 dark:text-amber-600 group-hover:scale-110 transition-transform" />
+              ) : (
+                <ChevronDown className="h-6 w-6 text-amber-800 dark:text-amber-600 group-hover:scale-110 transition-transform" />
+              )}
+            </button>
+
+            {showRecap && (
+              <div className="space-y-4 animate-in slide-in-from-top-2 duration-200">
+                {quizData.map((question, index) => {
+                  const userAnswer = selectedAnswers[index];
+                  const isCorrect = userAnswer === question.correctAnswer;
+
+                  return (
+                    <Card key={index} className={cn(
+                      "border-2",
+                      isCorrect ? "border-green-500/20 bg-green-50/50 dark:bg-green-950/20" : "border-red-500/20 bg-red-50/50 dark:bg-red-950/20"
+                    )}>
+                      <CardContent className="p-4">
+                        <div className="flex items-start gap-3">
+                          {isCorrect ? (
+                            <CheckCircle2 className="w-6 h-6 text-green-600 dark:text-green-400 shrink-0 mt-0.5" />
+                          ) : (
+                            <XCircle className="w-6 h-6 text-red-600 dark:text-red-400 shrink-0 mt-0.5" />
+                          )}
+                          <div className="flex-1 space-y-2">
+                            <p className="font-semibold text-sm">
+                              Pertanyaan {index + 1}: {question.question}
+                            </p>
+
+                            {!isCorrect && (
+                              <>
+                                <div className="text-sm">
+                                  <span className="text-red-600 dark:text-red-400 font-medium">Jawaban Anda: </span>
+                                  <span className="text-red-700 dark:text-red-300">{userAnswer}</span>
+                                </div>
+                                <div className="text-sm">
+                                  <span className="text-green-600 dark:text-green-400 font-medium">Jawaban Benar: </span>
+                                  <span className="text-green-700 dark:text-green-300">{question.correctAnswer}</span>
+                                </div>
+                              </>
+                            )}
+
+                            {isCorrect && (
+                              <div className="text-sm">
+                                <span className="text-green-600 dark:text-green-400 font-medium">Jawaban Benar: </span>
+                                <span className="text-green-700 dark:text-green-300">{question.correctAnswer}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+
+          {/* Restart Button */}
+          <div className="text-center pb-4">
+            <Button onClick={handleRestart} size="lg" className="bg-amber-800 hover:bg-amber-900 text-white">
+              <RotateCw className="mr-2" />
+              Coba Lagi dengan Soal Baru
+            </Button>
+          </div>
         </div>
       </AnimatedWrapper>
     );
@@ -100,7 +179,7 @@ export default function QuizClient({ quizData }: QuizClientProps) {
       </div>
 
       <Card className="border-0 shadow-none">
-        <CardContent className="p-6">
+        <CardContent className="">
           <h3 className="text-lg font-semibold leading-relaxed text-center mb-6 min-h-[56px] flex items-center justify-center">
             <Target className="w-5 h-5 mr-3 text-primary shrink-0"/> {currentQuestion.question}
           </h3>
@@ -126,7 +205,7 @@ export default function QuizClient({ quizData }: QuizClientProps) {
         </CardContent>
       </Card>
 
-      <div className="mt-6 flex justify-center">
+      <div className="mt-6 pt-6 border-t flex justify-center">
         {currentQuestionIndex < quizData.length - 1 ? (
           <Button onClick={handleNext} disabled={!selectedAnswer}>Selanjutnya</Button>
         ) : (

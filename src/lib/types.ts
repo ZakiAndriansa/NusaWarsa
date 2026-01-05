@@ -11,6 +11,8 @@ export interface TimelineEvent {
   keyFigures: string[];
   relatedEvents: string[];
   imageId: string;
+  colorClass?: string;
+  suggestionQuestions?: string[];
 }
 
 export interface RegionFigure {
@@ -31,7 +33,7 @@ export interface RegionDetails {
   figures: RegionFigure[];
   cuisine: string[];
   cuisineImageId: string;
-  clothing: string;
+  clothing: string[];
   clothingImageId: string;
   traditions: string[];
   traditionImageId: string;
@@ -45,6 +47,7 @@ export interface Region {
   imageId: string;
   coordinates: [number, number];
   details: RegionDetails;
+  suggestionQuestions?: string[];
 }
 
 export type TraditionCategory = 'Tarian' | 'Kerajinan' | 'Upacara' | 'Kuliner' | 'Musik';
@@ -59,4 +62,5 @@ export interface Tradition {
   fullDescription: string;
   history: string;
   meaning: string;
+  suggestionQuestions?: string[];
 }

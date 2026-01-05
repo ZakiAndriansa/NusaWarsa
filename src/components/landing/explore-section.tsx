@@ -23,7 +23,7 @@ export default function ExploreSection() {
       {/* Hero Header */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center">
-          <AnimatedWrapper>
+          <AnimatedWrapper animationId="explore-header">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-headline tracking-tight text-foreground">
               Peta Interaktif Nusantara
             </h2>
@@ -36,7 +36,7 @@ export default function ExploreSection() {
 
       {/* Interactive Map */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl mt-8 sm:mt-10 md:mt-12">
-        <AnimatedWrapper delay={200}>
+        <AnimatedWrapper animationId="explore-map" delay={200}>
           <IndonesiaMap 
             regions={regionsData}
           />
