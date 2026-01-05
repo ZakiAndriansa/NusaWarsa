@@ -246,12 +246,21 @@ export default function Header() {
           {/* Logo - Left */}
           <div className="flex-1">
             <Link href="/#home" scroll={true} className="flex items-center flex-shrink-0 w-fit">
+              {/* Mobile: favIcon.webp */}
+              <Image
+                src="/pictures/logo/favIcon.webp"
+                alt="Nusa Warsa Logo"
+                width={117}
+                height={59}
+                className="block md:hidden h-auto w-auto object-contain"
+              />
+              {/* Desktop: LogoNusaWartaP.webp */}
               <Image
                 src="/pictures/logo/LogoNusaWartaP.webp"
                 alt="Nusa Warsa Logo"
                 width={200}
                 height={200}
-                className="h-24 w-24 sm:h-28 sm:w-28 md:h-28 md:w-28 lg:h-32 lg:w-32 object-contain"
+                className="hidden md:block h-24 w-24 sm:h-28 sm:w-28 md:h-28 md:w-28 lg:h-32 lg:w-32 object-contain"
               />
             </Link>
           </div>
