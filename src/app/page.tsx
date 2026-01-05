@@ -6,6 +6,7 @@ import GallerySection from '@/components/landing/gallery-section';
 import ServicesSection from '@/components/landing/services-section';
 import AboutSection from '@/components/landing/about-section';
 import FAQSection from '@/components/landing/faq-section';
+import PageEntranceAnimation from '@/components/ui/page-entrance-animation';
 import { CardSectionSkeleton, ContentSectionSkeleton } from '@/components/ui/page-skeleton';
 
 // Loading fallback component with skeleton
@@ -16,26 +17,28 @@ const ContentLoader = () => <ContentSectionSkeleton />;
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
-      <Hero />
-      <Suspense fallback={<ContentLoader />}>
-        <AboutSection />
-      </Suspense>
-      <Suspense fallback={<SectionLoader />}>
-        <Timeline />
-      </Suspense>
-      <Suspense fallback={<SectionLoader />}>
-        <ExploreSection />
-      </Suspense>
-      <Suspense fallback={<ContentLoader />}>
-        <ServicesSection />
-      </Suspense>
-      <Suspense fallback={<SectionLoader />}>
-        <GallerySection />
-      </Suspense>
-      <Suspense fallback={<ContentLoader />}>
-        <FAQSection />
-      </Suspense>
-    </div>
+    <PageEntranceAnimation>
+      <div className="flex flex-col">
+        <Hero />
+        <Suspense fallback={<ContentLoader />}>
+          <AboutSection />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <Timeline />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <ExploreSection />
+        </Suspense>
+        <Suspense fallback={<ContentLoader />}>
+          <ServicesSection />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <GallerySection />
+        </Suspense>
+        <Suspense fallback={<ContentLoader />}>
+          <FAQSection />
+        </Suspense>
+      </div>
+    </PageEntranceAnimation>
   );
 }
