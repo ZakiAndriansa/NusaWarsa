@@ -41,12 +41,9 @@ export const metadata: Metadata = {
   description:
     'An interactive journey through the history and culture of Indonesia.',
   icons: {
-    icon: [
-      { url: '/pictures/logo/favIcon.png' },
-      { url: '/favicon.ico' },
-    ],
-    shortcut: '/favicon.ico',
-    apple: '/pictures/logo/favIcon.png',
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
   },
 };
 
