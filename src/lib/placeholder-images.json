@@ -201,19 +201,19 @@
     {
       "id": "gajah-mada",
       "description": "Illustration of Gajah Mada",
-      "imageUrl": "/pictures/landing-page/background-3.webp",
+      "imageUrl": "/pictures/regions/gajahmada.JPG",
       "imageHint": "warrior illustration"
     },
     {
       "id": "diponegoro",
       "description": "Portrait of Pangeran Diponegoro",
-      "imageUrl": "/pictures/landing-page/background-3.webp",
+      "imageUrl": "/pictures/regions/pangerandiponegoro.jpg",
       "imageHint": "royal portrait"
     },
     {
       "id": "kartini",
       "description": "Portrait of R.A. Kartini",
-      "imageUrl": "/pictures/landing-page/background-3.webp",
+      "imageUrl": "/pictures/regions/kartini.jpg",
       "imageHint": "female portrait"
     },
     {
