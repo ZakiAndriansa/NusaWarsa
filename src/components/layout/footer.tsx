@@ -1,5 +1,6 @@
-import { Github, Twitter, Instagram, Mountain } from 'lucide-react';
+import { Github, Twitter, Instagram } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Separator } from '@/components/ui/separator';
 
 const Footer = () => {
@@ -38,7 +39,13 @@ const Footer = () => {
           {/* Brand Info - Full width on mobile */}
           <div className="col-span-2 lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-2 sm:mb-4">
-              <Mountain className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+              <Image
+                src="/pictures/logo/favIcon.webp"
+                alt="Nusa Warsa Logo"
+                width={117}
+                height={59}
+                className="h-4 w-auto object-contain"
+              />
               <h3 className="text-base sm:text-lg font-bold font-headline">
                 Nusa Warsa
               </h3>

@@ -11,6 +11,7 @@ import ChatBudayawan from '@/components/explore/chat-budayawan';
 import Image from 'next/image';
 import { useState } from 'react';
 import { HeroImageSkeleton, AvatarSkeleton, ImageSkeleton } from '@/components/ui/image-skeleton';
+import BackButton from '@/components/ui/back-button';
 import type { Region, Tradition } from '@/lib/types';
 
 interface ExploreDetailClientProps {
@@ -53,6 +54,8 @@ function TraditionDetailPage({ tradition, mainImageUrl }: { tradition: Tradition
           </div>
         </AnimatedWrapper>
       )}
+
+      <BackButton href="/#galeri" />
 
       <div className={`w-full px-4 sm:px-6 lg:px-8 relative z-10 pb-12 sm:pb-16 lg:pb-20 ${mainImageUrl ? '-mt-16 sm:-mt-20 lg:-mt-24' : 'pt-24 sm:pt-28 lg:pt-32'}`}>
         <AnimatedWrapper delay={200} forceAnimate={true}>
@@ -222,6 +225,8 @@ function RegionDetailContent({ region, mainImageUrl }: { region: Region; mainIma
           </div>
         </AnimatedWrapper>
       )}
+
+      <BackButton href="/#peta" />
 
       <div className="w-full px-3 sm:px-4 md:px-6 lg:px-8 -mt-16 sm:-mt-20 md:-mt-24 lg:-mt-32 relative z-10 pb-8 sm:pb-12 md:pb-16 lg:pb-20">
         <AnimatedWrapper delay={200} forceAnimate={true}>

@@ -9,6 +9,7 @@ import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { ChevronRight, ChevronLeft, Sparkles, Heart, Target } from 'lucide-react';
 import AnimatedWrapper from '../ui/animated-wrapper';
+import BackButton from '../ui/back-button';
 import { CulturalMatcher } from '@/lib/cultural-matcher';
 import { traditionsData } from '@/lib/data';
 import Image from 'next/image';
@@ -343,6 +344,8 @@ export default function CulturalQuizClient() {
 
   return (
     <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-8 lg:py-12">
+      <BackButton href="/" />
+
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <AnimatedWrapper>

@@ -18,6 +18,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import AnimatedWrapper from '../ui/animated-wrapper';
+import BackButton from '../ui/back-button';
 import Link from 'next/link';
 import {
   Accordion,
@@ -78,16 +79,11 @@ export default function ScenarioPlayer({ scenario }: ScenarioPlayerProps) {
 
   return (
     <div className="container mx-auto px-4 py-6 sm:py-8 md:py-12">
+      <BackButton href="/scenarios" />
+
       {/* Header */}
       <AnimatedWrapper animationId={`scenario-header-${scenario.id}`}>
         <div className="max-w-4xl mx-auto mb-6 sm:mb-8">
-          <Link href="/scenarios">
-            <Button variant="ghost" className="mb-3 sm:mb-4 gap-1 text-sm sm:text-base h-9 sm:h-10">
-              <ChevronLeft className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-              Kembali ke Daftar Panduan
-            </Button>
-          </Link>
-
           <div className="flex items-start justify-between mb-4 sm:mb-6">
             <div className="flex-1">
               <div className="flex flex-wrap items-center gap-2 mb-2 sm:mb-3">

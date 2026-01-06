@@ -7,6 +7,7 @@ import AnimatedWrapper from '@/components/ui/animated-wrapper';
 import Image from 'next/image';
 import { useState } from 'react';
 import { HeroImageSkeleton } from '@/components/ui/image-skeleton';
+import BackButton from '@/components/ui/back-button';
 import type { TimelineEvent } from '@/lib/types';
 
 interface TimelineDetailClientProps {
@@ -48,6 +49,8 @@ export default function TimelineDetailClient({ event, timelineImageUrl }: Timeli
           </div>
         </AnimatedWrapper>
       )}
+
+      <BackButton href="/#timeline" />
 
       <div className={`w-full px-3 sm:px-4 md:px-6 lg:px-8 relative z-10 pb-8 sm:pb-12 md:pb-16 lg:pb-20 ${timelineImageUrl ? '-mt-16 sm:-mt-20 lg:-mt-24' : 'pt-20 sm:pt-24 md:pt-28 lg:pt-32'}`}>
         <AnimatedWrapper delay={200} forceAnimate={true}>
