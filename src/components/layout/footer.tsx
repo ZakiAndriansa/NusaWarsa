@@ -44,7 +44,7 @@ const Footer = () => {
               </h3>
             </Link>
             <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-6 max-w-md">
-              Platform digital interaktif untuk menjelajahi kekayaan budaya Indonesia.
+              Platform digital interaktif untuk menjelajahi dan memahami kekayaan budaya Indonesia. Dari linimasa sejarah hingga panduan AI untuk situasi budaya.
             </p>
 
             {/* Social Links */}
