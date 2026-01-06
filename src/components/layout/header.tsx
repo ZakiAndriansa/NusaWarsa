@@ -252,7 +252,7 @@ export default function Header() {
                 alt="Nusa Warsa Logo"
                 width={117}
                 height={59}
-                className="block md:hidden h-10 w-auto object-contain"
+                className="block md:hidden h-8 w-auto object-contain"
               />
               {/* Desktop: LogoNusaWartaP.webp */}
               <Image
