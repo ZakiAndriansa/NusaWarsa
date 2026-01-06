@@ -34,17 +34,17 @@ const Footer = () => {
     <footer className="w-full bg-card border-t">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="py-8 sm:py-12 lg:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8">
-          {/* Brand Info */}
-          <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-3 sm:mb-4">
+        <div className="py-6 sm:py-12 lg:py-16 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-8">
+          {/* Brand Info - Full width on mobile */}
+          <div className="col-span-2 lg:col-span-2">
+            <Link href="/" className="flex items-center gap-2 mb-2 sm:mb-4">
               <Mountain className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
               <h3 className="text-base sm:text-lg font-bold font-headline">
                 Nusa Warsa
               </h3>
             </Link>
-            <p className="text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-6 max-w-md">
-              Platform digital interaktif untuk menjelajahi dan memahami kekayaan budaya Indonesia. Dari linimasa sejarah hingga panduan AI untuk situasi budaya.
+            <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-6 max-w-md">
+              Platform digital interaktif untuk menjelajahi kekayaan budaya Indonesia.
             </p>
 
             {/* Social Links */}
@@ -73,11 +73,11 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Navigation Links */}
+          {/* Navigation Links - 2 columns on mobile */}
           {sections.map((section) => (
             <div key={section.title}>
-              <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">{section.title}</h4>
-              <ul className="space-y-2 sm:space-y-3">
+              <h4 className="font-semibold mb-2 sm:mb-4 text-sm sm:text-base">{section.title}</h4>
+              <ul className="space-y-1.5 sm:space-y-3">
                 {section.links.map((link) => (
                   <li key={link.href}>
                     <Link
@@ -96,13 +96,13 @@ const Footer = () => {
 
       <Separator />
 
-      {/* Copyright */}
+      {/* Copyright - More compact on mobile */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="py-4 sm:py-6 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
+        <div className="py-3 sm:py-6 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-4">
           <p className="text-[10px] xs:text-xs sm:text-sm text-muted-foreground text-center sm:text-left">
             &copy; {new Date().getFullYear()} Nusa Warsa. All rights reserved.
           </p>
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 text-[10px] xs:text-xs sm:text-sm text-muted-foreground">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-6 text-[10px] xs:text-xs sm:text-sm text-muted-foreground">
             <Link href="/#faq" className="hover:text-primary transition-colors">
               FAQ
             </Link>
