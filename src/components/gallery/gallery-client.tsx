@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Image from 'next/image';
 import { traditionsData } from '@/lib/data';
 import type { Tradition, TraditionCategory } from '@/lib/types';
@@ -15,6 +15,12 @@ import {
   DialogTrigger,
   DialogTitle,
 } from '@/components/ui/dialog';
+import {
+  Drawer,
+  DrawerContent,
+  DrawerTrigger,
+  DrawerTitle,
+} from '@/components/ui/drawer';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import TraditionDetail from './tradition-detail';
 import AnimatedWrapper from '../ui/animated-wrapper';
@@ -67,13 +73,12 @@ const TraditionCard = ({
   const shape = getBoxShape(tradition.id, index);
 
   return (
-    <DialogTrigger asChild>
-      <div
-        onClick={onSelect}
-        className="cursor-pointer break-inside-avoid mb-4 sm:mb-5 lg:mb-6"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
+    <div
+      onClick={onSelect}
+      className="cursor-pointer break-inside-avoid mb-4 sm:mb-5 lg:mb-6"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
         <Card className="group overflow-hidden relative shadow-lg hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 transform hover:-translate-y-2 bg-transparent border-none">
           {image && (
             <div className={`relative w-full overflow-hidden ${shape.mobileAspect} ${shape.tabletAspect} ${shape.desktopAspect} ${shape.borderRadius}`}>
@@ -154,8 +159,7 @@ const TraditionCard = ({
             </div>
           </CardContent>
         </Card>
-      </div>
-    </DialogTrigger>
+    </div>
   );
 };
 
@@ -164,6 +168,14 @@ export default function GalleryClient() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTradition, setSelectedTradition] = useState<Tradition | null>(null);
   const [lovedTraditions, setLovedTraditions] = useState<Set<string>>(new Set());
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const filteredTraditions = useMemo(() => {
     return traditionsData.filter(tradition => {
@@ -187,8 +199,15 @@ export default function GalleryClient() {
     });
   };
 
+  const handleOpenChange = (isOpen: boolean) => {
+    if (!isOpen) setSelectedTradition(null);
+  };
+
+  const WrapperComponent = isMobile ? Drawer : Dialog;
+  const TriggerComponent = isMobile ? DrawerTrigger : DialogTrigger;
+
   return (
-    <Dialog onOpenChange={(isOpen) => !isOpen && setSelectedTradition(null)}>
+    <WrapperComponent open={!!selectedTradition} onOpenChange={handleOpenChange}>
       <div className="w-full">
         {/* Filters Section */}
         <div className="flex flex-col gap-4 mb-8 sm:mb-10 lg:mb-12 max-w-4xl mx-auto px-4">
@@ -274,15 +293,28 @@ export default function GalleryClient() {
         )}
       </div>
 
-      {/* Detail Modal */}
+      {/* Detail Modal/Drawer */}
       {selectedTradition && (
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-          <VisuallyHidden>
-            <DialogTitle>{selectedTradition.name}</DialogTitle>
-          </VisuallyHidden>
-          <TraditionDetail tradition={selectedTradition} />
-        </DialogContent>
+        <>
+          {isMobile ? (
+            <DrawerContent className="max-h-[90vh]">
+              <VisuallyHidden>
+                <DrawerTitle>{selectedTradition.name}</DrawerTitle>
+              </VisuallyHidden>
+              <div className="overflow-y-auto p-4">
+                <TraditionDetail tradition={selectedTradition} />
+              </div>
+            </DrawerContent>
+          ) : (
+            <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+              <VisuallyHidden>
+                <DialogTitle>{selectedTradition.name}</DialogTitle>
+              </VisuallyHidden>
+              <TraditionDetail tradition={selectedTradition} />
+            </DialogContent>
+          )}
+        </>
       )}
-    </Dialog>
+    </WrapperComponent>
   );
 }
