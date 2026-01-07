@@ -40,11 +40,6 @@ export const metadata: Metadata = {
   title: 'Nusa Warsa',
   description:
     'An interactive journey through the history and culture of Indonesia.',
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/pictures/logo/iconBrowser.webp',
-  },
 };
 
 export default function RootLayout({
